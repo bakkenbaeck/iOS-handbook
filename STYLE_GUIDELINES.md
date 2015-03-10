@@ -265,7 +265,7 @@ Use pragma marks to structure your code. Sort them in a linear fashion, starting
 
 Private and custom delegate methods are added at the bottom.
 
-```
+```objc
 #pragma mark - Initializers
 
 #pragma mark - Getters
