@@ -134,14 +134,14 @@ In method signatures, there should be a space after the scope (-/+ symbol). Ther
 
 **For Example**:
 ```objc
-- (void)setExampleText:(NSString *)text image:(UIImage *)image;
+- (void)updatePersonWithName:(NSString *)name andImage:(UIImage *)image;
 ```
 
 In the method implementation opening bracket should **always** be placed in a new line.
 
 **For Example**:
 ```objc
-- (void)setExampleText:(NSString *)text image:(UIImage *)image
+- (void)updatePersonWithName:(NSString *)text andImage:(UIImage *)image
 {
     // Implementation
 }
