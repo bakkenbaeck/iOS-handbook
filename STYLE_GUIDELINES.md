@@ -253,6 +253,25 @@ Instance variables should be camel-case with the leading word being lowercase, a
 id varnm;
 ```
 
+When crafting data models, use generic wording for ID properties.
+
+Use `remoteID` and `localID` when you are in need of synching.
+
+**For exampel:**
+
+```objc
+Note *note;
+note.localID = 12; // local
+note.remoteID = 10; // from backend
+```
+
+**Not:**
+
+```objc```
+Note *note;
+note.noteID = 1;
+```
+
 ## Comments
 
 When they are needed, comments should be used to explain **why** a particular piece of code does something. Any comments that are used must be kept up-to-date or deleted.
