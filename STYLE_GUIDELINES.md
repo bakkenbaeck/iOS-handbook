@@ -278,6 +278,32 @@ When they are needed, comments should be used to explain **why** a particular pi
 
 Block comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. This does not apply to those comments used to generate documentation.
 
+## Pragma marks
+
+Use pragma marks to structure your code. Sort them in a linear fashion, starting with the initialization, lazy loaded properties and other getters followed by the setters.
+
+Private and custom delegate methods are added at the bottom.
+
+```objc
+#pragma mark - Initializers
+
+#pragma mark - Getters
+
+#pragma mark - Setters
+
+#pragma mark - View Life cycle
+
+#pragma mark - Actions
+
+#pragma mark - Notifications
+
+#pragma mark - UITableViewDelegate
+
+#pragma mark - CustomViewDelegate
+
+#pragma mark - Private methods
+```
+
 ## init and dealloc
 
 `dealloc` methods should be placed at the top of the implementation, directly after the `@synthesize` and `@dynamic` statements. `init` should be placed directly below the `dealloc` methods of any class.
