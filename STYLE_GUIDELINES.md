@@ -496,32 +496,3 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 }
 ```
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
-
-## Xcode project
-
-The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
-
-A recommended project structure can be found in [Project Structure](https://github.com/hyperoslo/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
-
-When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
-
-
-## OCLint Settings
-
-OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code [...](http://oclint.org)
-
-### Installation
-
-* Download the latest version of OCLint [here](http://oclint.org/downloads.html)
-* Make sure that the binary is reachable in your $PATH
-
-### Usage
-
-```
-  $ xcodebuild clean
-  $ xcodebuild >> xcodebuild.log
-  $ oclint-xcodebuild
-  $ oclint-json-compilation-database oclint_args "-rc LONG_LINE=110" | sed 's/\(.*\.\m\{1,2\}:[0-9]*:[0-9]*:\)/\1 warning:/' >> oclint.log
-```
-
-Based on the [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide).
