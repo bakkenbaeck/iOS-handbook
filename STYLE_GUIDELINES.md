@@ -31,8 +31,6 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Image Naming](#image-naming)
 * [Booleans](#booleans)
 * [Singletons](#singletons)
-* [Xcode Project](#xcode-project)
-* [OCLint Settings](#oclint-settings)
 
 ## Dot-Notation Syntax
 
