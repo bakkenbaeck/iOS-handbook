@@ -49,7 +49,7 @@ OCLint is a static code analysis tool for improving quality and reducing defects
 
 ### Semantic Versioning
 
-We support [semantic versioning](http://semver.org/), and it's pretty important that minor releases are backwards compatible otherwise don't feel shy to make it a major version.
+We support [semantic versioning](http://semver.org/), and it's pretty important that minor releases are backwards compatible otherwise don't feel shy to make it a major release.
 
 When making backwards compatible changes, flag your old APIs as deprecated like this:
 
