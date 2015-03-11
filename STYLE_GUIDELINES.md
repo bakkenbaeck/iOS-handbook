@@ -291,7 +291,7 @@ Private and custom delegate methods are added at the bottom.
 
 #pragma mark - Setters
 
-#pragma mark - View Life cycle
+#pragma mark - View life cycle
 
 #pragma mark - Actions
 
