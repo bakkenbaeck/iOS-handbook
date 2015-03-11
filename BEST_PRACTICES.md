@@ -1,23 +1,25 @@
-# When to use blocks, delegates or data source
+# Best practices
 
-## Block
+## When to use blocks, delegates or data source
+
+### Block
 - Asynchronous (For example: networking operations)
 - User inputs with multiple options (For example: UIAlertView's YES and NO)
 - Data source driven inputs (For example: A table items with action blocks that were defined in the data source)
 - Returns many values (For example looking for a field in a collection and returning the field and the indexPath)
 - If there’s no tracked state or if state it’s defined in the same method
 
-## Delegate
+### Delegate
 - Synchronous (For example: buttons actions in views that should perform on their parents)
 - Shouldn't return values
 - Provides control over performing an action (For example: UITextField's shouldEndEditing)
 - User input with one action (For example: buttons actions in views that should perform on their parents)
 - If tracked state is shared (if state is stored in a property or a constant)
 
-## Data source
+### Data source
 - Returns ONE value
 
-### Xcode project
+## Xcode project
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
 
@@ -25,20 +27,32 @@ A recommended project structure can be found in [Project Structure](https://gith
 
 When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
 
-### OCLint Settings
+## OCLint Settings
 
 OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code [...](http://oclint.org)
 
-#### Installation
+### Installation
 
 * Download the latest version of OCLint [here](http://oclint.org/downloads.html)
 * Make sure that the binary is reachable in your $PATH
 
-#### Usage
+### Usage
 
 ```
   $ xcodebuild clean
   $ xcodebuild >> xcodebuild.log
   $ oclint-xcodebuild
   $ oclint-json-compilation-database oclint_args "-rc LONG_LINE=110" | sed 's/\(.*\.\m\{1,2\}:[0-9]*:[0-9]*:\)/\1 warning:/' >> oclint.log
+```
+
+## Deployment
+
+### Semantic Versioning
+
+We support [semantic versioning](http://semver.org/), and it's pretty important that minor releases are backwards compatible otherwise don't feel shy to make it a major version.
+
+When making backwards compatible changes, flag your old APIs as deprecated like this:
+
+```objc
+- (NSInteger)foo:(NSInteger)bar __attribute__((deprecated("Use fooWithBar: instead")));
 ```
