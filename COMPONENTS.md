@@ -1,6 +1,6 @@
 Every agnostic component (UI control, category, helper, etc) should be created in a separate repository.
 
-You component should be unit tested and documented.
+Your component should be unit tested and documented.
 
 # Steps to create a category component
 - [ ] Create repo
