@@ -255,9 +255,9 @@ id varnm;
 
 When crafting data models, use generic wording for ID properties.
 
-Use `remoteID` and `localID` when you are in need of synching.
+Use `remoteID` and `localID` when you are in need of syncing.
 
-**For exampel:**
+**For example:**
 
 ```objc
 Note *note;
