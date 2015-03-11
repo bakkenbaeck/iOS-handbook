@@ -496,3 +496,7 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 }
 ```
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
+
+## Attribution
+
+This document is based on the [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide).
