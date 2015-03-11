@@ -36,7 +36,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 
 ## Dot-Notation Syntax
 
-Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
+Dot-notation should **always** be used for accessing properties. Bracket notation is preferred when using methods and in other instances.
 
 **For example:**
 ```objc
