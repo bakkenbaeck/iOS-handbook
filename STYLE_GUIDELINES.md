@@ -344,6 +344,20 @@ NSNumber *shouldUseLiterals = [NSNumber numberWithBool:YES];
 NSNumber *buildingZIPCode = [NSNumber numberWithInteger:10018];
 ```
 
+Literals should be used when accessing `NSDictionary` or `NSArray` instances.
+
+```objc
+NSString *name = names[0];
+NSString *productManager = productManagers[@"iPhone"];
+```
+
+**Not:**
+
+```objc
+NSString *name = [names objectAtIndex:0];
+NSString *productManager = [productManagers objectForKey:@"iPhone"];
+```
+
 ## CGRect Functions
 
 When accessing the `x`, `y`, `width`, or `height` of a `CGRect`, always use the [`CGGeometry` functions](http://developer.apple.com/library/ios/#documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html) instead of direct struct member access. From Apple's `CGGeometry` reference:
