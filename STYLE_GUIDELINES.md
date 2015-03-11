@@ -136,14 +136,14 @@ In method signatures, there should be a space after the scope (-/+ symbol). Ther
 
 **For Example**:
 ```objc
-- (void)setExampleText:(NSString *)text image:(UIImage *)image;
+- (void)updatePersonWithName:(NSString *)name andImage:(UIImage *)image;
 ```
 
 In the method implementation opening bracket should **always** be placed in a new line.
 
 **For Example**:
 ```objc
-- (void)setExampleText:(NSString *)text image:(UIImage *)image
+- (void)updatePersonWithName:(NSString *)text andImage:(UIImage *)image
 {
     // Implementation
 }
@@ -153,8 +153,8 @@ Method declarations should conform to be written on one line unless it exceeds t
 
 **For Example**:
 ```objc
-- (void)setExampleText:(NSString *)text image:(UIImage *)image
-           description:(NSString *)description 
+- (void)updatePersonWithName:(NSString *)text image:(UIImage *)image
+              andDescription:(NSString *)description 
 {
     // Implementation
 }
@@ -164,9 +164,9 @@ In method invocations the parameters should be colon aligned. An exception to th
 
 **For Example**:
 ```objc
-[someObject setExampleText:@"Example Text"
-                     image:[UIImage imageNamed:@"Image.png"]
-               description:@"Example description"];
+[someObject updatePersonWithName:@"Example Text"
+                          image:[UIImage imageNamed:@"Image.png"]
+                 andDescription:@"Example description"];
 ```
 
 **For Example**:
