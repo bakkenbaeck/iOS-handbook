@@ -136,45 +136,28 @@ In method signatures, there should be a space after the scope (-/+ symbol). Ther
 
 **For Example**:
 ```objc
-- (void)updatePersonWithName:(NSString *)name andImage:(UIImage *)image;
+- (void)updatePersonWithName:(NSString *)name 
+                    andImage:(UIImage *)image;
 ```
 
 In the method implementation opening bracket should **always** be placed in a new line.
 
 **For Example**:
 ```objc
-- (void)updatePersonWithName:(NSString *)text andImage:(UIImage *)image
+- (void)updatePersonWithName:(NSString *)name 
+                    andImage:(UIImage *)image
 {
     // Implementation
 }
 ```
 
-Method declarations should conform to be written on one line unless it exceeds the width of 110. If it does exceed the proposed limit then it should colon align the exceeding parameters with the first colon on the previous line when possible.
-
-**For Example**:
-```objc
-- (void)updatePersonWithName:(NSString *)text image:(UIImage *)image
-              andDescription:(NSString *)description 
-{
-    // Implementation
-}
-```
-
-In method invocations the parameters should be colon aligned. An exception to this rule is when working with blocks. For the sake of readabilty the block should be on a new line and should colon align with the first colon of the previous line.
+In method invocations the parameters should be colon aligned, if the method becomes a cascade consider splitting the logic in several methods.
 
 **For Example**:
 ```objc
 [someObject updatePersonWithName:@"Example Text"
                           image:[UIImage imageNamed:@"Image.png"]
                  andDescription:@"Example description"];
-```
-
-**For Example**:
-```objc
-[someObject name:(NSString *)name path:(NSString *)path parameters:(NSDictionary *)parameters 
-      usingBlock:^(NSString *responseValue) {
-          // Implementation
-}];
 ```
 
 ## Variables
