@@ -6,8 +6,7 @@ Your component should be unit tested and documented.
 - [ ] Create repo
 - [ ] Download https://github.com/hyperoslo/pod-template/archive/master.zip
 - [ ] Extract files to your empty repo
-- [ ] Replace all ocurrences of `<PODNAME>`
-- [ ] Rename `PODNAME.podspec`
+- [ ] Run [init.rb](https://github.com/hyperoslo/pod-template/blob/master/init.rb)
 - [ ] Enable Travis support for your repo in https://travis-ci.org/profile/hyperoslo
 - [ ] Publish your pod by running `pod trunk push`(*)
 - [ ] Add Hyper as co-owner by running `pod trunk add-owner <PODNAME> ios@hyper.no`
