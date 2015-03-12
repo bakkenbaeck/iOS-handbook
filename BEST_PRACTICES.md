@@ -72,4 +72,4 @@ Image names should be named consistently to preserve organization and developer 
 * `refreshBarButtonItem` / `refreshBarButtonItem@2x` and `refreshBarButtonItemSelected` / `refreshBarButtonItemSelected@2x`
 * `articleNavigationBarWhite` / `articleNavigationBarWhite@2x` and `articleNavigationBarBlackSelected` / `articleNavigationBarBlackSelected@2x`.
 
-Images that are used for a similar purpose should be grouped in respective groups in an Images folder.
+Images should live in `Images.xcassets`.
