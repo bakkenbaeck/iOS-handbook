@@ -291,6 +291,8 @@ Use pragma marks to structure your code. Sort them in a linear fashion, starting
 
 Private and custom delegate methods are added at the bottom.
 
+Methods that overwrite their parent methods should be grouped in `#pragma mark - PARENT_CLASS`
+
 ```objc
 #pragma mark - Initializers
 
@@ -303,6 +305,8 @@ Private and custom delegate methods are added at the bottom.
 #pragma mark - Actions
 
 #pragma mark - Notifications
+
+#pragma mark - HYPBaseTableViewController
 
 #pragma mark - UITableViewDelegate
 
