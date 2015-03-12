@@ -179,13 +179,15 @@ In method invocations the parameters should be colon aligned. An exception to th
 
 ## Variables
 
-Variables should be named as descriptively as possible. Single letter variable names should be avoided except in `for()` loops.
+Variables should be named as descriptively as possible. Abbreviated variable names should be avoided.
 
-Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of constants.
+Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of [constants](https://github.com/hyperoslo/iOS-playbook/blob/master/STYLE_GUIDELINES.md#constants).
 
 Property definitions should be used in place of naked instance variables whenever possible. Direct instance variable access should be avoided except in initializer methods (`init`, `initWithCoder:`, etc…), `dealloc` methods and within custom setters and getters. For more information on using Accessor Methods in Initializer Methods and dealloc, see [here](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html#//apple_ref/doc/uid/TP40004447-SW6).
 
 When declaring a `strong` property, you can leave out the `strong` keyword as this is the default.
+
+When declaring properties in public headers that contain mutable counterparts (`NSString`, `NSDictionary`, `NSArray`) make sure to include the `copy` keyword.
 
 **For example:**
 
