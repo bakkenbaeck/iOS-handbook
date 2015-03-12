@@ -33,7 +33,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 
 ## Dot-Notation Syntax
 
-Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
+Dot-notation should **always** be used for accessing properties. Bracket notation is preferred when using methods and in other instances.
 
 **For example:**
 ```objc
@@ -55,9 +55,9 @@ UIApplication.sharedApplication.delegate;
 **For example:**
 ```objc
 if (user.isHappy) {
-//Do something
+    // Do something
 } else {
-//Do something else
+    // Do something else
 }
 ```
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.
@@ -65,7 +65,7 @@ if (user.isHappy) {
 
 ## Conditionals
 
-Conditional bodies should always use braces unless it is one line only (in that case one line for the entire statement it's recommended). These errors include adding a second line and expecting it to be part of the if-statement. Another, even more dangerous defect may happen where the line "inside" the if-statement is commented out, and the next line unwittingly becomes part of the if-statement. In addition, this style is more consistent with all other conditionals, and therefore more easily scannable.
+Conditional bodies should always use braces.
 
 **For example:**
 ```objc
@@ -133,31 +133,22 @@ In method signatures, there should be a space after the scope (-/+ symbol). Ther
 
 **For Example**:
 ```objc
-- (void)updatePersonWithName:(NSString *)name andImage:(UIImage *)image;
+- (void)updatePersonWithName:(NSString *)name
+                    andImage:(UIImage *)image;
 ```
 
 In the method implementation opening bracket should **always** be placed in a new line.
 
 **For Example**:
 ```objc
-- (void)updatePersonWithName:(NSString *)text andImage:(UIImage *)image
+- (void)updatePersonWithName:(NSString *)name
+                    andImage:(UIImage *)image
 {
     // Implementation
 }
 ```
 
-Method declarations should conform to be written on one line unless it exceeds the width of 110. If it does exceed the proposed limit then it should colon align the exceeding parameters with the first colon on the previous line when possible.
-
-**For Example**:
-```objc
-- (void)updatePersonWithName:(NSString *)text image:(UIImage *)image
-              andDescription:(NSString *)description 
-{
-    // Implementation
-}
-```
-
-In method invocations the parameters should be colon aligned. An exception to this rule is when working with blocks. For the sake of readabilty the block should be on a new line and should colon align with the first colon of the previous line.
+In method invocations the parameters should be colon aligned, if the method becomes a cascade consider splitting the logic in several methods.
 
 **For Example**:
 ```objc
@@ -166,23 +157,17 @@ In method invocations the parameters should be colon aligned. An exception to th
                  andDescription:@"Example description"];
 ```
 
-**For Example**:
-```objc
-[someObject name:(NSString *)name path:(NSString *)path parameters:(NSDictionary *)parameters 
-      usingBlock:^(NSString *responseValue) {
-          // Implementation
-}];
-```
-
 ## Variables
 
-Variables should be named as descriptively as possible. Single letter variable names should be avoided except in `for()` loops.
+Variables should be named as descriptively as possible. Abbreviated variable names should be avoided.
 
-Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of constants.
+Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of [constants](https://github.com/hyperoslo/iOS-playbook/blob/master/STYLE_GUIDELINES.md#constants).
 
 Property definitions should be used in place of naked instance variables whenever possible. Direct instance variable access should be avoided except in initializer methods (`init`, `initWithCoder:`, etc…), `dealloc` methods and within custom setters and getters. For more information on using Accessor Methods in Initializer Methods and dealloc, see [here](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html#//apple_ref/doc/uid/TP40004447-SW6).
 
 When declaring a `strong` property, you can leave out the `strong` keyword as this is the default.
+
+When declaring properties in public headers that contain mutable counterparts (`NSString`, `NSDictionary`, `NSArray`) make sure to include the `copy` keyword.
 
 **For example:**
 
@@ -234,7 +219,7 @@ static const NSTimeInterval HYPArticleViewControllerNavigationFadeAnimationDurat
 static const NSTimeInterval fadetime = 1.7;
 ```
 
-Properties and local variables should be camel-case with the leading word being lowercase. 
+Properties and local variables should be camel-case with the leading word being lowercase.
 
 Instance variables should be camel-case with the leading word being lowercase, and should be prefixed with an underscore. This is consistent with instance variables synthesized automatically by LLVM. **If LLVM can synthesize the variable automatically, then let it.**
 
@@ -250,9 +235,7 @@ Instance variables should be camel-case with the leading word being lowercase, a
 id varnm;
 ```
 
-When crafting data models, use generic wording for ID properties.
-
-Use `remoteID` and `localID` when you are in need of syncing.
+Prefer `remoteID` or `localID` when naming local or remote foreign keys.
 
 **For example:**
 
@@ -267,6 +250,13 @@ note.remoteID = 10; // from backend
 ```objc```
 Note *note;
 note.noteID = 1;
+```
+
+**or**
+
+```objc```
+Note *note;
+note.noteId = 1;
 ```
 
 ## Pragma marks
@@ -302,13 +292,13 @@ Private and custom delegate methods are added at the bottom.
 `init` methods should be structured like this:
 
 ```objc
-- (instancetype)init 
+- (instancetype)init
 {
     self = [super init]; // or call the designated initalizer
     if (!self) return nil;
 
     // Custom initialization
-    
+
     return self;
 }
 ```
@@ -463,7 +453,7 @@ Text and example taken from the [Cocoa Naming Guidelines](https://developer.appl
 
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
-+ (instancetype)sharedInstance 
++ (instancetype)sharedInstance
 {
    static id sharedInstance = nil;
 
