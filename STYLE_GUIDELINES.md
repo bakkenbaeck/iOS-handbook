@@ -253,9 +253,7 @@ Instance variables should be camel-case with the leading word being lowercase, a
 id varnm;
 ```
 
-When crafting data models, use generic wording for ID properties.
-
-Use `remoteID` and `localID` when you are in need of syncing.
+Prefer `remoteID` or `localID` when naming local or remote foreign keys.
 
 **For example:**
 
@@ -270,6 +268,13 @@ note.remoteID = 10; // from backend
 ```objc```
 Note *note;
 note.noteID = 1;
+```
+
+**or**
+
+```objc```
+Note *note;
+note.noteId = 1;
 ```
 
 ## Comments
