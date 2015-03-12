@@ -68,7 +68,7 @@ if (user.isHappy) {
 
 ## Conditionals
 
-Conditional bodies should have braces, except for in the initializer and lazy loaders.
+Conditional bodies should have braces, except when initializing and lazy loading.
 
 #### Common code
 
