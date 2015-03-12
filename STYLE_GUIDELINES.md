@@ -80,7 +80,7 @@ if (!error) {
 }
 ```
 
-even if it's one line
+**even if it's one line**
 
 ```objc
 if (!error) {
@@ -94,7 +94,7 @@ if (!error)
     return success;
 ```
 
-#### Initializer
+**Initializer**
 
 ```objc
 - (instancetype)initWithFrame:(CGRect)frame
@@ -106,16 +106,16 @@ if (!error)
 }
 ```
 
-#### Lazy loading
+**Lazy loading**
 
 ```objc
-- (UIView *)hypView
+- (UILabel *)label
 {
-    if (_hypView) return _hypView;
+    if (_label) return _label;
     
-    _hypView = [[UIView alloc] initWithFrame:frame];
+    _label = [UILabel new];
     
-    return _hypView;
+    return _label;
 }
 ```
 
