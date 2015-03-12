@@ -27,7 +27,6 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Constants](#constants)
 * [Enumerated Types](#enumerated-types)
 * [Private Properties](#private-properties)
-* [Image Naming](#image-naming)
 * [Booleans](#booleans)
 * [Singletons](#singletons)
 
