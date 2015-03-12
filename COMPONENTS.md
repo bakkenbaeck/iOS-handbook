@@ -7,7 +7,7 @@ Your component should be unit tested and documented.
 - [ ] Download [pod-template](https://github.com/hyperoslo/pod-template/archive/master.zip) or [ui-component-template](https://github.com/hyperoslo/ui-component-template/archive/master.zip) depending on your needs
 - [ ] Extract files to your empty repo
 - [ ] Run `ruby init.rb` in Terminal.app
-- [ ] Enable Travis support for your repo in https://travis-ci.org/profile/hyperoslo. If your component doesn't show app press "Sync Now"
+- [ ] Enable CI support for your repo in [Travis](https://travis-ci.org/profile/hyperoslo). If your component doesn't show app press "Sync Now"
 - [ ] Publish your pod by running `pod trunk push`(*)
 - [ ] Add Hyper as co-owner by running `pod trunk add-owner <PODNAME> ios@hyper.no`
 - [ ] Share it with the world!
