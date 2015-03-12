@@ -39,9 +39,11 @@ ProjectName
 |—— Models
 |—— Controllers
 |—— Networking
+|—— Resources // Mocked JSON responses
 |
 |— Resources
 |—— Storyboards
 |—— Images.xcassets
+|—— JSONs
 |—— Sounds
 |—— Others
