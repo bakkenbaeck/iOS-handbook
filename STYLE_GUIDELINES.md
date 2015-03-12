@@ -68,7 +68,9 @@ if (user.isHappy) {
 
 ## Conditionals
 
-Conditional bodies should always use braces.
+Conditional bodies should have braces, except for in the initializer and lazy loaders.
+
+#### Common code
 
 **For example:**
 ```objc
@@ -90,6 +92,31 @@ if (!error) {
 ```objc
 if (!error)
     return success;
+```
+
+#### Initializer
+
+```objc
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (!self) return nil;
+    
+    return self;
+}
+```
+
+#### Lazy loading
+
+```objc
+- (UIView *)hypView
+{
+    if (_hypView) return _hypView;
+    
+    _hypView = [[UIView alloc] initWithFrame:frame];
+    
+    return _hypView;
+}
 ```
 
 ### Ternary Operator
