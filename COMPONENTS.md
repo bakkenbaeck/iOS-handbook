@@ -2,9 +2,9 @@ Every agnostic component (UI control, category, helper, etc) should be created i
 
 Your component should be unit tested and documented.
 
-# Steps to create a category component
+# Steps to create a component
 - [ ] Create repo
-- [ ] Download https://github.com/hyperoslo/pod-template/archive/master.zip
+- [ ] Download [pod-template](https://github.com/hyperoslo/pod-template/archive/master.zip) or [ui-component-template](https://github.com/hyperoslo/ui-component-template/archive/master.zip) depending on your needs
 - [ ] Extract files to your empty repo
 - [ ] Run [init.rb](https://github.com/hyperoslo/pod-template/blob/master/init.rb)
 - [ ] Enable Travis support for your repo in https://travis-ci.org/profile/hyperoslo
