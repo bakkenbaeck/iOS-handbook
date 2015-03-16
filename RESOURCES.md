@@ -29,11 +29,8 @@ http://oleb.net/blog/2014/12/programming-languages-mooc/
 Functional Programming Principles in Scala  
 https://www.coursera.org/course/progfun
 
-Immutability. You have probably seen this one few times few times already.   
+Immutability:
+It's much easier to deal with 2 immutable things than 1 mutable.  
+You can pass them around and no one can change them. `Immutability = happy programer life`
 https://www.youtube.com/watch?v=DK3vO3fUnlo
 
-Why: It's much easier to deal with 2 immutable things than 1 mutable.  
-You can pass them around and no one can change them. `Immutability = happy programer life`
-
-1 way data flow.  From top - to bottom  
-It would be cool to make some simple projects to show examples how it works
