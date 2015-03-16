@@ -1,10 +1,10 @@
+# Resources
+
+## The new wave
+
 iOS, mainly thanks to Swift, is transitioning to a whole new level. Now you hear more about Functional Programming, Reactive Programming, Immutability and so much more.
 
-I thought I would start this issue to compile some resources that could help us to get to the next level.
-
-Would be great if (besides the link) you added why the resource is relevant or how it could help us.
-
-<hr>
+### Articles
 
 Great introduction by [Andy Matuschak](https://twitter.com/andy_matuschak) about why this concepts are important and how they help to make better software  
 https://developer.apple.com/videos/wwdc/2014/  
