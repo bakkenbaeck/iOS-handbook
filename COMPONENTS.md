@@ -9,7 +9,7 @@ Your component should be unit tested and documented.
 - [ ] Run `./init.rb` in Terminal.app
 - [ ] [Enable Travis for your repository](https://travis-ci.org/profile/hyperoslo). If your component doesn't show up press "Sync Now"
 - [ ] Add your beautiful code and make a `Initial implementation` pull request
-- [ ] Publish your pod by running `pod trunk push`
+- [ ] Publish your pod by running `pod trunk push`(*)
 - [ ] Add Hyper as co-owner by running `pod trunk add-owner <PODNAME> ios@hyper.no`
 - [ ] Share it with the world!
 - [ ] :cake:
