@@ -5,7 +5,7 @@ Your component should be unit tested and documented.
 # Steps to create a component
 - [ ] Create repo
 - [ ] Download [pod-template](https://github.com/hyperoslo/pod-template/archive/master.zip) or [ui-component-template](https://github.com/hyperoslo/ui-component-template/archive/master.zip) depending on your needs
-- [ ] Extract files to your empty repo
+- [ ] Extract files to your empty repo (if you extract the zip file to somewhere else, like Downloads, be sure to also copy hidden files to your repo)
 - [ ] Run `./init.rb` in Terminal.app
 - [ ] [Enable Travis for your repository](https://travis-ci.org/profile/hyperoslo). If your component doesn't show up press "Sync Now"
 - [ ] Add your beautiful code and make a `Initial implementation` pull request
