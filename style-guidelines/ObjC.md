@@ -97,7 +97,7 @@ if (!error)
 {
     self = [super initWithFrame:frame];
     if (!self) return nil;
-    
+
     return self;
 }
 ```
@@ -108,9 +108,9 @@ if (!error)
 - (UILabel *)label
 {
     if (_label) return _label;
-    
+
     _label = [UILabel new];
-    
+
     return _label;
 }
 ```
