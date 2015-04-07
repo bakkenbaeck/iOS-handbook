@@ -163,10 +163,10 @@ class Circle: Shape {
   var radius: Double
   var diameter: Double {
     get {
-      return radius * 2
+      return radius * 2.0
     }
     set {
-      radius = newValue / 2
+      radius = newValue / 2.0
     }
   }
 
@@ -177,7 +177,7 @@ class Circle: Shape {
   }
 
   convenience init(x: Int, y: Int, diameter: Double) {
-    self.init(x: x, y: y, radius: diameter / 2)
+    self.init(x: x, y: y, radius: diameter / 2.0)
   }
 
   func describe() -> String {
@@ -262,7 +262,7 @@ For conciseness, if a computed property is read-only, omit the get clause. The g
 **Preferred:**
 ```swift
 var diameter: Double {
-  return radius * 2
+  return radius * 2.0
 }
 ```
 
@@ -270,7 +270,7 @@ var diameter: Double {
 ```swift
 var diameter: Double {
   get {
-    return radius * 2
+    return radius * 2.0
   }
 }
 ```
@@ -391,14 +391,14 @@ Use the native Swift struct initializers rather than the legacy CGGeometry const
 
 **Preferred:**
 ```swift
-let bounds = CGRect(x: 40, y: 20, width: 120, height: 80)
-var centerPoint = CGPoint(x: 96, y: 42)
+let bounds = CGRect(x: 40.0, y: 20.0, width: 120.0, height: 80.0)
+var centerPoint = CGPoint(x: 96.0, y: 42.0)
 ```
 
 **Not Preferred:**
 ```swift
-let bounds = CGRectMake(40, 20, 120, 80)
-var centerPoint = CGPointMake(96, 42)
+let bounds = CGRectMake(40.0, 20.0, 120.0, 80.0)
+var centerPoint = CGPointMake(96.0, 42.0)
 ```
 
 Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc. over global constants `CGRectInfinite`, `CGRectNull`, etc. For existing variables, you can use the shorter `.zeroRect`.
