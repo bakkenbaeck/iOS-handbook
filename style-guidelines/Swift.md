@@ -195,7 +195,7 @@ class Circle: Shape {
 
 The example above demonstrates the following style guidelines:
 
- + The correct spacing for varible assignations and other statements is with a space after and before the equals mark `=`, e.g. `x = Int`
+ + The correct spacing for varible assignations and other statements is with a space after and before the equals mark `=`, e.g. `x = 3`
  + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
  + Define multiple variables and structures on a single line if they share a common purpose / context
  + Indent getter and setter definitions and property observers
