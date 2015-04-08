@@ -179,8 +179,8 @@ In method invocations the parameters should be colon aligned, if the method beco
 **For Example**:
 ```objc
 [someObject updatePersonWithName:@"Example Text"
-                          image:[UIImage imageNamed:@"Image.png"]
-                 andDescription:@"Example description"];
+                           image:[UIImage imageNamed:@"Image.png"]
+                  andDescription:@"Example description"];
 ```
 
 ## Variables
