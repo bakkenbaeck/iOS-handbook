@@ -164,7 +164,8 @@ class Circle: Shape {
   var diameter: Double {
     get {
       return radius * 2.0
-    } set {
+    } 
+    set {
       radius = newValue / 2.0
     }
   }
@@ -199,7 +200,6 @@ The example above demonstrates the following style guidelines:
  + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
  + Define multiple variables and structures on a single line if they share a common purpose / context
  + Indent getter and setter definitions and property observers
- + `get` and `set` have the same indentation as `if` and `else`
  + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
 
