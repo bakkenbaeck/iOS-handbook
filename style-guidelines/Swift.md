@@ -1,4 +1,4 @@
-# The Official raywenderlich.com Swift Style Guide.
+# Hyper's Swift Style Guide
 
 Our overarching goals are conciseness, readability, and simplicity.
 
@@ -8,8 +8,7 @@ Our overarching goals are conciseness, readability, and simplicity.
 * [Naming](#naming)
   * [Class Prefixes](#class-prefixes)
 * [Spacing](#spacing)
-* [Comments](#comments)
-* [Classes and Structures](#classes-and-structures)
+* [Classes and Structs](#classes-and-structs)
   * [Use of Self](#use-of-self)
   * [Protocol Conformance](#protocol-conformance)
   * [Computed Properties](#computed-properties)
@@ -23,8 +22,6 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
-* [Language](#language)
-* [Smiley Face](#smiley-face)
 * [Credits](#credits)
 
 
@@ -57,14 +54,14 @@ class app_widgetContainer {
 For functions and init methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
 
 ```swift
-func dateFromString(dateString: String) -> NSDate
-func convertPointAt(#column: Int, #row: Int) -> CGPoint
-func timedAction(#delay: NSTimeInterval, perform action: SKAction) -> SKAction!
+func dateFromString(dateString: String) -> NSDate { ... }
+func convertPointAt(#column: Int, #row: Int) -> CGPoint { ... }
+func timedAction(#delay: NSTimeInterval, perform action: SKAction) -> SKAction! { ... }
 
 // would be called like this:
-dateFromString("2014-03-14")
-convertPointAt(column: 42, row: 13)
-timedAction(delay: 1.0, perform: someOtherAction)
+dateFromString("2014-03-14") { ... }
+convertPointAt(column: 42, row: 13) { ... }
+timedAction(delay: 1.0, perform: someOtherAction) { ... }
 ```
 
 For methods, follow the standard Apple convention of referring to the first parameter in the method name:
@@ -146,9 +143,11 @@ else {
 
 ### Which one to use?
 
-Remember, structs have [value semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_144). Use structs for things that do not have an identity. An array that contains [a, b, c] is really the same as another array that contains [a, b, c] and they are completely interchangeable. It doesn't matter whether you use the first array or the second, because they represent the exact same thing. That's why arrays are structs.
+Structs have [value semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_144). Use structs for things that do not have an identity. An array that contains [a, b, c] is really the same as another array that contains [a, b, c] and they are completely interchangeable. It doesn't matter whether you use the first array or the second, because they represent the exact same thing. That's why arrays are structs.
 
-Classes have [reference semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_145). Use classes for things that do have an identity or a specific life cycle. You would model a person as a class because two person objects are two different things. Just because two people have the same name and birthdate, doesn't mean they are the same person. But the person's birthdate would be a struct because a date of 3 March 1950 is the same as any other date object for 3 March 1950. The date itself doesn't have an identity.
+Classes have [reference semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_145). Use classes for things that do have an identity or a specific life cycle. You would model an animal as a class because even when two animals have the same weight and age, doesn't mean they are the same animal.
+
+Meanwhile you would model a person that has a unique indentifier as a struct, since two persons with the same unique identifier are the same one.
 
 Sometimes, things should be structs but need to conform to `AnyObject` or are historically modeled as classes already (`NSDate`, `NSSet`). Try to follow these guidelines as closely as possible.
 
@@ -161,12 +160,13 @@ Here's an example of a well-styled class definition:
 class Circle: Shape {
   var x: Int, y: Int
   var radius: Double
+
   var diameter: Double {
     get {
-      return radius * 2.0
-    }
+      return self.radius * 2.0
+    } 
     set {
-      radius = newValue / 2.0
+      self.radius = newValue / 2.0
     }
   }
 
@@ -185,21 +185,22 @@ class Circle: Shape {
   }
 
   override func computeArea() -> Double {
-    return M_PI * radius * radius
+    return M_PI * self.radius * self.radius
   }
 
   private func centerString() -> String {
-    return "(\(x),\(y))"
+    return "(\(self.x),\(self.y))"
   }
 }
 ```
 
 The example above demonstrates the following style guidelines:
 
- + Specify types for properties, variables, constants, argument declarations and other statements with a space after the colon but not before, e.g. `x: Int`, and `Circle: Shape`.
- + Define multiple variables and structures on a single line if they share a common purpose / context.
- + Indent getter and setter definitions and property observers.
- + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method.
+ + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
+ + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
+ + Define multiple variables and structures on a single line if they share a common purpose/context
+ + Indent getter and setter definitions and property observers
+ + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
 
 ### Use of Self
