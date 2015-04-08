@@ -23,7 +23,7 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
-* [Credits](#credits)
+* [Attribution](#attribution)
 
 
 ## Naming
