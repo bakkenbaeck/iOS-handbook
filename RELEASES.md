@@ -1,6 +1,6 @@
 # Releases
 
-Steps for releasing a new version of your project:
+Steps for releasing a new version of your app:
 
 1. Switch to the `develop` branch
 2. Bump the projects version number (make sure to use [semantic versioning](http://semver.org/))
