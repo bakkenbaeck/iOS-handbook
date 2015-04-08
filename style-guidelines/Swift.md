@@ -7,7 +7,7 @@ Our overarching goals are conciseness, readability, and simplicity.
 
 * [Naming](#naming)
   * [Class Prefixes](#class-prefixes)
-* [Spacing](#spacing)
+* [Spacing and Indentation](#spacing-and-indentation)
 * [Classes and Structs](#classes-and-structs)
   * [Use of Self](#use-of-self)
   * [Protocol Conformance](#protocol-conformance)
@@ -106,7 +106,7 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 ```
 
 
-## Spacing
+## Spacing and Indentation
 
 * Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode as shown below:
 
