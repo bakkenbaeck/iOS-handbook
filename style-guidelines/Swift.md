@@ -1,4 +1,4 @@
-# The Official raywenderlich.com Swift Style Guide.
+# Hyper's Swift Style Guide
 
 Our overarching goals are conciseness, readability, and simplicity.
 
