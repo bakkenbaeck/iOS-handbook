@@ -161,10 +161,10 @@ class Circle: Shape {
 
   var diameter: Double {
     get {
-      return radius * 2.0
+      return self.radius * 2.0
     } 
     set {
-      radius = newValue / 2.0
+      self.radius = newValue / 2.0
     }
   }
 
@@ -183,20 +183,20 @@ class Circle: Shape {
   }
 
   override func computeArea() -> Double {
-    return M_PI * radius * radius
+    return M_PI * self.radius * self.radius
   }
 
   private func centerString() -> String {
-    return "(\(x),\(y))"
+    return "(\(self.x),\(self.y))"
   }
 }
 ```
 
 The example above demonstrates the following style guidelines:
 
- + The correct spacing for varible assignations and other statements is with a space after and before the equals mark `=`, e.g. `x = 3`
+ + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
  + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
- + Define multiple variables and structures on a single line if they share a common purpose / context
+ + Define multiple variables and structures on a single line if they share a common purpose/context
  + Indent getter and setter definitions and property observers
  + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
