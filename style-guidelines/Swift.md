@@ -204,11 +204,11 @@ The example above demonstrates the following style guidelines:
 
 ### Use of Self
 
-Use `self` when required to differentiate between property names and arguments in initializers and when referencing properties:
+Use `self` to differentiate between property names and arguments in initializers and when referencing properties:
 
 ```swift
 class BoardLocation {
-  let row: Int, column: Int
+  let row: Int, column: Int, foo: String
 
   init(row: Int, column: Int) {
     self.row = row
@@ -217,6 +217,10 @@ class BoardLocation {
     let closure = {
       println(self.row)
     }
+  }
+  
+  func randomFoo() {
+    self.foo = "So random!"
   }
 }
 ```
