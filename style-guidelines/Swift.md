@@ -204,7 +204,7 @@ The example above demonstrates the following style guidelines:
 
 ### Use of Self
 
-Use `self` to differentiate between property names, arguments in initializers and when referencing properties:
+Use `self` when referencing global variables like properties:
 
 ```swift
 class BoardLocation {
