@@ -143,57 +143,6 @@ else {
 Unless you require functionality that can only be provided by a class (like identity or deinitializers), implement a struct instead.
 
 
-### Example definition
-
-Here's an example of a well-styled class definition:
-
-```swift
-class Circle: Shape {
-  var x: Int, y: Int
-  var radius: Double
-
-  var diameter: Double {
-    get {
-      return self.radius * 2.0
-    } 
-    set {
-      self.radius = newValue / 2.0
-    }
-  }
-
-  init(x: Int, y: Int, radius: Double) {
-    self.x = x
-    self.y = y
-    self.radius = radius
-  }
-
-  convenience init(x: Int, y: Int, diameter: Double) {
-    self.init(x: x, y: y, radius: diameter / 2.0)
-  }
-
-  func describe() -> String {
-    return "I am a circle at \(centerString()) with an area of \(computeArea())"
-  }
-
-  override func computeArea() -> Double {
-    return M_PI * self.radius * self.radius
-  }
-
-  private func centerString() -> String {
-    return "(\(self.x),\(self.y))"
-  }
-}
-```
-
-The example above demonstrates the following style guidelines:
-
- + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
- + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
- + Define multiple variables and structures on a single line if they share a common purpose/context
- + Indent getter and setter definitions and property observers
- + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
-
-
 ### Use of Self
 
 Use `self` when referencing global variables like properties:
@@ -268,6 +217,56 @@ var diameter: Double {
   }
 }
 ```
+
+### Example definition
+
+Here's an example of a well-styled class definition:
+
+```swift
+class Circle: Shape {
+  var x: Int, y: Int
+  var radius: Double
+
+  var diameter: Double {
+    get {
+      return self.radius * 2.0
+    } 
+    set {
+      self.radius = newValue / 2.0
+    }
+  }
+
+  init(x: Int, y: Int, radius: Double) {
+    self.x = x
+    self.y = y
+    self.radius = radius
+  }
+
+  convenience init(x: Int, y: Int, diameter: Double) {
+    self.init(x: x, y: y, radius: diameter / 2.0)
+  }
+
+  func describe() -> String {
+    return "I am a circle at \(centerString()) with an area of \(computeArea())"
+  }
+
+  override func computeArea() -> Double {
+    return M_PI * self.radius * self.radius
+  }
+
+  private func centerString() -> String {
+    return "(\(self.x),\(self.y))"
+  }
+}
+```
+
+The example above demonstrates the following style guidelines:
+
+ + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
+ + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
+ + Define multiple variables and structures on a single line if they share a common purpose/context
+ + Indent getter and setter definitions and property observers
+ + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
 
 ## Function Declarations
