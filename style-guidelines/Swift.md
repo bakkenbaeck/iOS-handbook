@@ -22,8 +22,6 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
-* [Language](#language)
-* [Smiley Face](#smiley-face)
 * [Credits](#credits)
 
 
