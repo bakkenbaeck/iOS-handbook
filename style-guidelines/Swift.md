@@ -12,6 +12,7 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Use of Self](#use-of-self)
   * [Protocol Conformance](#protocol-conformance)
   * [Computed Properties](#computed-properties)
+  * [Example definition](#example-definition)
 * [Function Declarations](#function-declarations)
 * [Closure Expressions](#closure-expressions)
 * [Types](#types)
