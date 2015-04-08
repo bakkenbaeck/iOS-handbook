@@ -140,16 +140,7 @@ else {
 
 ## Classes and Structs
 
-
-### Which one to use?
-
-Structs have [value semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_144). Use structs for things that do not have an identity. An array that contains [a, b, c] is really the same as another array that contains [a, b, c] and they are completely interchangeable. It doesn't matter whether you use the first array or the second, because they represent the exact same thing. That's why arrays are structs.
-
-Classes have [reference semantics](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_145). Use classes for things that do have an identity or a specific life cycle. You would model an animal as a class because even when two animals have the same weight and age, doesn't mean they are the same animal.
-
-Meanwhile you would model a person that has a unique indentifier as a struct, since two persons with the same unique identifier are the same one.
-
-Sometimes, things should be structs but need to conform to `AnyObject` or are historically modeled as classes already (`NSDate`, `NSSet`). Try to follow these guidelines as closely as possible.
+Unless you require functionality that can only be provided by a class (like identity or deinitializers), implement a struct instead.
 
 
 ### Example definition
