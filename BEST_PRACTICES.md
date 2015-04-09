@@ -25,28 +25,7 @@ You can get the Xcode's version UUID by running
 /usr/libexec/PlistBuddy -c 'Print DVTPlugInCompatibilityUUID' "$(xcode-select -p)/../Info.plist"
 ```
 
-
-## Blocks, delegates or data source
-
-### Block
-- Asynchronous (For example: networking operations)
-- User inputs with multiple options (For example: UIAlertView's YES and NO)
-- Data source driven inputs (For example: A table items with action blocks that were defined in the data source)
-- Returns many values (For example looking for a field in a collection and returning the field and the indexPath)
-- If there’s no tracked state or if state it’s defined in the same method
-
-### Delegate
-- Synchronous (For example: buttons actions in views that should perform on their parents)
-- Shouldn't return values
-- Provides control over performing an action (For example: UITextField's shouldEndEditing)
-- User input with one action (For example: buttons actions in views that should perform on their parents)
-- If tracked state is shared (if state is stored in a property or a constant)
-
-### Data source
-- Returns ONE value
-
-
-## OCLint Settings
+### OCLint
 
 OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code [...](http://oclint.org)
 
@@ -55,7 +34,7 @@ OCLint is a static code analysis tool for improving quality and reducing defects
 * Download the latest version of OCLint [here](http://oclint.org/downloads.html)
 * Make sure that the binary is reachable in your $PATH
 
-### Usage
+#### Usage
 
 ```
   $ xcodebuild clean
@@ -100,6 +79,25 @@ Block comments should generally be avoided, as code should be as self-documentin
     }
 }
 ```
+
+## Blocks, delegates or data source
+
+### Block
+- Asynchronous (For example: networking operations)
+- User inputs with multiple options (For example: UIAlertView's YES and NO)
+- Data source driven inputs (For example: A table items with action blocks that were defined in the data source)
+- Returns many values (For example looking for a field in a collection and returning the field and the indexPath)
+- If there’s no tracked state or if state it’s defined in the same method
+
+### Delegate
+- Synchronous (For example: buttons actions in views that should perform on their parents)
+- Shouldn't return values
+- Provides control over performing an action (For example: UITextField's shouldEndEditing)
+- User input with one action (For example: buttons actions in views that should perform on their parents)
+- If tracked state is shared (if state is stored in a property or a constant)
+
+### Data source
+- Returns ONE value
 
 
 ## Image Naming
