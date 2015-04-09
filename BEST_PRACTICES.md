@@ -1,5 +1,14 @@
 # Best practices
 
+## Xcode
+
+The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
+
+A recommended project structure can be found in [Project Structure](https://github.com/hyperoslo/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
+
+Enable warnings by adding `-Weverything` to your Build Settings under "Other Compiler Flags". If you need to ignore a specific warning you can use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas) or add `-Wno-warning-to-be-disabled` (for example `-Wno-gnu-conditional-omitted-operand`).
+
+
 ## Blocks, delegates or data source
 
 ### Block
@@ -19,13 +28,6 @@
 ### Data source
 - Returns ONE value
 
-## Xcode project
-
-The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
-
-A recommended project structure can be found in [Project Structure](https://github.com/hyperoslo/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
-
-Enable warnings by adding `-Weverything` to your Build Settings under "Other Compiler Flags". If you need to ignore a specific warning you can use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas) or add `-Wno-warning-to-be-disabled` (for example `-Wno-gnu-conditional-omitted-operand`).
 
 ## OCLint Settings
 
@@ -45,6 +47,7 @@ OCLint is a static code analysis tool for improving quality and reducing defects
   $ oclint-json-compilation-database oclint_args "-rc LONG_LINE=110" | sed 's/\(.*\.\m\{1,2\}:[0-9]*:[0-9]*:\)/\1 warning:/' >> oclint.log
 ```
 
+
 ## Deployment
 
 ### Semantic Versioning
@@ -56,6 +59,7 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 ```objc
 - (NSInteger)foo:(NSInteger)bar __attribute__((deprecated("Use fooWithBar: instead")));
 ```
+
 
 ## Comments
 
@@ -79,6 +83,7 @@ Block comments should generally be avoided, as code should be as self-documentin
     }
 }
 ```
+
 
 ## Image Naming
 
