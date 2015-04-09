@@ -1,6 +1,6 @@
 # Best practices
 
-## When to use blocks, delegates or data source
+## Blocks, delegates or data source
 
 ### Block
 - Asynchronous (For example: networking operations)
