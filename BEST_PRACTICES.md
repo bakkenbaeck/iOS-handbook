@@ -10,6 +10,15 @@ A recommended project structure can be found in [Project Structure](https://gith
 
 Enable warnings by adding `-Weverything` to your Build Settings under "Other Compiler Flags". If you need to ignore a specific warning you can use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas) or add `-Wno-warning-to-be-disabled` (for example `-Wno-gnu-conditional-omitted-operand`).
 
+### Plugin compatibility
+
+After upgrading to a new Xcode version plugins will become disabled until their list of compatible Xcode versions gets updated. In case you can't wait for an official update by the plugins' authors you can try to run [this script](https://gist.github.com/neonichu/9487584/download#). Be sure to find out your Xcode's version UUID first and update it in the script.
+
+You can get the Xcode's version UUID by running 
+```shell
+/usr/libexec/PlistBuddy -c 'Print DVTPlugInCompatibilityUUID' "$(xcode-select -p)/../Info.plist"
+```
+
 
 ## Blocks, delegates or data source
 
