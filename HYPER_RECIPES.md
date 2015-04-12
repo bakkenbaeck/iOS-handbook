@@ -14,4 +14,4 @@ When you are ready to ship, [send us](mailto:ios@hyper.no) the link to your Hype
 
 Thanks, we hope you'll enjoy making some recipes!
 
-PS: You'll get 10000 additional points if you use our [style guidelines](style-guidelines/index.md).
+PS: You'll get 10000 additional points if you use our [style guidelines](style-guidelines/README.md).
