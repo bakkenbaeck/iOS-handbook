@@ -20,27 +20,9 @@ Enable warnings by adding `-Weverything` to your Build Settings under "Other Com
 
 After upgrading to a new Xcode version plugins will become disabled until their list of compatible Xcode versions gets updated. In case you can't wait for an official update by the plugins' authors you can try to run [this script](https://gist.github.com/neonichu/9487584/download#). Be sure to find out your Xcode's version UUID first and update it in the script.
 
-You can get the Xcode's version UUID by running
+You can get your Xcode version UUID by running
 ```shell
 /usr/libexec/PlistBuddy -c 'Print DVTPlugInCompatibilityUUID' "$(xcode-select -p)/../Info.plist"
-```
-
-### OCLint
-
-OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code [...](http://oclint.org)
-
-### Installation
-
-* Download the latest version of OCLint [here](http://oclint.org/downloads.html)
-* Make sure that the binary is reachable in your $PATH
-
-#### Usage
-
-```
-  $ xcodebuild clean
-  $ xcodebuild >> xcodebuild.log
-  $ oclint-xcodebuild
-  $ oclint-json-compilation-database oclint_args "-rc LONG_LINE=110" | sed 's/\(.*\.\m\{1,2\}:[0-9]*:[0-9]*:\)/\1 warning:/' >> oclint.log
 ```
 
 
