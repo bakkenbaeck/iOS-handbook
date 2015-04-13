@@ -20,7 +20,7 @@ Enable warnings by adding `-Weverything` to your Build Settings under "Other Com
 
 After upgrading to a new Xcode version plugins will become disabled until their list of compatible Xcode versions gets updated. In case you can't wait for an official update by the plugins' authors you can try to run [this script](https://gist.github.com/neonichu/9487584/download#). Be sure to find out your Xcode's version UUID first and update it in the script.
 
-You can get the Xcode's version UUID by running 
+You can get the Xcode's version UUID by running
 ```shell
 /usr/libexec/PlistBuddy -c 'Print DVTPlugInCompatibilityUUID' "$(xcode-select -p)/../Info.plist"
 ```
@@ -99,6 +99,11 @@ Block comments should generally be avoided, as code should be as self-documentin
 ### Data source
 - Returns ONE value
 
+## View controllers
+
+### Presenting and dismissing View Controllers
+
+- It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
 
 ## Image Naming
 
