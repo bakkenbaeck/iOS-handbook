@@ -1,5 +1,14 @@
 # Best practices
 
+## Table of Contents
+
+* [Xcode](#xcode)
+* [Deployment](#deployment)
+* [Comments](#comments)
+* [Blocks, delegates or data source](#blocks-delegates-or-data-source)
+* [View controllers](#view-controllers)
+* [Assets](#assets)
+
 ## Xcode
 
 ### Version
