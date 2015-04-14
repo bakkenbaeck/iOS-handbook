@@ -87,7 +87,9 @@ Block comments should generally be avoided, as code should be as self-documentin
 
 - It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
 
-## Image Naming
+## Assets
+
+### Images
 
 Image names should be named consistently to preserve organization and developer sanity. They should be named as one [lower camel case](http://c2.com/cgi/wiki?LowerCamelCase) string with a description of their purpose, followed by the un-prefixed name of the class or property they are customizing (if there is one), followed by a further description of color and/or placement, and finally their state.
 
