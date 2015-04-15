@@ -150,7 +150,7 @@ Use `self` when required, for example:
 
 - When using optional binding with optional properties
 
-### Preferred
+**Preferred:**
 
 ```swift
 if let textContainer = self.textContainer {
@@ -158,7 +158,7 @@ if let textContainer = self.textContainer {
 }
 ```
 
-### Not Preferred
+**Not Preferred:**
 
 ```swift
 if let maybeThisCouldBeTextContainer = textContainer {
