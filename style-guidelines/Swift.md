@@ -109,7 +109,7 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 ## Spacing and Indentation
 
-* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project and should not rely on your Xcode configuration.
+* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
 
   ![Xcode indent settings](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/zenangst-patch-1/assets/xcode-text-settings.png)
 
