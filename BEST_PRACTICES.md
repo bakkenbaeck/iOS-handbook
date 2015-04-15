@@ -15,11 +15,6 @@
 
 The recommended version of Xcode (and Swift) for all purposes is the current available [in the App Store](https://itunes.apple.com/no/app/xcode/id497799835?mt=12).
 
-### Project settings
-
-Always configure the **Text Settings** on your project to correspond with the language it's using.
-Swift projects should use 2 spaces and Objective-C projects should use 4 spaces.
-
 ### Project structure
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.

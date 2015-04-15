@@ -109,9 +109,9 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 ## Spacing and Indentation
 
-* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode as shown below:
+* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project and should not rely on your Xcode configuration.
 
-  ![Xcode indent settings](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/indentation.png)
+  ![Xcode indent settings](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/zenangst-patch-1/assets/xcode-text-settings.png)
 
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
 * Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.
