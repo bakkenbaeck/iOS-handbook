@@ -146,7 +146,7 @@ Unless you require functionality that can only be provided by a class (like iden
 
 ### Use of Self
 
-Use `self` when required for example:
+Use `self` when required, for example:
 
 - To differentiate between property names and arguments in initializers
 - When referencing properties in closure expressions
