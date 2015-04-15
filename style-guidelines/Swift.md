@@ -153,8 +153,8 @@ class BoardLocation {
   let row: Int, column: Int, foo: String
 
   init(row: Int, column: Int) {
-    row = row
-    column = column
+    self.row = row
+    self.column = column
 
     let closure = {
       println(self.row)
