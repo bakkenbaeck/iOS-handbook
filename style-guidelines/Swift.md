@@ -146,15 +146,15 @@ Unless you require functionality that can only be provided by a class (like iden
 
 ### Use of Self
 
-Use `self` when referencing global variables like properties:
+Use `self` only when *needed*:
 
 ```swift
 class BoardLocation {
   let row: Int, column: Int, foo: String
 
   init(row: Int, column: Int) {
-    self.row = row
-    self.column = column
+    row = row
+    column = column
 
     let closure = {
       println(self.row)
@@ -162,7 +162,7 @@ class BoardLocation {
   }
   
   func randomFoo() {
-    self.foo = "So random!"
+    foo = "So random!"
   }
 }
 ```
@@ -230,10 +230,10 @@ class Circle: Shape {
 
   var diameter: Double {
     get {
-      return self.radius * 2.0
+      return radius * 2.0
     } 
     set {
-      self.radius = newValue / 2.0
+      radius = newValue / 2.0
     }
   }
 
@@ -252,11 +252,11 @@ class Circle: Shape {
   }
 
   override func computeArea() -> Double {
-    return M_PI * self.radius * self.radius
+    return M_PI * radius * radius
   }
 
   private func centerString() -> String {
-    return "(\(self.x),\(self.y))"
+    return "(\(x),\(y))"
   }
 }
 ```
@@ -344,7 +344,7 @@ Use implicitly unwrapped types declared with `!` only for instance variables tha
 When accessing an optional value, use optional chaining if the value is only accessed once or if there are many optionals in the chain:
 
 ```swift
-self.textContainer?.textLabel?.setNeedsDisplay()
+textContainer?.textLabel?.setNeedsDisplay()
 ```
 
 Use optional binding when it's more convenient to unwrap once and perform multiple operations:
