@@ -20,6 +20,8 @@ The recommended version of Xcode (and Swift) for all purposes is the current ava
 Always configure the **Text Settings** on your project to correspond with the language it's using.
 Swift projects should use 2 spaces and Objective-C projects should use 4 spaces.
 
+<img src="https://raw.githubusercontent.com/hyperoslo/iOS-playbook/zenangst-patch-1/assets/xcode-text-settings.png" alt="Xcode Text Settings" />
+
 ### Project structure
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
