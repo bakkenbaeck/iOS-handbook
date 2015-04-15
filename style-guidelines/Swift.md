@@ -146,7 +146,7 @@ Unless you require functionality that can only be provided by a class (like iden
 
 ### Use of Self
 
-Use `self` only when *needed*:
+Use `self` when required to differentiate between property names and arguments in initializers, and when referencing properties in closure expressions (as required by the compiler):
 
 ```swift
 class BoardLocation {
@@ -160,7 +160,7 @@ class BoardLocation {
       println(self.row)
     }
   }
-  
+
   func randomFoo() {
     foo = "So random!"
   }
@@ -231,7 +231,7 @@ class Circle: Shape {
   var diameter: Double {
     get {
       return radius * 2.0
-    } 
+    }
     set {
       radius = newValue / 2.0
     }
