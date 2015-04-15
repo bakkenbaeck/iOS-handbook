@@ -148,28 +148,37 @@ Unless you require functionality that can only be provided by a class (like iden
 
 Use `self` when required, for example:
 
+- When using optional binding with optional properties
+
+**Preferred:**
+
+```swift
+if let textContainer = self.textContainer {
+  // do many things with textContainer
+}
+```
+
+**Not Preferred:**
+
+```swift
+if let maybeThisCouldBeTextContainer = textContainer {
+  // do many things with maybeThisCouldBeTextContainer
+}
+```
+
 - To differentiate between property names and arguments in initializers
 - When referencing properties in closure expressions
 
 ```swift
-class BoardLocation {
-  let row: Int, column: Int, foo: String
+init(row: Int, column: Int) {
+  self.row = row
+  self.column = column
 
-  init(row: Int, column: Int) {
-    self.row = row
-    self.column = column
-
-    let closure = {
-      println(self.row)
-    }
-  }
-
-  func randomFoo() {
-    foo = "So random!"
+  let closure = {
+    println(self.row)
   }
 }
 ```
-
 
 ### Protocol Conformance
 
