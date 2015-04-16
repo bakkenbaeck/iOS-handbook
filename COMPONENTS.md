@@ -1,4 +1,4 @@
-Every agnostic component (UI control, category, helper, etc) should be created in a separate repository and preferably in Swift.
+Every agnostic component (UI control, category, helper, etc) should be created in a separate repository and in Swift.
 
 Your component should be unit tested and documented.
 
