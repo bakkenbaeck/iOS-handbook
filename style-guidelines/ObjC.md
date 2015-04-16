@@ -96,8 +96,7 @@ if (!error)
 **Initializer**
 
 ```objc
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (!self) return nil;
 
@@ -108,8 +107,7 @@ if (!error)
 **Lazy loading**
 
 ```objc
-- (UILabel *)label
-{
+- (UILabel *)label {
     if (_label) return _label;
 
     _label = [UILabel new];
@@ -166,13 +164,12 @@ In method signatures, there should be a space after the scope (-/+ symbol). Ther
                     andImage:(UIImage *)image;
 ```
 
-In the method implementation opening bracket should **always** be placed in a new line.
+In the method implementation opening bracket should **always** be placed in the same line as the last parameter:
 
 **For Example**:
 ```objc
 - (void)updatePersonWithName:(NSString *)name
-                    andImage:(UIImage *)image
-{
+                    andImage:(UIImage *)image {
     // Implementation
 }
 ```
@@ -325,8 +322,7 @@ Methods that overwrite their parent methods should be grouped in `#pragma mark -
 `init` methods should be structured like this:
 
 ```objc
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init]; // or call the designated initalizer
     if (!self) return nil;
 
@@ -500,8 +496,7 @@ Text and example taken from the [Cocoa Naming Guidelines](https://developer.appl
 
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
    static id sharedInstance = nil;
 
    static dispatch_once_t onceToken;
