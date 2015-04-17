@@ -1,5 +1,7 @@
 # Hyper's iOS Playbook
 
+![code-quality](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/improve/readme/assets/code_quality.png)
+
 This is our playbook, there are many like it, but this one is ours.
 
 Wanna work with us? [We have a fun assigment](https://github.com/hyperoslo/iOS-playbook/blob/master/HYPER_RECIPES.md) that you might be interested in.
