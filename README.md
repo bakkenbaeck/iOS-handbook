@@ -1,6 +1,8 @@
 # Hyper's iOS Playbook
 
-![code-quality](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/improve/readme/assets/code_quality.png)
+<a href="http://xkcd.com/1513/">
+  <img src="https://raw.githubusercontent.com/hyperoslo/iOS-playbook/improve/readme/assets/code_quality.png" />
+</a>
 
 This is our playbook, there are many like it, but this one is ours.
 
