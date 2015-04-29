@@ -149,6 +149,7 @@ Additional capabilities of classes:
 - Type casting: Enables you to check and interpret the type of a class instance at runtime
 - Deinitializers: Enable an instance of a class to free up any resources it has assigned
 - Reference counting: Allows more than one reference to a class instance
+- Compatibility: Classes are available from Objetive-C
 
 ### Use of Self
 
