@@ -141,8 +141,15 @@ else {
 
 ## Classes and Structs
 
-Unless you require functionality that can only be provided by a class (like identity or deinitializers), implement a struct instead.
+Unless you require functionality that can only be provided by a class, implement a struct instead.
 
+Additional capabilities of classes:
+
+- Inheritance: Enables one class to inherit the characteristics of another
+- Type casting: Enables you to check and interpret the type of a class instance at runtime
+- Deinitializers: Enable an instance of a class to free up any resources it has assigned
+- Reference counting: Allows more than one reference to a class instance
+- Compatibility: Classes are available from Objetive-C
 
 ### Use of Self
 
