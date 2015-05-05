@@ -92,6 +92,12 @@ Block comments should generally be avoided, as code should be as self-documentin
 
 ## View controllers
 
+### Naming
+
+When naming subclasses of `UIViewController` or friends `UIPageViewController`, `UICollectionViewController`, `UITableViewController`, you don't have to use the `ViewController` suffix.
+
+For example instead of `HYPRecipesTableViewController` you would do `HYPRecipesController`, this applies for both Objective-C and Swift.
+
 ### Presenting and dismissing View Controllers
 
 - It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
