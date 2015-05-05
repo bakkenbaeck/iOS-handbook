@@ -14,4 +14,4 @@ Wanna work with us? [We have a fun assigment](https://github.com/hyperoslo/iOS-p
 
 ### Should my guideline be in code style or best practices?
 
-If your guideline applies to either Swift and Objective-C, then it's probably a best practice.
+If your guideline applies to both Swift and Objective-C, then it's probably a best practice.
