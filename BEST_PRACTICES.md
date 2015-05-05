@@ -94,7 +94,7 @@ Block comments should generally be avoided, as code should be as self-documentin
 
 ### Naming
 
-When naming subclasses of `UIViewController` or friends `UIPageViewController`, `UICollectionViewController`, `UITableViewController`, you don't have to use the `viewController` suffix.
+When naming subclasses of `UIViewController` or friends `UIPageViewController`, `UICollectionViewController`, `UITableViewController`, you don't have to use the `ViewController` suffix.
 
 For example instead of `HYPRecipesTableViewController` you would do `HYPRecipesController`, this applies for both Objective-C and Swift.
 
