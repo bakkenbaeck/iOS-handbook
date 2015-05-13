@@ -19,7 +19,7 @@ Your component should be unit tested and documented.
 
 # Steps to ship your component
 
-Before shipping your component make sure that the README states why your thing is different or what makes it different than the other ones, been made by you might not be enough. It's very important that your README is :star2: fabulous :star2:.
+Before shipping your component make sure that the README states what makes your Pod is different than the other ones, been made by you might not be enough. It's very important that your README is :star2: fabulous :star2:.
 
 Make sure to include a super simple example on how to get up and running, if you're using any Pods as dependencies write why do you need those Pods and what do they do. Don't assume that people know everything.
 
