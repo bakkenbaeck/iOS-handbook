@@ -28,7 +28,7 @@ If it's a visual component include a `.gif` showing how does it work or what doe
 - [ ] Make sure to have a cool logo, you can ask [@hyperoslo/design](https://github.com/orgs/hyperoslo/teams/design) to give you a hand
 - [ ] Submit it to [Cocoa Controls](https://www.cocoacontrols.com/)
 - [ ] Make a PR to [iOS Goodies](https://github.com/iOS-Goodies/iOS-Goodies)
-- [ ] Submit your component to [Hacker News](https://news.ycombinator.com/), your post should start with **"Show HN"**
+- [ ] Submit your component to [Hacker News](https://news.ycombinator.com/), your post should start with **Show HN**
  
 **Send a few tweets from the @hyperoslo account**
 
