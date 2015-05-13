@@ -23,7 +23,7 @@ Before shipping your component make sure that the README states what makes your 
 
 Make sure to include a super simple example on how to get up and running, if you're using any Pods as dependencies write why do you need those Pods and what do they do. Don't assume that people know everything.
 
-If it's a visual component include a `.gif` showing how does it work or what does it does. It helps a lot for people to understand your Pod without cloning, building and running your project.
+If it's a visual component include a `.gif` showing how does it work or what does it does. It helps a lot for people to understand your Pod without having to clone, build and run your project.
 
 - [ ] Make sure to have a cool logo, you can ask [@hyperoslo/design](https://github.com/orgs/hyperoslo/teams/design) to give you a hand
 - [ ] Submit it to [Cocoa Controls](https://www.cocoacontrols.com/)
