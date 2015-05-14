@@ -22,7 +22,7 @@ Your component should be unit tested and documented.
 
 Before shipping your component make sure that the README states what makes your Pod different than the other ones, been made by you might not be enough. It's very important that your README is :star2: fabulous :star2:.
 
-Make sure to provide a super simple example on how to get your Pod up and running, if it is dependent on other Pods you should explain why. Don't assume that people know everything.
+Make sure to provide a super simple example on how to get your Pod up and running, if it is dependent on other Pods you should explain why do you need them and what do they do. Don't assume that people know everything.
 
 If it's a visual component include a `.gif` showing how does it work or what does it do. It helps a lot for people to understand your Pod without having to clone, build and run your project. A good tool to make gifs is [Licecap](http://www.cockos.com/licecap/).
 
