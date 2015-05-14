@@ -33,8 +33,8 @@ If it's a visual component include a `.gif` showing how does it work or what doe
  
 **Send a few tweets from the @hyperoslo account**
 
-Always express yourself like you are apart of a team, use **"We did this"** and never **"I did this"**.
-Take the time to compose personal tweets to all your recipients, copy pasting one message to everyone makes you sound like a robot, don't do this.
+Always express yourself like you are part of a team, use **"We did this"** and never **"I did this"**.
+Take the time to compose personal tweets to all your recipients, copy pasting one message to everyone makes you sound like a robot and feels spammy, don't do this.
 
 A few examples:
 
