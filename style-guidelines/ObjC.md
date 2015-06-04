@@ -409,7 +409,7 @@ static NSString * const HYPAboutViewControllerCompanyName = @"Hyper";
 
 static const CGFloat HYPImageThumbnailHeight = 50.0;
 
-const CGSize HYPImageDefaultSize = {40.0f, 40.f};
+const CGSize HYPImageDefaultSize = {40.0f, 40.0f};
 ```
 
 **Not:**
