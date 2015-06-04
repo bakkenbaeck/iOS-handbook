@@ -408,6 +408,8 @@ They should be located in the class that uses them, if they are shared between c
 static NSString * const HYPAboutViewControllerCompanyName = @"Hyper";
 
 static const CGFloat HYPImageThumbnailHeight = 50.0;
+
+const CGSize HYPImageDefaultSize = {40.0f, 40.f};
 ```
 
 **Not:**
