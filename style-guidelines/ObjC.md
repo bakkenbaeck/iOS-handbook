@@ -325,10 +325,9 @@ Methods that overwrite their parent methods should be grouped in `#pragma mark -
 ```objc
 - (instancetype)init {
     self = [super init]; // or call the designated initalizer
-    if (!self) return nil;
-
-    // Custom initialization
-
+    if (self) {
+        // custom initialization
+    }
     return self;
 }
 ```
