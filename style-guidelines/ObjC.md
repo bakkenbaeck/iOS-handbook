@@ -109,10 +109,9 @@ if (!error)
 
 ```objc
 - (UILabel *)label {
-    if (_label) return _label;
-
-    _label = [UILabel new];
-
+    if (!_label) {
+        _label = [UILabel new];
+    }
     return _label;
 }
 ```
