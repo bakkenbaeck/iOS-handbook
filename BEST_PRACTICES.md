@@ -19,7 +19,7 @@ The recommended version of Xcode (and Swift) for all purposes is the current ava
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
 
-A recommended project structure can be found in [Project Structure](https://github.com/hyperoslo/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
+A recommended project structure can be found in [Project Structure](https://github.com/bakkenbaeck/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
 
 ### Warnings
 

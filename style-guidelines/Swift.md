@@ -1,4 +1,4 @@
-# Hyper's Swift Style Guide
+# Bakken & Bæck's Swift Style Guide
 
 Our overarching goals are conciseness, readability, and simplicity.
 
@@ -98,7 +98,7 @@ var myClass = MyModule.MyClass()
 
 You **should not** add prefixes to your Swift types.
 
-If you need to expose a Swift type for use within Objective-C you can provide a suitable prefix (following our [Objective-C style guide](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/ObjC.md)) as follows:
+If you need to expose a Swift type for use within Objective-C you can provide a suitable prefix (following our [Objective-C style guide](https://github.com/bakkenbaeck/iOS-playbook/blob/master/style-guidelines/ObjC.md)) as follows:
 
 ```swift
 @objc (RWTChicken) class Chicken {
@@ -111,7 +111,7 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 * Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
 
-  ![Xcode indent settings](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/master/assets/xcode-text-settings-swift.png)
+  ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
 * Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.

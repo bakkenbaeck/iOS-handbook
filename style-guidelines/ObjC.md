@@ -1,6 +1,6 @@
-# Hyper Objective-C Style Guide
+# Bakken & Bæck Objective-C Style Guide
 
-This style guide outlines the coding conventions of the iOS team at Hyper.
+This style guide outlines the coding conventions of the iOS team at Bakken & Bæck.
 
 ## Introduction
 
@@ -50,7 +50,7 @@ UIApplication.sharedApplication.delegate;
 
 * Indent using 4 spaces. Never indent with tabs. This should be configured on the project.
 
-  ![Xcode indent settings](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/master/assets/xcode-text-settings-objc.png) 
+  ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-objc.png) 
 
 * `if`/`else`/`switch`/`while` and friends should always open on the same line as the statement, conditions like else or do that follow if or while respectively start in the same line where the previous condition ends.
 
@@ -187,7 +187,7 @@ In method invocations the parameters should be colon aligned, if the method beco
 
 Variables should be named as descriptively as possible. Abbreviated variable names should be avoided.
 
-Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of [constants](https://github.com/hyperoslo/iOS-playbook/blob/master/STYLE_GUIDELINES.md#constants).
+Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of [constants](https://github.com/bakkenbaeck/iOS-playbook/blob/master/STYLE_GUIDELINES.md#constants).
 
 Property definitions should be used in place of naked instance variables whenever possible. Direct instance variable access should be avoided except in initializer methods (`init`, `initWithCoder:`, etc…), `dealloc` methods and within custom setters and getters. For more information on using Accessor Methods in Initializer Methods and dealloc, see [here](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html#//apple_ref/doc/uid/TP40004447-SW6).
 
@@ -405,7 +405,7 @@ They should be located in the class that uses them, if they are shared between c
 **For example:**
 
 ```objc
-static NSString * const BBAboutViewControllerCompanyName = @"Hyper";
+static NSString * const BBAboutViewControllerCompanyName = @"Bakken & Bæck";
 
 static const CGFloat BBImageThumbnailHeight = 50.0f;
 
@@ -415,7 +415,7 @@ static const CGSize BBImageDefaultSize = {40.0f, 40.0f};
 **Not:**
 
 ```objc
-#define CompanyName @"Hyper"
+#define CompanyName @"Bakken & Bæck"
 
 #define thumbnailHeight 2
 ```
