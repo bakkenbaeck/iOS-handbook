@@ -98,8 +98,9 @@ if (!error)
 ```objc
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (!self) return nil;
-
+    if (self) {
+        // Initialize
+    }
     return self;
 }
 ```
