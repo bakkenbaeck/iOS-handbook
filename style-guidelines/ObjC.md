@@ -198,7 +198,7 @@ When declaring properties in public headers that contain mutable counterparts (`
 **For example:**
 
 ```objc
-@interface HYPSection: NSObject
+@interface BBSection: NSObject
 
 @property (nonatomic) NSString *headline;
 
@@ -208,7 +208,7 @@ When declaring properties in public headers that contain mutable counterparts (`
 **Not:**
 
 ```objc
-@interface HYPSection : NSObject {
+@interface BBSection : NSObject {
     NSString *headline;
 }
 ```
@@ -231,12 +231,12 @@ UIButton *settingsButton;
 UIButton *setBut;
 ```
 
-A three letter prefix (e.g. `HYP`) should always be used for class names and constants, however may be omitted for Core Data entity names. Constants should be camel-case with all words capitalized and prefixed by the related class name for clarity.
+A three letter prefix (e.g. `BB`) should always be used for class names and constants, however may be omitted for Core Data entity names. Constants should be camel-case with all words capitalized and prefixed by the related class name for clarity.
 
 **For example:**
 
 ```objc
-static const NSTimeInterval HYPArticleViewControllerNavigationFadeAnimationDuration = 0.3;
+static const NSTimeInterval BBArticleViewControllerNavigationFadeAnimationDuration = 0.3;
 ```
 
 **Not:**
@@ -306,7 +306,7 @@ Methods that overwrite their parent methods should be grouped in `#pragma mark -
 
 #pragma mark - Notifications
 
-#pragma mark - HYPBaseTableViewController
+#pragma mark - BBBaseTableViewController
 
 #pragma mark - UITableViewDelegate
 
@@ -405,11 +405,11 @@ They should be located in the class that uses them, if they are shared between c
 **For example:**
 
 ```objc
-static NSString * const HYPAboutViewControllerCompanyName = @"Hyper";
+static NSString * const BBAboutViewControllerCompanyName = @"Hyper";
 
-static const CGFloat HYPImageThumbnailHeight = 50.0f;
+static const CGFloat BBImageThumbnailHeight = 50.0f;
 
-static const CGSize HYPImageDefaultSize = {40.0f, 40.0f};
+static const CGSize BBImageDefaultSize = {40.0f, 40.0f};
 ```
 
 **Not:**
@@ -427,20 +427,20 @@ When using `enum`s, it is recommended to use the new fixed underlying type speci
 **Example:**
 
 ```objc
-typedef NS_ENUM(NSInteger, HYPAdRequestState) {
-    HYPAdRequestStateInactive,
-    HYPAdRequestStateLoading
+typedef NS_ENUM(NSInteger, BBAdRequestState) {
+    BBAdRequestStateInactive,
+    BBAdRequestStateLoading
 };
 ```
 
 ## Private Properties
 
-Private properties should be declared in class extensions (anonymous categories) in the implementation file of a class. Named categories (such as `HYPPrivate` or `private`) should never be used unless extending another class.
+Private properties should be declared in class extensions (anonymous categories) in the implementation file of a class. Named categories (such as `BBPrivate` or `private`) should never be used unless extending another class.
 
 **For example:**
 
 ```objc
-@interface HYPAdvertisement ()
+@interface BBAdvertisement ()
 
 @property (nonatomic) GADBannerView *googleAdView;
 @property (nonatomic) ADBannerView *iAdView;
