@@ -109,7 +109,7 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 ## Spacing and Indentation
 
-* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
+* Indent using 4 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
 
   ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
@@ -119,9 +119,9 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 **Preferred:**
 ```swift
 if user.isHappy {
-  // Do something
+    // Do something
 } else {
-  // Do something else
+    // Do something else
 }
 ```
 
@@ -129,10 +129,10 @@ if user.isHappy {
 ```swift
 if user.isHappy
 {
-    // Do something
+  // Do something
 }
 else {
-    // Do something else
+  // Do something else
 }
 ```
 
