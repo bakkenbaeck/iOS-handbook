@@ -54,6 +54,23 @@ When they are needed, comments should be used to explain **why** a particular pi
 
 Block comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. This does not apply to those comments used to generate documentation.
 
+**Comments style**
+
+One-line:
+```swift
+// Workaround: This is the comment
+```
+
+Multiple-lines:
+
+```swift
+/*
+   Workaround: This is a comment that spans multiple lines.
+   Comments should be added when they are not only needed but critical
+   to understand the underlying block of code.
+ */
+```
+
 **For example**
 
 ```objc
@@ -61,15 +78,18 @@ Block comments should generally be avoided, as code should be as self-documentin
 {
     [super viewWillAppear:animated];
 
-    // Workaround: Selected cell only gets deselected when pressing the back button
-    // dragging the screen to go back doesn't deselect the selected cell.
-    // So, `self.clearsSelectionOnViewWillAppear = YES;` only works sometimes.
+    /*
+     Workaround: Selected cell only gets deselected when pressing the back button
+     dragging the screen to go back doesn't deselect the selected cell.
+     So, `self.clearsSelectionOnViewWillAppear = YES;` only works sometimes.
+     */
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     if (selectedIndexPath) {
         [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
     }
 }
 ```
+
 
 ## Blocks, delegates or data source
 
