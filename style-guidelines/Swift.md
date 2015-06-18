@@ -23,6 +23,7 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
+* [Resources](#resources)
 * [Attribution](#attribution)
 
 
@@ -507,6 +508,16 @@ var swift = "not a scripting language";
 ```
 
 **NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
+
+## Resources
+
+In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+
+```swift
+struct ColorList {
+  static let someColor = UIColor(hex: "343434")
+}
+```
 
 ## Attribution
 
