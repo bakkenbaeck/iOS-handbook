@@ -401,7 +401,7 @@ CGFloat height = frame.size.height;
 
 Constants are preferred over in-line string literals or numbers, as they allow for easy reproduction of commonly used variables and can be quickly changed without the need for find and replace. Constants should be declared as `static` constants and not `#define`s unless explicitly being used as a macro.
 
-They should be located in the class that uses them, if they are shared between classes you can have them in the public header.
+They should be located in the class that uses them. If they are shared between classes you should declare them in the header as extern variables which are defined in the corresponding implementation file.
 
 **For example:**
 
