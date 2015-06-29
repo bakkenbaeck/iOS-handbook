@@ -403,11 +403,23 @@ Constants are preferred over in-line string literals or numbers, as they allow f
 
 They should be located in the class that uses them. If they are shared between classes you should declare them in the header as extern variables which are defined in the corresponding implementation file.
 
-**For example:**
+**Example:**
+
+In header:
 
 ```objc
-static NSString * const BBAboutViewControllerCompanyName = @"Bakken & Bæck";
+extern NSString * const BBAboutViewControllerCompanyName;
+```
 
+Then, in the implementation:
+
+```objc
+NSString * const BBAboutViewControllerCompanyName = @"Bakken & Bæck";
+```
+
+or
+
+```objc
 static const CGFloat BBImageThumbnailHeight = 50.0f;
 
 static const CGSize BBImageDefaultSize = {40.0f, 40.0f};
