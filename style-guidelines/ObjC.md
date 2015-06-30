@@ -236,7 +236,7 @@ A three letter prefix (e.g. `BB`) should always be used for class names and cons
 **For example:**
 
 ```objc
-static const NSTimeInterval BBArticleViewControllerNavigationFadeAnimationDuration = 0.3;
+extern const NSTimeInterval BBArticleViewControllerNavigationFadeAnimationDuration;
 ```
 
 **Not:**
@@ -403,24 +403,16 @@ They should be located in the class that uses them. If they are shared between c
 
 **Example:**
 
-In header:
-
 ```objc
+// BBAboutViewController.h
 extern NSString * const BBAboutViewControllerCompanyName;
-```
+extern const CGFloat BBImageThumbnailHeight;
+extern const CGSize BBImageDefaultSize;
 
-Then, in the implementation:
-
-```objc
+// BBAboutViewController.m
 NSString * const BBAboutViewControllerCompanyName = @"Bakken & Bæck";
-```
-
-or
-
-```objc
-static const CGFloat BBImageThumbnailHeight = 50.0f;
-
-static const CGSize BBImageDefaultSize = {40.0f, 40.0f};
+const CGFloat BBImageThumbnailHeight = 50.0f;
+const CGSize BBImageDefaultSize = {40.0f, 40.0f};
 ```
 
 **Not:**
