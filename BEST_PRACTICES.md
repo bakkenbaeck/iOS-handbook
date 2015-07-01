@@ -134,3 +134,10 @@ Image names should be named consistently to preserve organization and developer 
 * `articleNavigationBarWhite` / `articleNavigationBarWhite@2x` and `articleNavigationBarBlackSelected` / `articleNavigationBarBlackSelected@2x`.
 
 Images should live in `Images.xcassets`.
+
+## Networking
+
+Completion blocks in networking calls should be returned in the main thread.
+
+Completion blocks should contain the `error` instead of success/failure blocks. 
+
