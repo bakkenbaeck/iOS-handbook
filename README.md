@@ -1,10 +1,10 @@
 # Bakken & Bæck's iOS Playbook
 
-* Swift Style Guide
-* Best Practices
-* Components
-* Project Structure
-* Releases
+* [Swift Style Guide](#swift-style-guide)
+* [Best Practices](#best-practices)
+* [Components](#components)
+* [Project Structure](#project-structure)
+* [Releases](#releases)
 
 # Swift Style Guide
 
@@ -529,12 +529,6 @@ This document is based on the [raywenderlich.com Swift Style Guide](https://gith
 
 The recommended version of Xcode (and Swift) for all purposes is the current available [in the App Store](https://itunes.apple.com/no/app/xcode/id497799835?mt=12).
 
-### Project structure
-
-The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
-
-A recommended project structure can be found in [Project Structure](https://github.com/bakkenbaeck/objective-c-style-guide/blob/master/PROJECT-STRUCTURE).
-
 ### Warnings
 
 Enable warnings by adding `-Weverything` to your Build Settings under "Other Compiler Flags". If you need to ignore a specific warning you can use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas) or add `-Wno-warning-to-be-disabled` (for example `-Wno-gnu-conditional-omitted-operand`).
@@ -702,6 +696,10 @@ Take the time to compose personal tweets to all your recipients, copy pasting on
 - [ ] Send a tweet to [@NatashaTheRobot](https://twitter.com/NatashaTheRobot)
 
 # Project Structure
+
+The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
+
+```
 ProjectName
 |
 |— Vendor # 3rd party code that doesn't use CocoaPods
@@ -752,6 +750,7 @@ ProjectName
 |—— JSONs
 |—— Sounds
 |—— Others
+```
 
 # Releases
 
