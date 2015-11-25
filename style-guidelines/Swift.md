@@ -55,16 +55,17 @@ For functions and init methods, prefer named parameters for all arguments unless
 
 ```swift
 func dateFromString(dateString: String) -> NSDate { ... }
-func convertPointAt(#column: Int, #row: Int) -> CGPoint { ... }
-func timedAction(#delay: NSTimeInterval, perform action: SKAction) -> SKAction! { ... }
+func convertPointAt(column: Int, row: Int) -> CGPoint { ... }
+func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction! { ... }
 
 // would be called like this:
 dateFromString("2014-03-14") { ... }
 convertPointAt(column: 42, row: 13) { ... }
-timedAction(delay: 1.0, perform: someOtherAction) { ... }
+timedAction(delay: 1.0, action: someOtherAction) { ... }
 ```
 
 For methods, follow the standard Apple convention of referring to the first parameter in the method name:
+
 ```swift
 class Guideline {
     func combineWithString(incoming: String, options: Dictionary?) { ... }
@@ -84,7 +85,6 @@ When in doubt, look at how Xcode lists the method in the jump bar – our style 
 
 ![Methods in Xcode jump bar](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/xcode-jump-bar.png)
 
-
 ### Class Prefixes
 
 Swift types are all automatically namespaced by the module that contains them. As a result, prefixes are not required in order to minimize naming collisions. If two names from different modules collide you can disambiguate by prefixing the type name with the module name:
@@ -96,15 +96,6 @@ var myClass = MyModule.MyClass()
 ```
 
 You **should not** add prefixes to your Swift types.
-
-If you need to expose a Swift type for use within Objective-C you can provide a suitable prefix (following our [Objective-C style guide](https://github.com/bakkenbaeck/iOS-playbook/blob/master/style-guidelines/ObjC.md)) as follows:
-
-```swift
-@objc (RWTChicken) class Chicken {
-    ...
-}
-```
-
 
 ## Spacing and Indentation
 
@@ -199,11 +190,13 @@ class MyViewcontroller: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+
 extension MyViewcontroller: UITableViewDataSource {
     // table view data source methods
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension MyViewcontroller: UIScrollViewDelegate {
     // scroll view delegate methods
 }
@@ -215,7 +208,6 @@ class MyViewcontroller: UIViewController, UITableViewDataSource, UIScrollViewDel
     // all methods
 }
 ```
-
 
 ### Computed Properties
 
@@ -243,7 +235,8 @@ Here's an example of a well-styled class definition:
 
 ```swift
 class Circle: Shape {
-    var x: Int, y: Int
+    var x: Int
+    var y: Int
     var radius: Double
 
     var diameter: Double {
@@ -283,14 +276,13 @@ The example above demonstrates the following style guidelines:
 
  + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
  + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
- + Define multiple variables and structures on a single line if they share a common purpose/context
  + Indent getter and setter definitions and property observers
  + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
 
 ## Function Declarations
 
-Keep short function declarations on one line including the opening brace:
+Keep function declarations on one line including the opening brace, doesn't matter how long they are:
 
 ```swift
 func reticulateSplines(spline: [Double]) -> Bool {
@@ -298,14 +290,8 @@ func reticulateSplines(spline: [Double]) -> Bool {
 }
 ```
 
-For functions with long signatures, add line breaks at appropriate points and add an extra indent on subsequent lines:
-
 ```swift
-func reticulateSplines(
-    spline: [Double],
-    adjustmentFactor: Double,
-    translateConstant: Int,
-    comment: String) -> Bool {
+func reticulateSplines(spline: [Double], adjustmentFactor: Double, translateConstant: Int, comment: String) -> Bool {
     // reticulate code goes here
 }
 ```
@@ -346,21 +332,17 @@ let width: NSNumber = 120.0                                 // NSNumber
 let widthString: NSString = width.stringValue               // NSString
 ```
 
-In Sprite Kit code, use `CGFloat` if it makes the code more succinct by avoiding too many conversions.
-
-
 ### Constants
 
 Constants are defined using the `let` keyword, and variables with the `var` keyword. Any value that **is** a constant **must** be defined appropriately, using the `let` keyword. As a result, you will likely find yourself using `let` far more than `var`.
 
 **Tip:** One technique that might help meet this standard is to define everything as a constant and only change it to a variable when the compiler complains!
 
-
 ### Optionals
 
 Declare variables and function return types as optional with `?` where a nil value is acceptable.
 
-Use implicitly unwrapped types declared with `!` only for instance variables that you know will be initialized later before use, such as subviews that will be set up in `viewDidLoad`.
+Use implicitly unwrapped types declared with `!` only for instance variables that you know will be initialized later before use. Correct use of implicitly unwrapped is very rare so be careful with this, since it will crash your app if a nil value is found.
 
 When accessing an optional value, use optional chaining if the value is only accessed once or if there are many optionals in the chain:
 
@@ -399,7 +381,6 @@ if let unwrappedSubview = optionalSubview {
 }
 ```
 
-
 ### Struct Initializers
 
 Use the native Swift struct initializers rather than the legacy CGGeometry constructors.
@@ -417,7 +398,6 @@ var centerPoint = CGPointMake(96.0, 42.0)
 ```
 
 Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc. over global constants `CGRectInfinite`, `CGRectNull`, etc. For existing variables, you can use the shorter `.zeroRect`.
-
 
 ### Type Inference
 
@@ -438,7 +418,6 @@ var currentBounds: CGRect = computeViewBounds()
 ```
 
 **NOTE**: Following this guideline means picking descriptive names is even more important than before.
-
 
 ### Syntactic Sugar
 
@@ -495,25 +474,28 @@ Do not write multiple statements on a single line separated with semicolons.
 
 The only exception to this rule is the `for-conditional-increment` construct, which requires semicolons. However, alternative `for-in` constructs should be used where possible.
 
-**Preferred:**
-```swift
-var swift = "not a scripting language"
-```
-
-**Not Preferred:**
-```swift
-var swift = "not a scripting language";
-```
-
-**NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
 
 ## Resources
 
-In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+In `Swift` it's a good practice to use extensions for accessing elements of asset catalogs, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
+
+### Colors
 
 ```swift
-struct ColorList {
-  static let someColor = UIColor(hex: "343434")
+extension UIColor {
+    class func applicationColor() -> UIColor {
+        return UIColor(hex: "AB76F5")
+    }
+}
+```
+
+### Fonts
+
+```swift
+extension UIFont {
+    class func bold(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Bold", size: CGFloat(size))!
+    }
 }
 ```
 
