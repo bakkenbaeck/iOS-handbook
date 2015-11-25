@@ -1,4 +1,4 @@
-# Index
+# Bakken & Bæck's iOS Playbook
 
 * Swift Style Guide
 * Best Practices
@@ -6,7 +6,7 @@
 * Project Structure
 * Releases
 
-# Bakken & Bæck's Swift Style Guide
+# Swift Style Guide
 
 Our overarching goals are conciseness, readability, and simplicity.
 
