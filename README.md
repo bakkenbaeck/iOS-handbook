@@ -507,10 +507,6 @@ extension UIFont {
 }
 ```
 
-## Attribution
-
-This document is based on the [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown).
-
 
 # Best practices
 
