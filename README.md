@@ -518,6 +518,7 @@ extension UIFont {
 * [Blocks, delegates or data source](#blocks-delegates-or-data-source)
 * [View controllers](#view-controllers)
 * [Assets](#assets)
+* [Property Observing](#property-observing)
 
 ## Xcode
 
@@ -538,7 +539,6 @@ You can get your Xcode version UUID by running
 /usr/libexec/PlistBuddy -c 'Print DVTPlugInCompatibilityUUID' "$(xcode-select -p)/../Info.plist"
 ```
 
-
 ## Deployment
 
 ### Semantic Versioning
@@ -550,7 +550,6 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 ```objc
 - (NSInteger)foo:(NSInteger)bar __attribute__((deprecated("Use fooWithBar: instead")));
 ```
-
 
 ## Comments
 
@@ -593,7 +592,6 @@ Multiple-lines:
     }
 }
 ```
-
 
 ## Blocks, delegates or data source
 
@@ -638,6 +636,68 @@ Image names should be named consistently to preserve organization and developer 
 * `articleNavigationBarWhite` / `articleNavigationBarWhite@2x` and `articleNavigationBarBlackSelected` / `articleNavigationBarBlackSelected@2x`.
 
 Images should live in `Images.xcassets`.
+
+## Property Observing
+
+### When using Property Observers make sure to not over-reload the UI
+
+It's common that when using property observers any change will update some part of the UI.
+
+For example:
+
+```swift
+// PhotoViewerController
+
+var photo: Photo? {
+    didSet {
+        guard let viewerItem = self.viewerItem else { return }
+        // Do something with photo, maybe download and so on
+    }
+}
+```
+
+The problem with this logic is that if for some reason the user of the `PhotoViewerController` is required to update multiple times his `PhotoViewerController` instance with the same photo, this will have awful performance issues. And since this user doesn't know the kind of logic processed inside this controller, bugs can occur. So it's better that if the `PhotoViewerController` is handling property observation, it should also handle the cases where the new introduced value is the same as the one that currently exists:
+
+There are two ways to solve this issue:
+
+### Version A:
+
+One solution would be that the API user (the abuser) makes sure that he doesn't set a photo item if it has already being set.
+
+```swift
+// ViewerController (A horizontal array of PhotoViewerController)
+
+let photoViewerController = self.cachedPhotoViewerControllers.objectForKey(photo.remoteID)
+if photoViewerController.photo?.remoteID != photo.remoteID {
+    photoViewerController.photo = photo
+}
+```
+
+### Version B (Recommended):
+
+The other solution would be that the `PhotoViewerController` takes care of this since it's the one that decided to do property observing instead of having a separate method to trigger this side effect (downloading photo).
+
+```swift
+// PhotoViewerController
+
+var changed = false
+var photo: Photo? {
+    willSet {
+        if self.photo?.remoteID != newValue?.remoteID {
+            self.changed = true
+        }
+    }
+
+    didSet {
+        guard let photo = self.photo else { return }
+
+        if self.changed {
+            // Do something with photo, maybe download and so on
+            self.changed = false
+        }
+    }
+}
+```
 
 ## Networking
 
