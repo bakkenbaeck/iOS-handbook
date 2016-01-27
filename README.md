@@ -509,6 +509,7 @@ extension UIFont {
 }
 ```
 
+---
 
 # Best practices
 
@@ -708,6 +709,8 @@ Completion blocks in networking calls should be returned in the main thread.
 
 Completion blocks should contain the `error` instead of success/failure blocks.
 
+---
+
 # Components
 
 Every agnostic component (UI control, category, helper, etc) should be created in a separate repository and in Swift.
@@ -753,6 +756,8 @@ Take the time to compose personal tweets to all your recipients, copy pasting on
 - [ ] Send a tweet to [@daveverwer](https://twitter.com/daveverwer) and [@iOSDevWeekly](https://twitter.com/iOSDevWeekly)
 - [ ] Send a tweet to [@iOSGoodies](https://twitter.com/iOSGoodies) with the link to your PR
 - [ ] Send a tweet to [@NatashaTheRobot](https://twitter.com/NatashaTheRobot)
+
+---
 
 # Project Structure
 
@@ -810,6 +815,8 @@ ProjectName
 |—— Sounds
 |—— Others
 ```
+
+---
 
 # Releases
 
