@@ -1,5 +1,7 @@
 # Bakken & Bæck's iOS Playbook
 
+Consistency is 👸
+
 * [Swift Style Guide](/SWIFT_STYLE_GUIDE.md)
 * [Best Practices](/BEST_PRACTICES.md)
 * [Components](/COMPONENTS.md)
