@@ -91,7 +91,7 @@ Multiple-lines:
 - User inputs with multiple options (For example: UIAlertView's YES and NO)
 - Data source driven inputs (For example: A table items with action blocks that were defined in the data source)
 - Returns many values (For example looking for a field in a collection and returning the field and the indexPath)
-- If there’s no tracked state or if state it’s defined in the same method
+- If there’s no tracked state or if the state is defined in the same method
 
 ### Delegate
 - Synchronous (For example: buttons actions in views that should perform on their parents)
