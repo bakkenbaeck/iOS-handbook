@@ -153,7 +153,7 @@ There are two ways to solve this issue:
 
 ### Version A:
 
-One solution would be that the API user (the abuser) makes sure that he doesn't set a photo item if it has already being set.
+One solution would be that the API user (the abuser) makes sure that they don't set a photo item if it has already been set.
 
 ```swift
 // ViewerController (A horizontal array of PhotoViewerController)
@@ -166,7 +166,7 @@ if photoViewerController.photo?.remoteID != photo.remoteID {
 
 ### Version B (Recommended):
 
-The other solution would be that the `PhotoViewerController` takes care of this since it's the one that decided to do property observing instead of having a separate method to trigger this side effect (downloading photo).
+The other solution would be that the `PhotoViewerController` takes care of this since it's the one that decided to do property observing, instead of having a separate method to trigger this side effect (downloading photo).
 
 ```swift
 // PhotoViewerController
