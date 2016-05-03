@@ -10,6 +10,7 @@
 * [Assets](#assets)
 * [Property Observing](#property-observing)
 * [Networking](#networking)
+* [Theming](#theming)
 
 ## Xcode
 
@@ -195,3 +196,38 @@ var photo: Photo? {
 Completion blocks in networking calls should be returned in the main thread.
 
 Completion blocks should contain the `error` instead of success/failure blocks.
+
+## Theming
+
+Use a `Theme.swift` that contains extensions for theming your app. When adding color extensions avoid adding the `Color` postfix to your color methods.
+
+For example:
+
+```swift
+import Hex
+import UIKit
+
+extension UIColor {
+    class func brightPurple() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+}
+
+extension UIFont {
+    class func bold(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Bold", size: CGFloat(size))!
+    }
+
+    class func light(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Light", size: CGFloat(size))!
+    }
+
+    class func medium(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Medium", size: CGFloat(size))!
+    }
+
+    class func regular(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Regular", size: CGFloat(size))!
+    }
+}
+```
