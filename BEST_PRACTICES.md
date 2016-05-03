@@ -199,7 +199,7 @@ Completion blocks should contain the `error` instead of success/failure blocks.
 
 ## Theming
 
-Use a `Theme.swift` that contains extensions for theming your app. When adding color extensions avoid adding the `Color` postfix to your color methods.
+Use a `Theme.swift` that contains extensions for theming your app. When adding color extensions avoid adding the `Color` postfix to your color methods, also add some context of how this color is used, just be careful to not have one method per UI element.
 
 For example:
 
@@ -208,7 +208,15 @@ import Hex
 import UIKit
 
 extension UIColor {
-    class func brightPurple() -> UIColor {
+    class func callToActionNormal() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+    
+    class func callToActionSelected() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+    
+    class func callToActionHighlighted() -> UIColor {
         return UIColor(hex: "A87CF2")
     }
 }
