@@ -8,4 +8,4 @@ Consistency is 👸.
 * [Project Structure](/PROJECT_STRUCTURE.md)
 * [Releases](/RELEASES.md)
 
-Based partly in [Hyper's iOS Playbook](https://github.com/hyperoslo/ios-playbook)
+Based partly in [Hyper's iOS Playbook](https://github.com/hyperoslo/ios-playbook).
