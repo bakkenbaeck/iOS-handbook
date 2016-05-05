@@ -5,7 +5,8 @@ Consistency is 👸.
 * [Swift Style Guide](/SWIFT_STYLE_GUIDE.md)
 * [Best Practices](/BEST_PRACTICES.md)
 * [Components](/COMPONENTS.md)
+* [Git and GitHub](/GIT_AND_GITHUB.md)
 * [Project Structure](/PROJECT_STRUCTURE.md)
 * [Releases](/RELEASES.md)
 
-Based partly in [Hyper's iOS Playbook](https://github.com/hyperoslo/ios-playbook).
+_Based partly in [Hyper's iOS Playbook](https://github.com/hyperoslo/ios-playbook)._
