@@ -39,8 +39,8 @@ We support [semantic versioning](http://semver.org/), and it's important that mi
 
 When making backwards compatible changes, flag your old APIs as deprecated like this:
 
-```objc
-- (NSInteger)foo:(NSInteger)bar __attribute__((deprecated("Use fooWithBar: instead")));
+```swift
+@available(*, deprecated=4.3.0, message="Use `foo:bar` instead") public func fooWithBar(bar: Int)
 ```
 
 ## Comments
@@ -68,19 +68,18 @@ Multiple-lines:
 
 **For example**
 
-```objc
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+```swift
+func override viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
 
     /*
      Workaround: Selected cell only gets deselected when pressing the back button
      dragging the screen to go back doesn't deselect the selected cell.
      So, `self.clearsSelectionOnViewWillAppear = YES;` only works sometimes.
      */
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-    if (selectedIndexPath) {
-        [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
+    let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+    if selectedIndexPath {
+        self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
     }
 }
 ```
@@ -110,7 +109,7 @@ Multiple-lines:
 
 When naming subclasses of `UIViewController` or friends `UIPageViewController`, `UICollectionViewController`, `UITableViewController`, you don't have to use the `ViewController` suffix.
 
-For example instead of `BBRecipesTableViewController` you would do `BBRecipesController`, this applies for both Objective-C and Swift.
+For example instead of `BBRecipesTableViewController` you would do `RecipesController`.
 
 ### Presenting and dismissing View Controllers
 
@@ -120,14 +119,14 @@ For example instead of `BBRecipesTableViewController` you would do `BBRecipesCon
 
 ### Images
 
-Image names should be named consistently to preserve organization and developer sanity. They should be named as one [lower camel case](http://c2.com/cgi/wiki?LowerCamelCase) string with a description of their purpose, followed by the un-prefixed name of the class or property they are customizing (if there is one), followed by a further description of color and/or placement, and finally their state.
+Image names should be named consistently to preserve organization and developer sanity. They should be named in lower case and separated by dashes, followed by the un-prefixed name of the class or property they are customizing (if there is one), followed by a further description of color and/or placement, and finally their state.
 
 **For example:**
 
-* `refreshBarButtonItem` / `refreshBarButtonItem@2x` and `refreshBarButtonItemSelected` / `refreshBarButtonItemSelected@2x`
-* `articleNavigationBarWhite` / `articleNavigationBarWhite@2x` and `articleNavigationBarBlackSelected` / `articleNavigationBarBlackSelected@2x`.
+* `refresh-bar-button-item` / `refresh-bar-button-item@2x` and `refresh-bar-button-item-selected` / `refresh-bar-button-item-selected@2x`
+* `article-navigation-bar-white` / `article-navigation-bar-white@2x` and `article-navigation-bar-black-selected` / `article-navigation-bar-black-selected@2x`.
 
-Images should live in `Images.xcassets`.
+Images should live in `Images.xcassets`, they don't need to be grouped in any way.
 
 ## Property Observing
 
@@ -196,6 +195,8 @@ var photo: Photo? {
 Completion blocks in networking calls should be returned in the main thread.
 
 Completion blocks should contain the `error` instead of success/failure blocks.
+
+Use a simple NSURLSession wrapper to make things simpler, [Networking](https://github.com/3lvis/Networking) is a good candidate for this.
 
 ## Theming
 
