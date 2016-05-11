@@ -38,8 +38,14 @@ We support [semantic versioning](http://semver.org/), and it's important that mi
 
 When making backwards compatible changes, flag your old APIs as deprecated like this:
 
+**Objective-C**:
+```objc
+- (NSInteger)objectWithIndex:(NSInteger)bar __attribute__((deprecated("Use objectAtIndex: instead")));
+```
+
+**Swift**:
 ```swift
-@available(*, deprecated=4.3.0, message="Use `foo:bar` instead") public func fooWithBar(bar: Int)
+@available(*, deprecated=4.3.0, message="Use `objectAt(index index: Int)` instead") public func objectAtIndex(index: Int)
 ```
 
 ## Comments
