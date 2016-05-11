@@ -21,11 +21,9 @@ Our overarching goals are conciseness, readability, and simplicity.
   * [Struct Initializers](#struct-initializers)
   * [Type Inference](#type-inference)
   * [Syntactic Sugar](#syntactic-sugar)
-* [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
 * [Resources](#resources)
 * [Attribution](#attribution)
-
 
 ## Naming
 
@@ -51,35 +49,33 @@ class app_widgetContainer {
 }
 ```
 
-For functions and init methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
+For functions and init methods, prefer named parameters for all arguments.
 
-```swift
-func dateFromString(dateString: String) -> NSDate { ... }
-func convertPointAt(column: Int, row: Int) -> CGPoint { ... }
-func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction! { ... }
-
-// would be called like this:
-dateFromString("2014-03-14") { ... }
-convertPointAt(column: 42, row: 13) { ... }
-timedAction(delay: 1.0, action: someOtherAction) { ... }
-```
-
-For methods, follow the standard Apple convention of referring to the first parameter in the method name:
+Declarations:
 
 ```swift
 class Guideline {
-    func combineWithString(incoming: String, options: Dictionary?) { ... }
-    func upvoteBy(amount: Int) { ... }
+    func combineWithString(incoming incoming: String, options: Dictionary?)
+    func upvoteBy(amount amount: Int)
+    func date(string string: String) -> NSDate
+    func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction!
+    func authenticate(username username: String, password: String, completion: (error: NSError?) -> Void)
 }
 ```
 
-When referring to functions in prose include the required parameter names from the caller's perspective. If the context is clear and the exact signature is not important, you can use just the method name.
+Implementations:
 
-> Call `convertPointAt(column:row:)` from your own `init` implementation.
->
-> If you implement `timedAction`, remember to provide an appropriate delay value.
->
-> You shouldn't call the data source method `tableView(_:cellForRowAtIndexPath:)` directly.
+```swift
+date(string: "2014-03-14")
+
+timedAction(delay: 1.0, action: someOtherAction) {
+
+}
+
+authenticate(username: "elvis", password: "m8eu201je") { error in
+
+}
+```
 
 When in doubt, look at how Xcode lists the method in the jump bar – our style here matches that.
 
@@ -99,12 +95,26 @@ You **should not** add prefixes to your Swift types.
 
 ## Spacing and Indentation
 
-* Indent using 4 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
+* Indent using 4 spaces rather than tabs. This should be configured on the project.
 
   ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
+* Avoid doing method indentation since Swift's indentation is inconsistent, and just keep things in one line as long as is possible. It helps you to not having to think many times on how you would indent your code.
+
+**Preferred:**
+```swift
+let user = User(name: "Igor", lastName: "Ranieri", country: "Germany")
+```
+
+**Not Preferred:**
+```swift
+let user = User(name: "Igor",
+      lastName: "Ranieri",
+      country: "Germany")
+```
+
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
-* Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.
+* Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu).
 
 **Preferred:**
 ```swift
@@ -128,7 +138,6 @@ else {
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
 
-
 ## Classes and Structs
 
 Unless you require functionality that can only be provided by a class, implement a struct instead.
@@ -143,45 +152,11 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Use `self` when required, for example:
-
-- When using optional binding with optional properties
-
-**Preferred:**
-
-```swift
-if let textContainer = self.textContainer {
-    // do many things with textContainer
-}
-```
-
-**Not Preferred:**
-
-```swift
-if let maybeThisCouldBeTextContainer = textContainer {
-    // do many things with maybeThisCouldBeTextContainer
-}
-```
-
-- To differentiate between property names and arguments in initializers
-- When referencing properties in closure expressions
-
-```swift
-init(row: Int, column: Int) {
-    self.row = row
-    self.column = column
-
-    let closure = {
-      println(self.row)
-    }
-}
-```
+Always use `self` when referencing properties. It will make your life simpler. Trust us.
 
 ### Protocol Conformance
 
-When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
-
-Also, don't forget the `// MARK: -` comment to keep things well-organized!
+When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. Also don't use extensions to split code, but to extend classes or structs with additional functionality. Finally, avoid the `// MARK: -` it makes code too noisy.
 
 **Preferred:**
 ```swift
@@ -189,13 +164,9 @@ class MyViewcontroller: UIViewController {
     // class stuff here
 }
 
-// MARK: - UITableViewDataSource
-
 extension MyViewcontroller: UITableViewDataSource {
     // table view data source methods
 }
-
-// MARK: - UIScrollViewDelegate
 
 extension MyViewcontroller: UIScrollViewDelegate {
     // scroll view delegate methods
@@ -206,6 +177,11 @@ extension MyViewcontroller: UIScrollViewDelegate {
 ```swift
 class MyViewcontroller: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
     // all methods
+}
+
+// MARK: - Data download
+extension MyViewController {
+
 }
 ```
 
@@ -241,7 +217,7 @@ class Circle: Shape {
 
     var diameter: Double {
         get {
-            return radius * 2.0
+            return self.radius * 2.0
         }
         set {
             radius = newValue / 2.0
@@ -263,7 +239,7 @@ class Circle: Shape {
     }
 
     override func computeArea() -> Double {
-        return M_PI * radius * radius
+        return M_PI * self.radius * self.radius
     }
 
     private func centerString() -> String {
@@ -296,7 +272,6 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double, translateCons
 }
 ```
 
-
 ## Closure Expressions
 
 Use trailing closure syntax wherever possible. In all cases, give the closure parameters descriptive names:
@@ -328,8 +303,8 @@ let widthString = (width as NSNumber).stringValue    // String
 
 **Not Preferred:**
 ```swift
-let width: NSNumber = 120.0                                 // NSNumber
-let widthString: NSString = width.stringValue               // NSString
+let width: NSNumber = 120.0                          // NSNumber
+let widthString: NSString = width.stringValue        // NSString
 ```
 
 ### Constants
@@ -367,7 +342,7 @@ For optional binding, shadow the original name when appropriate rather than usin
 var subview: UIView?
 
 // later on...
-if let subview = subview {
+if let subview = self.subview {
     // do something with unwrapped subview
 }
 ```
@@ -437,64 +412,53 @@ var employees: Dictionary<Int, String>
 var faxNumber: Optional<Int>
 ```
 
-
-## Control Flow
-
-Prefer the `for-in` style of `for` loop over the `for-condition-increment` style.
-
-**Preferred:**
-```swift
-for _ in 0..<3 {
-    println("Hello three times")
-}
-
-for (index, person) in enumerate(attendeeList) {
-    println("\(person) is at position #\(index)")
-}
-```
-
-**Not Preferred:**
-```swift
-for var i = 0; i < 3; i++ {
-    println("Hello three times")
-}
-
-for var i = 0; i < attendeeList.count; i++ {
-    let person = attendeeList[i]
-    println("\(person) is at position #\(i)")
-}
-```
-
-
 ## Semicolons
 
 Swift does not require a semicolon after each statement in your code. They are only required if you wish to combine multiple statements on a single line.
 
 Do not write multiple statements on a single line separated with semicolons.
 
-The only exception to this rule is the `for-conditional-increment` construct, which requires semicolons. However, alternative `for-in` constructs should be used where possible.
-
-
 ## Resources
 
 In `Swift` it's a good practice to use extensions for accessing elements of asset catalogs, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
 
-### Colors
+Use a `Theme.swift` that contains extensions for theming your app. When adding color extensions avoid adding the `Color` postfix to your color methods, also add some context of how this color is used, just be careful not to have one method per UI element.
+
+For example:
 
 ```swift
+import Hex
+import UIKit
+
 extension UIColor {
-    class func applicationColor() -> UIColor {
-        return UIColor(hex: "AB76F5")
+    class func callToActionNormal() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+
+    class func callToActionSelected() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+
+    class func callToActionHighlighted() -> UIColor {
+        return UIColor(hex: "A87CF2")
     }
 }
-```
 
-### Fonts
-
-```swift
 extension UIFont {
     class func bold(size: Double) -> UIFont {
         return UIFont(name: "DINNextLTPro-Bold", size: CGFloat(size))!
+    }
+
+    class func light(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Light", size: CGFloat(size))!
+    }
+
+    class func medium(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Medium", size: CGFloat(size))!
+    }
+
+    class func regular(size: Double) -> UIFont {
+        return UIFont(name: "DINNextLTPro-Regular", size: CGFloat(size))!
     }
 }
 ```
