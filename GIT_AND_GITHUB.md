@@ -47,9 +47,17 @@ Use `--no-ff` when you merge to `master`.
 It's okay to just push to `master` if it's a quick fix and you really need
 it out the door. Otherwise, make it a pull request.
 
+### Pull requests
+
 Pull request descriptions should be concise and well written. The merger should
 be able to copy this description straight into the release notes instead of
 figuring out what changed or was fixed.
+
+Besides a clear description more information could be helpful, for example:
+
+- If is static UI, a screenshot would do. 
+- If is an interaction a gif would help a lot. 
+- If is a bug, steps to reproduce are useful to understand the context.
 
 #### Who merges the pull request?
 
