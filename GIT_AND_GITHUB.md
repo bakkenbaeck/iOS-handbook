@@ -47,7 +47,7 @@ it out the door. Otherwise, make a pull request.
 
 ### Pull requests
 
-Pull request descriptions should be concise and well written. The reviwer should
+Pull request descriptions should be concise and well written. The reviewer should
 be able to copy this description straight into the release notes, instead of
 figuring out what changed or was fixed.
 
