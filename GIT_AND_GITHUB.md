@@ -1,23 +1,23 @@
 # Git & GitHub Conventions
 
-These conventions apply to our open-source, internal and client projects.
+These conventions apply to our open-source, internal, and client projects.
 
 ## Commits
 
-The `master` branch is the stable branch, it's also used for development
-purposes so just avoid having `dev`, `development`, `staging`, `wip` and others.
+The `master` branch is the stable branch. It's also used for development
+purposes, as to avoid having `dev`, `development`, `staging`, `wip` and others.
 
-You might be wondering, why only `master`? Why if I have to rollback to apply
-a fix? Well, if you find a bug in a previous release you can just checkout the
-tag, fork it, fix the bug, deploy the new build, and submit a PR to merge it
-with `master`.
+You might be wondering: why only `master`? What if I have to rollback to apply
+a fix? Well, if you find a bug in a previous release, you can just, checkout the tag,
+ fork it, fix it, deploy the new build, and finally, submit a PR to merge it with `master`
+  to the sound of Daft Punk.
 
-Write grammatically correct (i.e. start with a capital) commit messages in [imperative, present tense](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages).
+Commit messages are in the [imperative present tense](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages), and have no period at the end.
 
 Prefer concise commits over gigantic ones. When writing a concise commit message
 is difficult, it may indicate too many unrelated changes.
 
-Commit summaries shouldn't end with a dot. Descriptions should.
+Feel free to elaborate more on the commit description.
 
 ```
 // Preferred
@@ -31,7 +31,7 @@ Added image view to display image for employee in employees table view controlle
 
 ### Naming
 
-Branches are awesome. We use `feature`, `fix`, `improve` and `refactor`:
+Branches are awesome. We use `feature/`, `fix/`, `improve/` and `refactor/` for pseudo namespacing:
 
 ```
 feature/new-feature
@@ -42,24 +42,37 @@ refactor/make-it-awesome
 
 Use `--no-ff` when you merge to `master`.
 
-### Merging
-
 It's okay to just push to `master` if it's a quick fix and you really need
-it out the door. Otherwise, make it a pull request.
+it out the door. Otherwise, make a pull request.
 
-Pull request descriptions should be concise and well written. The merger should
-be able to copy this description straight into the release notes instead of
+### Pull requests
+
+Pull request descriptions should be concise and well written. The reviewer should
+be able to copy this description straight into the release notes, instead of
 figuring out what changed or was fixed.
 
-#### Who merges the pull request?
+Besides, a description with more information could be helpful, for example:
 
-Core contributors have the final say on what gets merged into their codebase,
-so they get to click the button. That could be you, but if you're working with
-someone else it should probably be them. The important thing is that someone else
-gets to look it over so we can learn from you, point out your silly mistakes and/or
-post the sufficient amount of gifs.
+- If it's a static UI, a screenshot would do. 
+- If it's an interaction, a gif would help a lot. A good tool to make gifs is [Licecap](http://www.cockos.com/licecap/).
+- If it's a bug, steps to reproduce are very useful to help understanding context.
 
-Once the pull request is accepted, the person who merged should delete the branch.
+#### When to merge a pull request?
+
+Before merging a pull request, your code has to be reviewed, so that we can learn from you, 
+point out your silly mistakes, and/or post a sufficient amount of gifs. The reviewing
+process is important. It is better for you to have another person backing you up. More eyes
+can mean less bugs and more consistency throughout.
+
+When the reviewer signs off, confirming that the changes are ready, feel free to 
+merge your pull request. Avoid merging before receiving a confirmation, even for 
+"final fixes" and "last touches". If several developers are involved in the project,
+one confirmation should be enough. You can always submit subsequent pull requests or file an issue after the fact.
+
+As a reviewer, when signing off on an issue, be sure to be as explicit and unambiguous as possible.
+
+After you have merged, you should delete the branch and smile. The smile is critical 
+part of the process, so don't forget this.
 
 #### Reviewing pull requests
 
