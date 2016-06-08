@@ -74,7 +74,7 @@ As a reviewer when signing off on an issue, be sure to be as explicit and unambi
 After you have merged, you should delete the branch and smile, the smile is critical 
 part of the process, so don't forget this.
 
-#### Reviewing a pull requests
+#### Reviewing pull requests
 
 As a reviewer, you should ideally be a core team member and have enough context
 to make a thorough review of the committed code, just by reading it. However,
