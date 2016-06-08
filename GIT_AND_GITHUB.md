@@ -71,7 +71,7 @@ one confirmation should be enough, you can always submit another PR or file an i
 
 As a reviewer when signing off on an issue, be sure to be as explicit and unambiguous as possible.
 
-After you have merged, you should delete the branch and smile, the smile is critical 
+After you have merged, you should delete the branch and smile. The smile is critical 
 part of the process, so don't forget this.
 
 #### Reviewing pull requests
