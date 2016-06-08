@@ -71,7 +71,7 @@ for reviewing feel free to merge your pull request. Avoid merging your pull requ
 receiving a confirmation, even for "final fixes". If several developers are involved in the project
 one confirmation should be enough, you can always submit another PR or file an issue.
 
-After you have merged you should delete the branch and smile, the smile is critical 
+After you have merged, you should delete the branch and smile, the smile is critical 
 part of the process, so don't forget this.
 
 #### Reviewing pull requests
