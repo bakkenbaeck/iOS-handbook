@@ -59,15 +59,18 @@ Besides a clear description more information could be helpful, for example:
 - If is an interaction a gif would help a lot. A good tool to make gifs is [Licecap](http://www.cockos.com/licecap/).
 - If is a bug, steps to reproduce are useful to understand the context.
 
-#### Who merges the pull request?
+#### When to merge a pull request?
 
-Core contributors have the final say on what gets merged into their codebase,
-so they get to click the button. That could be you, but if you're working with
-someone else it should probably be them. The important thing is that someone else
-gets to look it over so we can learn from you, point out your silly mistakes and/or
-post the sufficient amount of gifs.
+Before merging a pull request your code has to be reviewed, if you're working with 
+someone else it should probably be them. The important thing is that someone else gets to 
+look it over so we can learn from you, point out your silly mistakes and/or post the sufficient 
+amount of gifs.
 
-Once the pull request is accepted, the person who merged should delete the branch.
+When the reviewer accepts all the changes in the PR he or she coments with a "👍" to state 
+that according to them the PR is ready for merging. After this confirmation you are the one 
+performing the actual merge, so that you keep the end-responasbility in controlling your code. 
+
+After you have merged you should delete the branch.
 
 #### Reviewing pull requests
 
