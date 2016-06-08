@@ -55,9 +55,9 @@ figuring out what changed or was fixed.
 
 Besides a clear description more information could be helpful, for example:
 
-- If is static UI, a screenshot would do. 
-- If is an interaction a gif would help a lot. A good tool to make gifs is [Licecap](http://www.cockos.com/licecap/).
-- If is a bug, steps to reproduce are useful to understand the context.
+- If it's static UI, a screenshot would do. 
+- If it's an interaction a gif would help a lot. A good tool to make gifs is [Licecap](http://www.cockos.com/licecap/).
+- If it's a bug, steps to reproduce are useful to understand the context.
 
 #### When to merge a pull request?
 
