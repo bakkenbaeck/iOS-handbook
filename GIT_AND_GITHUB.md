@@ -68,7 +68,7 @@ amount of gifs.
 
 When the reviewer accepts all the changes in the PR he or she coments with a "👍" to state 
 that according to them the PR is ready for merging. After this confirmation you are the one 
-performing the actual merge, so that you keep the end-responasbility in controlling your code. 
+performing the actual merge, so that you keep the end-responsability in controlling your code. 
 
 After you have merged you should delete the branch.
 
