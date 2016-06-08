@@ -42,8 +42,6 @@ refactor/make-it-awesome
 
 Use `--no-ff` when you merge to `master`.
 
-### Merging
-
 It's okay to just push to `master` if it's a quick fix and you really need
 it out the door. Otherwise, make it a pull request.
 
@@ -74,7 +72,7 @@ one confirmation should be enough, you can always submit another PR or file an i
 After you have merged, you should delete the branch and smile, the smile is critical 
 part of the process, so don't forget this.
 
-#### Reviewing pull requests
+#### Reviewing a pull requests
 
 As a reviewer, you should ideally be a core team member and have enough context
 to make a thorough review of the committed code, just by reading it. However,
