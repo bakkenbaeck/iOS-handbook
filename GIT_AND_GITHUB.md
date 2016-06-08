@@ -69,7 +69,7 @@ merge your pull request. Avoid merging before receiving a confirmation, even for
 "final fixes" and "last touches". If several developers are involved in the project 
 one confirmation should be enough, you can always submit another PR or file an issue.
 
-As a reviewer when signing off on an issue, be sure to be as explicit and unambiguous as possible.
+As a reviewer, when signing off on an issue, be sure to be as explicit and unambiguous as possible.
 
 After you have merged, you should delete the branch and smile. The smile is critical 
 part of the process, so don't forget this.
