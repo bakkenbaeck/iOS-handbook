@@ -64,10 +64,12 @@ point out your silly mistakes and/or post the sufficient amount of gifs. The rev
 process is important, is better for you to have another person backing you up, more eyes
 means less bugs and more consistency, trust us.
 
-When the reviewer accepts all the changes in the PR and confirms that the changes are ready 
-for reviewing feel free to merge your pull request. Avoid merging your pull requests before
-receiving a confirmation, even for "final fixes". If several developers are involved in the project
+When the reviewer signs off confirming that the changes are ready, feel free to 
+merge your pull request. Avoid merging before receiving a confirmation, even for 
+"final fixes" and "last touches". If several developers are involved in the project 
 one confirmation should be enough, you can always submit another PR or file an issue.
+
+As a reviewer when signing off on an issue, be sure to be as explicit and unambiguous as possible.
 
 After you have merged, you should delete the branch and smile, the smile is critical 
 part of the process, so don't forget this.
