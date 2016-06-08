@@ -62,12 +62,14 @@ Besides a clear description more information could be helpful, for example:
 #### When to merge a pull request?
 
 Before merging a pull request your code has to be reviewed so we can learn from you, 
-point out your silly mistakes and/or post the sufficient amount of gifs.
+point out your silly mistakes and/or post the sufficient amount of gifs. The reviewing
+process is important, is better for you to have another person backing you up, more eyes
+means less bugs and more consistency, trust us.
 
 When the reviewer accepts all the changes in the PR and confirms that the changes are ready 
 for reviewing feel free to merge your pull request. Avoid merging your pull requests before
-receiving a confirmation, even for "final fixes", it will be better for you to have another
-person backing you up, more eyes means less bugs and more consistency, trust us.
+receiving a confirmation, even for "final fixes". If several developers are involved in the project
+one confirmation should be enough, you can always submit another PR or file an issue.
 
 After you have merged you should delete the branch and smile, the smile is critical 
 part of the process, so don't forget this.
