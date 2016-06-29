@@ -152,7 +152,49 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Always use `self` when referencing properties. It will make your life simpler. Trust us.
+Use `self` only when required, for example:
+
+- When using optional binding with optional properties
+
+**Preferred:**
+
+```swift
+if let textContainer = textContainer {
+  // do many things with textContainer
+}
+```
+
+**Not Preferred:**
+
+```swift
+if let textContainer = self.textContainer {
+  // do many things with textContainer
+}
+```
+
+```swift
+if let maybeThisCouldBeTextContainer = textContainer {
+  // do many things with maybeThisCouldBeTextContainer
+}
+```
+
+- To differentiate between property names and arguments in initializers
+- When referencing properties in closure expressions
+
+```swift
+init(row: Int, column: Int) {
+  self.row = row
+  self.column = column
+
+  let closure = {
+    println(self.row)
+  }
+}
+```
+
+**tl;dr**
+Only use `self` when the language requires it.
+
 
 ### Protocol Conformance
 
