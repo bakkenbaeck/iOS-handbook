@@ -10,6 +10,7 @@
 * [Assets](#assets)
 * [Property Observing](#property-observing)
 * [Networking](#networking)
+* [View layout](#view-layout)
 
 ## Xcode
 
@@ -202,3 +203,9 @@ Completion blocks in networking calls should be returned in the main thread.
 Completion blocks should contain the `error` instead of success/failure blocks.
 
 Use a simple NSURLSession wrapper to make things simpler, [Networking](https://github.com/3lvis/Networking) is a good candidate for this.
+
+## View layout
+
+Views should be layout using Apple's Auto Layout. No third-party frameworks are recommeded at the moment but this is open for change. Just try to use the highest abstraction that's available to you, wheter this is `UIStackView` or  `NSLayoutAnchor`.
+
+Old style layout is still an option for highly dynamic layouts such as when subclassing UICollectionViewLayout, but in general lines, first try AutoLayout.
