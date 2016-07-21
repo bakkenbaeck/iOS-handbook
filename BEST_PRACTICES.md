@@ -121,6 +121,8 @@ For example instead of `BBRecipesTableViewController` you would do `RecipesContr
 
 - It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
 
+[More information on this blog post.](https://sandofsky.com/blog/never-reach-up.html)
+
 ## Assets
 
 ### Images
