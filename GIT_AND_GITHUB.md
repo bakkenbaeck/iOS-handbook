@@ -77,6 +77,28 @@ discuss other alternatives. Of course, this means you are putting yourself at ri
 of sharing your knowledge and/or learning some new stuff, so please be careful not
 to end up being even more awesome than you are.
 
+As a reviewer your job is to be the extra pair of eyes, so the code will get twice 
+as good. You will look at thing like code style, structure, discuss things you might 
+do differently, point out what you've recently learned or applied. The goal is to 
+make the whole team become better at what we do!
+
+Keep in mind that you are reviewing what someone worked on really hard, so always be 
+respectful. The guidelines from github for giving feedback are a good reference:
+
+> - Familiarize yourself with the context of the issue, and reasons why this Pull Request exists.
+> - If you disagree strongly, consider giving it a few minutes before responding; think before you react.
+> - Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
+> - Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
+> - Offer ways to simplify or improve code.
+> - Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced.
+> - Be humble. (“I’m not sure, let’s try…”)
+> - Avoid hyperbole. (“NEVER do…”)
+> - Aim to develop professional skills, group knowledge and product quality, through group critique.
+> - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?
+> - Use emoji to clarify tone. Compare “✨ ✨ Looks good 👍 ✨ ✨” to “Looks good.”
+
+*source: [How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
+
 If everything is fine feel free to merge the pull request. Avoid merging before receiving
 a feedback. If several developers are involved in the project, one confirmation should be 
 enough. You can always submit subsequent pull requests or file an issue after the fact.
