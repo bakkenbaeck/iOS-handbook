@@ -83,8 +83,9 @@ that you might've done differently, point out possible more elegant solutions ba
 on something you've learned, and so on. The goal here is to make the whole team better 
 in the process.
 
-Keep in mind that you are reviewing what someone worked on really hard, so always be 
-respectful. The guidelines from GitHub for giving feedback are a good reference:
+Keep in mind that you are reviewing something that someone else has worked on really 
+hard, so always be respectful. The guidelines from GitHub for giving feedback are a 
+good reference:
 
 > - Familiarize yourself with the context of the issue, and reasons why this Pull Request exists.
 > - If you disagree strongly, consider giving it a few minutes before responding; think before you react.
