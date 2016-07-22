@@ -75,7 +75,31 @@ submitter and go through the pull request together.
 Be warned, though: By doing this, you will both need to explain your thoughts and
 discuss other alternatives. Of course, this means you are putting yourself at risk
 of sharing your knowledge and/or learning some new stuff, so please be careful not
-to end up being even more awesome than you are.
+to end up being even more awesome than you already are.
+
+As a reviewer your job is to be the extra pair of eyes, so the code will get twice 
+as good. You'll look at things such as code style and structure. You'll discuss things 
+that you might've done differently, point out possible more elegant solutions based 
+on something you've learned, and so on. The goal here is to make the whole team better 
+in the process.
+
+Keep in mind that you are reviewing something that someone else has worked on really 
+hard, so always be respectful. The guidelines from GitHub for giving feedback are a 
+good reference:
+
+> - Familiarize yourself with the context of the issue, and reasons why this Pull Request exists.
+> - If you disagree strongly, consider giving it a few minutes before responding; think before you react.
+> - Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
+> - Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
+> - Offer ways to simplify or improve code.
+> - Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced.
+> - Be humble. (“I’m not sure, let’s try…”)
+> - Avoid hyperbole. (“NEVER do…”)
+> - Aim to develop professional skills, group knowledge and product quality, through group critique.
+> - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?
+> - Use emoji to clarify tone. Compare “✨ ✨ Looks good 👍 ✨ ✨” to “Looks good.”
+
+[Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
 If everything is fine feel free to merge the pull request. Avoid merging before receiving
 a feedback. If several developers are involved in the project, one confirmation should be 
