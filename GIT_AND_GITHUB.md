@@ -78,9 +78,10 @@ of sharing your knowledge and/or learning some new stuff, so please be careful n
 to end up being even more awesome than you already are.
 
 As a reviewer your job is to be the extra pair of eyes, so the code will get twice 
-as good. You will look at thing like code style, structure, discuss things you might 
-do differently, point out what you've recently learned or applied. The goal is to 
-make the whole team become better at what we do!
+as good. You'll look at things such as code style and structure. You'll discuss things 
+that you might've done differently, point out possible more elegant solutions based 
+on something you've learned, and so on. The goal here is to make the whole team better 
+in the process.
 
 Keep in mind that you are reviewing what someone worked on really hard, so always be 
 respectful. The guidelines from GitHub for giving feedback are a good reference:
