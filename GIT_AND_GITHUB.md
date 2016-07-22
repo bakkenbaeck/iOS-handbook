@@ -75,7 +75,7 @@ submitter and go through the pull request together.
 Be warned, though: By doing this, you will both need to explain your thoughts and
 discuss other alternatives. Of course, this means you are putting yourself at risk
 of sharing your knowledge and/or learning some new stuff, so please be careful not
-to end up being even more awesome than you are.
+to end up being even more awesome than you already are.
 
 As a reviewer your job is to be the extra pair of eyes, so the code will get twice 
 as good. You will look at thing like code style, structure, discuss things you might 
