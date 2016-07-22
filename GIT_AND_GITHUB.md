@@ -97,7 +97,7 @@ respectful. The guidelines from GitHub for giving feedback are a good reference:
 > - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?
 > - Use emoji to clarify tone. Compare “✨ ✨ Looks good 👍 ✨ ✨” to “Looks good.”
 
-*source: [How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
+[Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
 If everything is fine feel free to merge the pull request. Avoid merging before receiving
 a feedback. If several developers are involved in the project, one confirmation should be 
