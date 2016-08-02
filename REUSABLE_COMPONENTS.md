@@ -1,4 +1,4 @@
-# Components
+# Reusable components
 
 Every agnostic component (UI control, category, helper, etc) should be created in a separate repository and in Swift.
 
