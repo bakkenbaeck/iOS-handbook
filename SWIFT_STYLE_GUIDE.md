@@ -442,6 +442,16 @@ extension UIColor {
     class func callToActionHighlighted() -> UIColor {
         return UIColor(hex: "A87CF2")
     }
+    
+    class func callToActionHighlighted() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
+    
+    // We'll prefix colors with the project name when
+    // there's no specific name for it.
+    class func yelpRed() -> UIColor {
+        return UIColor(hex: "A87CF2")
+    }
 }
 
 extension UIFont {
