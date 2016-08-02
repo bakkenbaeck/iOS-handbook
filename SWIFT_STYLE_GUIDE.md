@@ -424,6 +424,8 @@ In `Swift` it's a good practice to use extensions for accessing elements of asse
 
 Use a `Theme.swift` that contains extensions for theming your app. When adding color extensions avoid adding the `Color` postfix to your color methods, also add some context of how this color is used, just be careful not to have one method per UI element.
 
+Colors should be semantic and context aware, adding the controller or the flow here this color is being used helps a lot.
+
 For example:
 
 ```swift
