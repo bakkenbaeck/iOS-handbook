@@ -40,9 +40,7 @@ improve/make-it-better
 refactor/make-it-awesome
 ```
 
-Use `--no-ff` when you merge to `master`.
-
-It's okay to just push to `master` if it's a quick fix and you really need
+Sometimes it's okay to just push to `master` if it's a quick fix and you really need
 it out the door. Otherwise, make a pull request.
 
 ### Pull requests
