@@ -1,8 +1,5 @@
 ![logo](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/feature/merge-style-guides/assets/logo.png)
 
-
-# Bakken & Bæck's iOS Playbook
-
 Consistency is 👸.
 
 * [Git and GitHub](/GIT_AND_GITHUB.md)
