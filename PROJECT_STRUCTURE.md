@@ -43,8 +43,8 @@ Project
 |———— Views
 |
 |—— Ingredients
-|——— Views
 |——— Controllers
+|——— Views
 |
 |— Tests
 ```
