@@ -1,4 +1,4 @@
-# Best practices
+# Best Practices & Style Guide
 
 ## Table of Contents
 
