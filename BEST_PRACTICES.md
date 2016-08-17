@@ -89,7 +89,6 @@ Choosing when to use a block or closure, a delegate or a dataSource most of the 
 - Asynchronous (For example: networking operations)
 - User inputs with multiple options (For example: UIAlertView's YES and NO)
 - Data source driven inputs (For example: A table items with action blocks that were defined in the data source)
-- Returns many values (For example looking for a field in a collection and returning the field and the indexPath)
 - If there’s no tracked state or if the state is defined in the same method
 
 ### Delegate
@@ -100,7 +99,7 @@ Choosing when to use a block or closure, a delegate or a dataSource most of the 
 - If tracked state is shared (if state is stored in a property or a constant)
 
 ### Data source
-- Returns ONE value
+- Returns a value
 
 ## View controllers
 
