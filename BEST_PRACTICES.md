@@ -137,8 +137,8 @@ Image names should be named consistently to preserve organization and developer 
 
 **For example:**
 
-* `refresh-bar-button-item` / `refresh-bar-button-item@2x` and `refresh-bar-button-item-selected` / `refresh-bar-button-item-selected@2x`
-* `article-navigation-bar-white` / `article-navigation-bar-white@2x` and `article-navigation-bar-black-selected` / `article-navigation-bar-black-selected@2x`.
+- `refresh-bar-button-item` and `refresh-bar-button-item-selected`
+- `article-navigation-bar-white` and `article-navigation-bar-black-selected`
 
 Images should live in `Images.xcassets`, they don't need to be grouped in any way.
 
