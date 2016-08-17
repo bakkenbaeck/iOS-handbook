@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Xcode](#xcode)
-* [Deployment](#deployment)
+* [Versioning](#versioning)
 * [Comments](#comments)
 * [Blocks, delegates or data source](#blocks-delegates-or-data-source)
 * [View controllers](#view-controllers)
@@ -42,17 +42,17 @@ The recommended version of Xcode (and Swift) for all purposes is the current ava
 
 Enable warnings by adding `-Weverything` to your Build Settings under "Other Compiler Flags". If you need to ignore a specific warning you can use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas) or add `-Wno-warning-to-be-disabled` (for example `-Wno-gnu-conditional-omitted-operand`).
 
-## Deployment
+## Versioning
 
-### Semantic Versioning
-
-We support [semantic versioning](http://semver.org/), and it's important that minor releases are backwards compatible otherwise don't feel shy to make it a major release.
+To version our open source projects we use [semantic versioning](http://semver.org/), and it's important that minor releases are backwards compatible otherwise don't feel shy to make it a major release.
 
 When making backwards compatible changes, flag your old APIs as deprecated like this:
 
 ```swift
 @available(*, deprecated=4.3.0, message="Use `objectAt(index index: Int)` instead") public func objectAtIndex(index: Int)
 ```
+
+When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
 
 ## Comments
 
