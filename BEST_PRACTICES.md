@@ -83,6 +83,8 @@ func override viewWillAppear(animated: Bool) {
 
 ## Blocks, delegates or data source
 
+Choosing when to use a block or closure, a delegate or a dataSource most of the time is a simple decision, but if you're having trouble deciding here are some reminders on what does what.
+
 ### Block
 - Asynchronous (For example: networking operations)
 - User inputs with multiple options (For example: UIAlertView's YES and NO)
