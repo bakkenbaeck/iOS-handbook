@@ -36,7 +36,8 @@ Project
 |
 |—— Source
 |——— Root
-|
+|———— AppDelegate.swift
+
 |——— Recipes
 |—–—— Controllers
 |———— Views
