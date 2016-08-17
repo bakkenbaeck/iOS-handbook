@@ -30,7 +30,6 @@
     * [Syntactic Sugar](#syntactic-sugar)
   * [Semicolons](#semicolons)
   * [Resources](#resources)
-  * [Attribution](#attribution)
 
 ## Xcode
 
