@@ -158,8 +158,8 @@ One solution would be that the API user (the abuser) makes sure that they don't 
 ```swift
 // ViewerController (A horizontal array of PhotoViewerController)
 
-let photoViewerController = self.cachedPhotoViewerControllers.objectForKey(photo.remoteID)
-if photoViewerController.photo?.remoteID != photo.remoteID {
+let photoViewerController = self.cachedPhotoViewerControllers.objectForKey(photo.id)
+if photoViewerController.photo?.id != photo.id {
     photoViewerController.photo = photo
 }
 ```
@@ -174,7 +174,7 @@ The other solution would be that the `PhotoViewerController` takes care of this 
 var changed = false
 var photo: Photo? {
     willSet {
-        if self.photo?.remoteID != newValue?.remoteID {
+        if self.photo?.id != newValue?.id {
             self.changed = true
         }
     }
