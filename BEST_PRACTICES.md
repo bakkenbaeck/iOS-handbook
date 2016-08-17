@@ -72,7 +72,7 @@ func override viewWillAppear(animated: Bool) {
     /*
      Workaround: Selected cell only gets deselected when pressing the back button
      dragging the screen to go back doesn't deselect the selected cell.
-     So, `self.clearsSelectionOnViewWillAppear = YES;` only works sometimes.
+     So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
      */
     let selectedIndexPath = self.tableView.indexPathForSelectedRow()
     if selectedIndexPath {
