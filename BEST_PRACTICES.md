@@ -57,7 +57,7 @@ When it comes to apps, patch releases are bug fixes, minor releases are small ne
 
 When they are needed, comments should be used to explain **why** a particular piece of code does something instead of **what**. Any comments that are used must be kept up-to-date or deleted.
 
-Comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. This does not apply to those comments used to generate documentation.
+Comments should generally be avoided, since they tend to be abused and most developers use it to state the obvious. This does not apply to those comments used to generate documentation.
 
 **Comments style**
 
@@ -253,8 +253,8 @@ Declarations:
 ```swift
 class Guideline {
     func combineWithString(incoming incoming: String, options: Dictionary?)
-    func upvoteBy(amount amount: Int)
-    func date(string string: String) -> NSDate
+    func upvoteBy(by amount: Int)
+    func date(from string: String) -> NSDate
     func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction!
     func authenticate(username username: String, password: String, completion: (error: NSError?) -> Void)
 }
@@ -432,7 +432,7 @@ class Circle: Shape {
     }
 
     func describe() -> String {
-        return "I am a circle at \(centerString()) with an area of \(computeArea())"
+        return "I am a circle at \(self.centerString()) with an area of \(self.computeArea())"
     }
 
     override func computeArea() -> Double {
@@ -440,17 +440,17 @@ class Circle: Shape {
     }
 
     private func centerString() -> String {
-        return "(\(x),\(y))"
+        return "(\(self.x),\(self.y))"
     }
 }
 ```
 
 The example above demonstrates the following style guidelines:
 
- + The correct spacing for variable assignations is with a space after and before the equals mark `=`, e.g. `x = 3`
+ + The correct spacing for variable assignations is with a single space after and before the equals mark `=`, e.g. `x = 3`
  + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
  + Indent getter and setter definitions and property observers
- + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
+ + Don't add modifiers such as `internal` when they're already the default
 
 
 ## Function Declarations
@@ -479,14 +479,22 @@ return SKAction.customActionWithDuration(effect.duration) { node, elapsedTime in
 }
 ```
 
-For single-expression closures where the context is clear, use implicit returns:
+For single-expression closures don't use implicit returns, always use return.
 
+**Preferred:**
+
+```swift
+attendeeList.sort { a, b in
+    return a > b
+}
+```
+
+**Not Preferred:**
 ```swift
 attendeeList.sort { a, b in
     a > b
 }
 ```
-
 
 ## Types
 
