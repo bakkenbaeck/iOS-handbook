@@ -55,9 +55,59 @@ When it comes to apps, patch releases are bug fixes, minor releases are small ne
 
 ## Comments
 
-When they are needed, comments should be used to explain **why** a particular piece of code does something instead of **what**. Any comments that are used must be kept up-to-date or deleted.
+ When they are needed, comments should be used to explain **why** a particular piece of code does something instead of **what**. Any comments that are used must be kept up-to-date or deleted. This does not apply to those comments used to generate documentation.
 
-Comments should generally be avoided, since they tend to be abused and most developers use it to state the obvious. This does not apply to those comments used to generate documentation.
+**Preferred:**
+
+```swift
+/*
+  Workaround: So far this is the scroll-to-bottom method that worked best,
+  with proper animation, and no issues so far, regardless of scrollview content size.
+  If this looks and feels like a hack, it's because it kinda is.
+  By creating a rect that's 1x1, pointed at the bottom-right side of the scrollview's content
+  and telling it to scroll there, regardless of insets and offsets, it will scroll to the very bottom.
+*/
+func scrollToBottom() {
+    let contentSize = self.collectionView.contentSize
+    let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
+    let visibleRect = self.collectionView.layer.visibleRect
+    if !visibleRect.intersects(bottomRect) {
+        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+    }
+}
+```
+
+**Not Preferred:**
+
+```swift
+// Scrolls to the bottom of the view
+func scrollToBottom() {
+    let contentSize = self.collectionView.contentSize
+    let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
+    let visibleRect = self.collectionView.layer.visibleRect
+    if !visibleRect.intersects(bottomRect) {
+        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+    }
+}
+```
+
+**Workaround comment:**
+
+```swift
+func override viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+
+    /*
+     Workaround: Selected cell only gets deselected when pressing the back button
+     dragging the screen to go back doesn't deselect the selected cell.
+     So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
+     */
+    let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+    if selectedIndexPath {
+        self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+    }
+}
+```
 
 **Comments style**
 
@@ -74,24 +124,6 @@ Multiple-lines:
    Comments should be added when they are not only needed but critical
    to understand the underlying block of code.
  */
-```
-
-**For example**
-
-```swift
-func override viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-
-    /*
-     Workaround: Selected cell only gets deselected when pressing the back button
-     dragging the screen to go back doesn't deselect the selected cell.
-     So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
-     */
-    let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-    if selectedIndexPath {
-        self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
-    }
-}
 ```
 
 ## Blocks, delegates or data source
