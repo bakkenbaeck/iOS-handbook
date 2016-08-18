@@ -245,7 +245,8 @@ class app_widgetContainer {
 }
 ```
 
-For functions and init methods, prefer named parameters for all arguments.
+For functions and init methods, prefer named parameters for all arguments. Also avoid using underscores
+in your method names.
 
 Declarations:
 
