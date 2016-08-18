@@ -296,7 +296,7 @@ You **should not** add prefixes to your Swift types.
 
   ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
-* Avoid doing method indentation since Swift's indentation is inconsistent, and just keep things in one line as long as is possible. It helps you to not having to think many times on how you would indent your code.
+* Avoid doing method indentation since Swift's indentation is inconsistent, and just keep things in one line as long as is possible. It helps you by not letting you think about manually indenting your code.
 
 **Preferred:**
 ```swift
