@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/logo.png)
+![logo](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/logo-v1.png)
 
 Consistency is 👸.
 
