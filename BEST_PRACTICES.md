@@ -213,9 +213,9 @@ Use a simple NSURLSession wrapper to make things simpler, [Networking](https://g
 
 ## View layout
 
-Views should be layout using Apple's Auto Layout. No third-party frameworks are recommeded at the moment but this is open for change. Just try to use the highest abstraction that's available to you, wheter this is `UIStackView` or  `NSLayoutAnchor`.
+Views should be layout using Apple's Auto Layout. No third-party frameworks are recommended at the moment but this is open for change. Just try to use the highest abstraction that's available to you, whether this is `UIStackView` or  `NSLayoutAnchor`.
 
-Old style layout is still an option for highly dynamic layouts such as when subclassing UICollectionViewLayout, but in general lines, first try Auto Layout.
+Old style layout is still an option for when Auto Layout is not available.
 
 # Swift Style Guide
 
