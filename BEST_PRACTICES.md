@@ -300,13 +300,13 @@ You **should not** add prefixes to your Swift types.
 
 **Preferred:**
 ```swift
-let user = User(name: "Igor", lastName: "Ranieri", country: "Germany")
+let user = User(name: "Igor Ranieri", nickname: "Elland", country: "Germany")
 ```
 
 **Not Preferred:**
 ```swift
-let user = User(name: "Igor",
-      lastName: "Ranieri",
+let user = User(name: "Igor Ranieri",
+      nickname: "elland",
       country: "Germany")
 ```
 
