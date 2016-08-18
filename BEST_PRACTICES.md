@@ -651,15 +651,15 @@ import Hex
 import UIKit
 
 extension UIColor {
-    class func callToActionNormal() -> UIColor {
+    class var callToActionNormal: UIColor {
         return UIColor(hex: "A87CF2")
     }
 
-    class func callToActionSelected() -> UIColor {
+    class var callToActionSelected: UIColor {
         return UIColor(hex: "A87CF2")
     }
 
-    class func callToActionHighlighted() -> UIColor {
+    class var callToActionHighlighted: UIColor {
         return UIColor(hex: "A87CF2")
     }
 }
