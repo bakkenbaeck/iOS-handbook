@@ -8,5 +8,5 @@ Consistency is 👸.
 * [Reusable components](/REUSABLE_COMPONENTS.md)
 * [Releases](/RELEASES.md)
 
-Project owner: [@3lvis](https://github.com/3lvis)
+Project owner: [@3lvis](https://github.com/3lvis)  
 PR buddies: [@marijnschilling](https://github.com/marijnschilling) and [@Elland](https://github.com/Elland)
