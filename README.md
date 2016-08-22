@@ -9,7 +9,7 @@ Consistency is 👸.
 * [Releases](/RELEASES.md)
 
 ### Project owner 
-[@3lvis](https://github.com/3lvis)  
+[@3lvis](https://github.com/3lvis)
 
 
 ### PR buddies
