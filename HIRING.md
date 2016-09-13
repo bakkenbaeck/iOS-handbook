@@ -50,3 +50,5 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Explain escaping and nonescaping closures
 
 ## Assignment
+
+The candidate will be asked to make an assigment with a 24 hour deadline. He'll get to pick the best day to receive the details of the assignment then the clock will start ticking. The assignment will consist in making a simple app to display a list of items that comes from an API. The list should be able to be accessed offline.
