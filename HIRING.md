@@ -34,7 +34,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Thank the candidate for their time and let them know what the next step will be.
 
 ## General Questions
-- Are you involved in the iOS community in some way
+- Are you involved in the iOS community in some way?
 - For how long you've been an iOS user?
 - Who inspires you in the iOS community?
 - What's your favorite native iOS app and why?
