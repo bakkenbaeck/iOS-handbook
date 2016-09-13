@@ -43,7 +43,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 
 ## Technical Questions
 - What's the superclass of UITableView?
-- Explain how he or she would achieve smooth scrolling in a collection view of 100 000 images
+- Have you faced any challenges regarding achieving 60 frames per second in iOS? Tell us more about it
 - Explain how you would achieve offline CRUD
 - Explain the difference between weak, strong and unowned
 - Explain escaping and nonescaping closures
