@@ -34,11 +34,9 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Thank the candidate for their time and let them know what the next step will be.
 
 ## General Questions
-- Do you know who's Mattt Thompson?
-- Do you know who's Loren Britcher?
-- Have you heard of ASIHTTPRequest?
-- Have you heard of Three20?
+- Are you involved in the iOS community in some way
 - For how long you've been an iOS user?
+- Who inspires you in the iOS community?
 - What's your favorite native iOS app and why?
 - What's your favorite third-party iOS app and why?
 - What do you think makes a great app?
