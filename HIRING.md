@@ -18,7 +18,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Ask them to talk about the role; their responsibilities; things that went well; things that went badly; why they went badly. Here you are trying to assess how they are as a worker -- are they a leader, or a follower? Are they outspoken or quiet? Do they work well in a team, or alone? You are also finding out how good they are at communicating -- can you understand what they actually did; can they answer clarifying questions about what they did? This has the benefit of warming up the candidate; talking about something they have done is easy.
 
 ### Use about 20-30 minutes
-- Either spend all the time asking technical questions, or ask a few technical questions and give them a whiteboard programming test. Examples of both are found below.
+- Ask a few technical questions. Examples are found below.
 - Here you are trying to assess what they know. At the same time you can assess if they are honest in what they don’t know. Push them to the limits of their knowledge but don’t waste time if they don’t know something; change your questioning to their knowledge so that they are suitably challenged.
 - By the end you should have a good sense of their technical skills but also a good impression of how they think, how they solve problems and how they operate under pressure.
 
