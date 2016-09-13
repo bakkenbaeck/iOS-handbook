@@ -41,6 +41,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - For how long you've been an iOS user?
 - What's your favorite native iOS app and why?
 - What's your favorite third-party iOS app and why?
+- What do you think makes a great app?
 
 ## Technical Questions
 - What's the superclass of UITableView?
