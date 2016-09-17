@@ -33,19 +33,18 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Let the answers flow like a conversation.
 - Thank the candidate for their time and let them know what the next step will be.
 
-## General Questions
+## Questions
 - Are you involved in the iOS community in some way?
 - For how long you've been an iOS user?
 - Who inspires you in the iOS community?
 - What's your favorite native iOS app and why?
 - What's your favorite third-party iOS app and why?
 - What do you think makes a great app?
-
-## Technical Questions
 - Have you faced any challenges regarding achieving 60 frames per second in iOS? Tell us more about it
 - Could you explain to us how you would achieve offline CRUD?
 - Do you have experience using weak, strong and unowned? Could you give us some examples?
 - How do you deal with retain cycles in closures?
+- Have you faced any challenges when working with designers and/or backend developers? Could you tell us a bit more about your experience on collaborating with both?
 
 ## Assignment
 The candidate will be asked to make an assigment with a 24 hour deadline. He'll get to pick the best day to receive the details of the assignment then the clock will start ticking. The assignment will consist in making a simple app to display a list of items that comes from an API. The list should be able to be accessed offline.
