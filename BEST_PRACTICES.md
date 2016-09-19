@@ -48,7 +48,7 @@ To version our open source projects we use [semantic versioning](http://semver.o
 When making backwards compatible changes, flag your old APIs as deprecated like this:
 
 ```swift
-@available(*, deprecated=4.3.0, message="Use `objectAt(index index: Int)` instead") public func objectAtIndex(index: Int)
+@available(*, deprecated: 4.3.0, message: "Use `objectAt(index index: Int)` instead") public func objectAtIndex(index: Int)
 ```
 
 When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
