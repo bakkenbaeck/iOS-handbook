@@ -533,12 +533,16 @@ Always used named parameters, and never unamed ordered parameters (`$0`). It's h
 
 **Preferred:**
 ```swift
-array.map { i in return i ** i }
+let values = [2.0,4.0,5.0,7.0]
+let squares = values.map { element in element * element}
+// [4.0, 16.0, 25.0, 49.0]
 ```
 
 **Not Preferred:**
 ```swift
-array.map { return $0 ** $0 }
+let values = [2.0,4.0,5.0,7.0]
+let squares = values.map { $0 * $0 }
+// [4.0, 16.0, 25.0, 49.0]
 ```
 
 ## Types
