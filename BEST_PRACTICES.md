@@ -154,6 +154,10 @@ When naming subclasses of `UIViewController` or friends `UIPageViewController`, 
 
 For example instead of `BBRecipesTableViewController` you would do `RecipesController`.
 
+*Why?*
+
+Because naming anything else a `Controller` in general is a bad idea and should have another name instead.
+
 ### Presenting and dismissing View Controllers
 
 - It's better practice to call `dismissViewControllerAnimated:completion:` in the `UIViewController` that did the presenting, not in the `UIViewController` that was presented.
