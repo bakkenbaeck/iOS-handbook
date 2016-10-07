@@ -8,6 +8,7 @@ Consistency is 👸.
 * [Best Practices](/BEST_PRACTICES.md)
 * [Reusable components](/REUSABLE_COMPONENTS.md)
 * [Releases](/RELEASES.md)
+* [Hiring](/HIRING.md)
 
 ### Maintainers
 * [@3lvis](https://github.com/3lvis)
