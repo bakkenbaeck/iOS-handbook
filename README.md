@@ -9,6 +9,6 @@ Consistency is 👸.
 * [Releases](/RELEASES.md)
 
 ### Maintainers
-[@3lvis](https://github.com/3lvis)
-[@marijnschilling](https://github.com/marijnschilling)
-[@Elland](https://github.com/Elland)
+[@3lvis](https://github.com/3lvis)  
+[@marijnschilling](https://github.com/marijnschilling)  
+[@Elland](https://github.com/Elland)  
