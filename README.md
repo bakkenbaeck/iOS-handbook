@@ -2,6 +2,7 @@
 
 Consistency is 👸.
 
+### Index
 * [Git and GitHub](/GIT_AND_GITHUB.md)
 * [Project Structure](/PROJECT_STRUCTURE.md)
 * [Best Practices](/BEST_PRACTICES.md)
