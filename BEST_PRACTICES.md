@@ -11,6 +11,7 @@
 * [Property Observing](#property-observing)
 * [Networking](#networking)
 * [View layout](#view-layout)
+* [Optional Force Unwrapping](#optional-force-unwrapping)
 * [Swift style guide](#swift-style-guide)
   * [Naming](#naming)
     * [Class Prefixes](#class-prefixes)
@@ -252,6 +253,19 @@ Use a simple NSURLSession wrapper to make things simpler, [Networking](https://g
 Views should be layout using Apple's Auto Layout. No third-party frameworks are recommended at the moment but this is open for change. Just try to use the highest abstraction that's available to you, whether this is `UIStackView` or  `NSLayoutAnchor`.
 
 Old style layout is still an option for when Auto Layout is not available.
+
+## Optional Force Unwrapping
+
+When something that shouldn't return an optional, returns an optional you have two options:
+
+**A)** Pass the error to the caller (throw) . 
+**B)** Crash
+
+**Option A** is pretty straight forward, you create an `Error` or `NSError` with the right status code, some information about the error in the info field and you move on. This is the ideal way of handling it, specially if there's the possibility of the app to recover from the problem and fix the problem.
+
+**Option B** is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
+
+In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred. In other cases such as instantiating a `URL` using a path using a `fatalError` with the path that caused the crash should be the way to go.
 
 # Swift Style Guide
 
