@@ -14,7 +14,7 @@ Project
 |—— METCalendarViewer
 |—— LZOPhotoViewer
 |
-|— Shared # Anything that falls outside of the MVC pattern or is shared between targets
+|— Library # Anything that falls outside of the MVC pattern or is shared between targets
 |—— Theming
 |——— Theme.swift
 |—— Extensions
