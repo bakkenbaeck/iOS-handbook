@@ -533,6 +533,22 @@ attendeeList.sort { a, b in
 }
 ```
 
+Always used named parameters, and never unamed ordered parameters (`$0`). It's harder to write, harder to read and takes much longer to compile.
+
+**Preferred:**
+```swift
+let values = [2.0, 4.0, 5.0, 7.0]
+let squares = values.map { element in element * element}
+// [4.0, 16.0, 25.0, 49.0]
+```
+
+**Not Preferred:**
+```swift
+let values = [2.0, 4.0, 5.0, 7.0]
+let squares = values.map { $0 * $0 }
+// [4.0, 16.0, 25.0, 49.0]
+```
+
 ## Types
 
 Always use Swift's native types when available. Swift offers bridging to Objective-C so you can still use the full set of methods as needed.
