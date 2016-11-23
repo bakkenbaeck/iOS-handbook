@@ -37,6 +37,8 @@ Explain why you think this might be helpful in this particular case.
 ## When you feel someone is not communicating clear enough
 If you feel someone’s reaction is not clear enough (i.e. someone’s reaction confuses you, or even agitates you) look at these guidelines together with that person to see what could be improved in the future. If you realise something critical is missing in the guidelines, please add to it.
 
+If following hte guidelines don't clear things up consider a call to solve the issue if the matter is pressing, or wait for the next iOS meeting to continue discussing it. '
+
 ### Good to keep in mind:
 These are the guidelines from GitHub for giving feedback on a PR, there's some valuable points in it for online communication in general:'
 
