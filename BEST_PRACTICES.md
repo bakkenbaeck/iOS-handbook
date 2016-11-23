@@ -4,6 +4,7 @@
 
 * [Xcode](#xcode)
 * [Versioning](#versioning)
+* [Class structure](#class-structure)
 * [Comments](#comments)
 * [Blocks, delegates or data source](#blocks-delegates-or-data-source)
 * [View controllers](#view-controllers)
@@ -12,24 +13,24 @@
 * [Networking](#networking)
 * [View layout](#view-layout)
 * [Swift style guide](#swift-style-guide)
-  * [Naming](#naming)
-    * [Class Prefixes](#class-prefixes)
-  * [Spacing and Indentation](#spacing-and-indentation)
-  * [Classes and Structs](#classes-and-structs)
-    * [Use of Self](#use-of-self)
-    * [Protocol Conformance](#protocol-conformance)
-    * [Computed Properties](#computed-properties)
-    * [Example definition](#example-definition)
-  * [Function Declarations](#function-declarations)
-  * [Closure Expressions](#closure-expressions)
-  * [Types](#types)
-    * [Constants](#constants)
-    * [Optionals](#optionals)
-    * [Struct Initializers](#struct-initializers)
-    * [Type Inference](#type-inference)
-    * [Syntactic Sugar](#syntactic-sugar)
-  * [Semicolons](#semicolons)
-  * [Resources](#resources)
+* [Naming](#naming)
+* [Class Prefixes](#class-prefixes)
+* [Spacing and Indentation](#spacing-and-indentation)
+* [Classes and Structs](#classes-and-structs)
+* [Use of Self](#use-of-self)
+* [Protocol Conformance](#protocol-conformance)
+* [Computed Properties](#computed-properties)
+* [Example definition](#example-definition)
+* [Function Declarations](#function-declarations)
+* [Closure Expressions](#closure-expressions)
+* [Types](#types)
+* [Constants](#constants)
+* [Optionals](#optionals)
+* [Struct Initializers](#struct-initializers)
+* [Type Inference](#type-inference)
+* [Syntactic Sugar](#syntactic-sugar)
+* [Semicolons](#semicolons)
+* [Resources](#resources)
 
 ## Xcode
 
@@ -53,27 +54,47 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 
 When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
 
+
+## Class structure 
+
+To make the code structured and to make it easy for yourself and other developers to find things in the code we have a guide for codestructure. It tells you where to put what and in what order.
+
+#### Order of views
+When declaring, laying-out or adding your views always keep the order of the views in the design. The order to follow is: from back till front and in reading order. 
+
+![Example of view order](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/view-order-example)
+
+So for example when implementing the view above the order would be:
+1. background image (because it's on the bottom)
+2. Title Label (because it's on top)
+3. Subtitle label (because it's below)
+4. Time label (because reading order is left to right)
+
+#### Example ViewController 
+
+
+
 ## Comments
 
- When they are needed, comments should be used to explain **why** a particular piece of code does something instead of **what**. Any comments that are used must be kept up-to-date or deleted. This does not apply to those comments used to generate documentation.
+When they are needed, comments should be used to explain **why** a particular piece of code does something instead of **what**. Any comments that are used must be kept up-to-date or deleted. This does not apply to those comments used to generate documentation.
 
 **Preferred:**
 
 ```swift
 /*
-  Workaround: So far this is the scroll-to-bottom method that worked best,
-  with proper animation, and no issues so far, regardless of scrollview content size.
-  If this looks and feels like a hack, it's because it kinda is.
-  By creating a rect that's 1x1, pointed at the bottom-right side of the scrollview's content
-  and telling it to scroll there, regardless of insets and offsets, it will scroll to the very bottom.
+Workaround: So far this is the scroll-to-bottom method that worked best,
+with proper animation, and no issues so far, regardless of scrollview content size.
+If this looks and feels like a hack, it's because it kinda is.
+By creating a rect that's 1x1, pointed at the bottom-right side of the scrollview's content
+and telling it to scroll there, regardless of insets and offsets, it will scroll to the very bottom.
 */
 func scrollToBottom() {
-    let contentSize = self.collectionView.contentSize
-    let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
-    let visibleRect = self.collectionView.layer.visibleRect
-    if !visibleRect.intersects(bottomRect) {
-        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
-    }
+let contentSize = self.collectionView.contentSize
+let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
+let visibleRect = self.collectionView.layer.visibleRect
+if !visibleRect.intersects(bottomRect) {
+self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+}
 }
 ```
 
@@ -82,12 +103,12 @@ func scrollToBottom() {
 ```swift
 // Scrolls to the bottom of the view
 func scrollToBottom() {
-    let contentSize = self.collectionView.contentSize
-    let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
-    let visibleRect = self.collectionView.layer.visibleRect
-    if !visibleRect.intersects(bottomRect) {
-        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
-    }
+let contentSize = self.collectionView.contentSize
+let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
+let visibleRect = self.collectionView.layer.visibleRect
+if !visibleRect.intersects(bottomRect) {
+self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+}
 }
 ```
 
@@ -95,17 +116,17 @@ func scrollToBottom() {
 
 ```swift
 func override viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
+super.viewWillAppear(animated)
 
-    /*
-     Workaround: Selected cell only gets deselected when pressing the back button
-     dragging the screen to go back doesn't deselect the selected cell.
-     So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
-     */
-    let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-    if selectedIndexPath {
-        self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
-    }
+/*
+Workaround: Selected cell only gets deselected when pressing the back button
+dragging the screen to go back doesn't deselect the selected cell.
+So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
+*/
+let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+if selectedIndexPath {
+self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+}
 }
 ```
 
@@ -120,10 +141,10 @@ Multiple-lines:
 
 ```swift
 /*
-   Workaround: This is a comment that spans multiple lines.
-   Comments should be added when they are not only needed but critical
-   to understand the underlying block of code.
- */
+Workaround: This is a comment that spans multiple lines.
+Comments should be added when they are not only needed but critical
+to understand the underlying block of code.
+*/
 ```
 
 ## Blocks, delegates or data source
@@ -189,10 +210,10 @@ For example:
 // PhotoViewerController
 
 var photo: Photo? {
-    didSet {
-        guard let viewerItem = self.viewerItem else { return }
-        // Do something with photo, maybe download and so on
-    }
+didSet {
+guard let viewerItem = self.viewerItem else { return }
+// Do something with photo, maybe download and so on
+}
 }
 ```
 
@@ -209,7 +230,7 @@ One solution would be that the API user (the abuser) makes sure that they don't 
 
 let photoViewerController = self.cachedPhotoViewerControllers.objectForKey(photo.id)
 if photoViewerController.photo?.id != photo.id {
-    photoViewerController.photo = photo
+photoViewerController.photo = photo
 }
 ```
 
@@ -222,20 +243,20 @@ The other solution would be that the `PhotoViewerController` takes care of this 
 
 var changed = false
 var photo: Photo? {
-    willSet {
-        if self.photo?.id != newValue?.id {
-            self.changed = true
-        }
-    }
+willSet {
+if self.photo?.id != newValue?.id {
+self.changed = true
+}
+}
 
-    didSet {
-        guard let photo = self.photo else { return }
+didSet {
+guard let photo = self.photo else { return }
 
-        if self.changed {
-            // Do something with photo, maybe download and so on
-            self.changed = false
-        }
-    }
+if self.changed {
+// Do something with photo, maybe download and so on
+self.changed = false
+}
+}
 }
 ```
 
@@ -265,8 +286,8 @@ Use descriptive names with camel case for classes, methods, variables, etc. Clas
 
 ```swift
 class WidgetContainer {
-    var widgetButton: UIButton
-    let widgetHeightPercentage = 0.85
+var widgetButton: UIButton
+let widgetHeightPercentage = 0.85
 }
 ```
 
@@ -276,8 +297,8 @@ class WidgetContainer {
 let MAX_WIDGET_COUNT = 100
 
 class app_widgetContainer {
-    var wBut: UIButton
-    let wHeightPct = 0.85
+var wBut: UIButton
+let wHeightPct = 0.85
 }
 ```
 
@@ -288,11 +309,11 @@ Declarations:
 
 ```swift
 class Guideline {
-    func combineWithString(incoming incoming: String, options: Dictionary?)
-    func upvoteBy(by amount: Int)
-    func date(from string: String) -> NSDate
-    func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction!
-    func authenticate(username username: String, password: String, completion: (error: NSError?) -> Void)
+func combineWithString(incoming incoming: String, options: Dictionary?)
+func upvoteBy(by amount: Int)
+func date(from string: String) -> NSDate
+func timedAction(delay: NSTimeInterval, action: SKAction) -> SKAction!
+func authenticate(username username: String, password: String, completion: (error: NSError?) -> Void)
 }
 ```
 
@@ -330,7 +351,7 @@ You **should not** add prefixes to your Swift types.
 
 * Indent using 4 spaces rather than tabs. This should be configured on the project.
 
-  ![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
+![Xcode indent settings](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
 * Avoid doing method indentation since Swift's indentation is inconsistent, and just keep things in one line as long as is possible. It helps you by not letting you think about manually indenting your code.
 
@@ -342,8 +363,8 @@ let user = User(name: "Igor Ranieri", nickname: "Elland", country: "Germany")
 **Not Preferred:**
 ```swift
 let user = User(name: "Igor Ranieri",
-      nickname: "elland",
-      country: "Germany")
+nickname: "elland",
+country: "Germany")
 ```
 
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
@@ -353,9 +374,9 @@ let user = User(name: "Igor Ranieri",
 **Preferred:**
 ```swift
 if user.isHappy {
-    // Do something
+// Do something
 } else {
-    // Do something else
+// Do something else
 }
 ```
 
@@ -363,10 +384,10 @@ if user.isHappy {
 ```swift
 if user.isHappy
 {
-  // Do something
+// Do something
 }
 else {
-  // Do something else
+// Do something else
 }
 ```
 
@@ -395,22 +416,22 @@ When adding protocol conformance to a class, prefer adding a separate class exte
 **Preferred:**
 ```swift
 class MyViewcontroller: UIViewController {
-    // class stuff here
+// class stuff here
 }
 
 extension MyViewcontroller: UITableViewDataSource {
-    // table view data source methods
+// table view data source methods
 }
 
 extension MyViewcontroller: UIScrollViewDelegate {
-    // scroll view delegate methods
+// scroll view delegate methods
 }
 ```
 
 **Not Preferred:**
 ```swift
 class MyViewcontroller: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
-    // all methods
+// all methods
 }
 
 // MARK: - Data download
@@ -426,16 +447,16 @@ For conciseness, if a computed property is read-only, omit the get clause. The g
 **Preferred:**
 ```swift
 var diameter: Double {
-    return radius * 2.0
+return radius * 2.0
 }
 ```
 
 **Not Preferred:**
 ```swift
 var diameter: Double {
-    get {
-      return radius * 2.0
-    }
+get {
+return radius * 2.0
+}
 }
 ```
 
@@ -445,49 +466,49 @@ Here's an example of a well-styled class definition:
 
 ```swift
 class Circle: Shape {
-    var x: Int
-    var y: Int
-    var radius: Double
+var x: Int
+var y: Int
+var radius: Double
 
-    var diameter: Double {
-        get {
-            return self.radius * 2.0
-        }
-        set {
-            radius = newValue / 2.0
-        }
-    }
+var diameter: Double {
+get {
+return self.radius * 2.0
+}
+set {
+radius = newValue / 2.0
+}
+}
 
-    init(x: Int, y: Int, radius: Double) {
-        self.x = x
-        self.y = y
-        self.radius = radius
-    }
+init(x: Int, y: Int, radius: Double) {
+self.x = x
+self.y = y
+self.radius = radius
+}
 
-    convenience init(x: Int, y: Int, diameter: Double) {
-        self.init(x: x, y: y, radius: diameter / 2.0)
-    }
+convenience init(x: Int, y: Int, diameter: Double) {
+self.init(x: x, y: y, radius: diameter / 2.0)
+}
 
-    func describe() -> String {
-        return "I am a circle at \(self.centerString()) with an area of \(self.computeArea())"
-    }
+func describe() -> String {
+return "I am a circle at \(self.centerString()) with an area of \(self.computeArea())"
+}
 
-    override func computeArea() -> Double {
-        return M_PI * self.radius * self.radius
-    }
+override func computeArea() -> Double {
+return M_PI * self.radius * self.radius
+}
 
-    private func centerString() -> String {
-        return "(\(self.x),\(self.y))"
-    }
+private func centerString() -> String {
+return "(\(self.x),\(self.y))"
+}
 }
 ```
 
 The example above demonstrates the following style guidelines:
 
- + The correct spacing for variable assignations is with a single space after and before the equals mark `=`, e.g. `x = 3`
- + Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
- + Indent getter and setter definitions and property observers
- + Don't add modifiers such as `internal` when they're already the default
++ The correct spacing for variable assignations is with a single space after and before the equals mark `=`, e.g. `x = 3`
++ Attributes in method signature have the `:` next to the name, e.g `init(x: Int, y: Int)` same with class inheritance and when using type inference
++ Indent getter and setter definitions and property observers
++ Don't add modifiers such as `internal` when they're already the default
 
 
 ## Function Declarations
@@ -496,13 +517,13 @@ Keep function declarations on one line including the opening brace, doesn't matt
 
 ```swift
 func reticulateSplines(spline: [Double]) -> Bool {
-    // reticulate code goes here
+// reticulate code goes here
 }
 ```
 
 ```swift
 func reticulateSplines(spline: [Double], adjustmentFactor: Double, translateConstant: Int, comment: String) -> Bool {
-    // reticulate code goes here
+// reticulate code goes here
 }
 ```
 
@@ -512,7 +533,7 @@ Use trailing closure syntax wherever possible. In all cases, give the closure pa
 
 ```swift
 return SKAction.customActionWithDuration(effect.duration) { node, elapsedTime in
-    // more code goes here
+// more code goes here
 }
 ```
 
@@ -522,14 +543,14 @@ For single-expression closures don't use implicit returns, always use return.
 
 ```swift
 attendeeList.sort { a, b in
-    return a > b
+return a > b
 }
 ```
 
 **Not Preferred:**
 ```swift
 attendeeList.sort { a, b in
-    a > b
+a > b
 }
 ```
 
@@ -571,7 +592,7 @@ Use optional binding when it's more convenient to unwrap once and perform multip
 
 ```swift
 if let textContainer = self.textContainer {
-    // do many things with textContainer
+// do many things with textContainer
 }
 ```
 
@@ -585,7 +606,7 @@ var subview: UIView?
 
 // later on...
 if let subview = self.subview {
-    // do something with unwrapped subview
+// do something with unwrapped subview
 }
 ```
 
@@ -594,7 +615,7 @@ if let subview = self.subview {
 var optionalSubview: UIView?
 
 if let unwrappedSubview = optionalSubview {
-    // do something with unwrappedSubview
+// do something with unwrappedSubview
 }
 ```
 
@@ -687,34 +708,34 @@ import Hex
 import UIKit
 
 extension UIColor {
-    class var callToActionNormal: UIColor {
-        return UIColor(hex: "A87CF2")
-    }
+class var callToActionNormal: UIColor {
+return UIColor(hex: "A87CF2")
+}
 
-    class var callToActionSelected: UIColor {
-        return UIColor(hex: "A87CF2")
-    }
+class var callToActionSelected: UIColor {
+return UIColor(hex: "A87CF2")
+}
 
-    class var callToActionHighlighted: UIColor {
-        return UIColor(hex: "A87CF2")
-    }
+class var callToActionHighlighted: UIColor {
+return UIColor(hex: "A87CF2")
+}
 }
 
 extension UIFont {
-    class func bold(size: Double) -> UIFont {
-        return UIFont(name: "DINNextLTPro-Bold", size: CGFloat(size))!
-    }
+class func bold(size: Double) -> UIFont {
+return UIFont(name: "DINNextLTPro-Bold", size: CGFloat(size))!
+}
 
-    class func light(size: Double) -> UIFont {
-        return UIFont(name: "DINNextLTPro-Light", size: CGFloat(size))!
-    }
+class func light(size: Double) -> UIFont {
+return UIFont(name: "DINNextLTPro-Light", size: CGFloat(size))!
+}
 
-    class func medium(size: Double) -> UIFont {
-        return UIFont(name: "DINNextLTPro-Medium", size: CGFloat(size))!
-    }
+class func medium(size: Double) -> UIFont {
+return UIFont(name: "DINNextLTPro-Medium", size: CGFloat(size))!
+}
 
-    class func regular(size: Double) -> UIFont {
-        return UIFont(name: "DINNextLTPro-Regular", size: CGFloat(size))!
-    }
+class func regular(size: Double) -> UIFont {
+return UIFont(name: "DINNextLTPro-Regular", size: CGFloat(size))!
+}
 }
 ```
