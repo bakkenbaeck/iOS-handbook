@@ -45,19 +45,8 @@ Try to keep in mind that written communication it’s really easy to misread som
 If following the guidelines don't clear things up, consider a call to solve the issue if the matter is pressing, or wait for the next iOS meeting to continue discussing it.
 
 ### Good to keep in mind:
-These are paraphrased or downright copied over from Github’s pull request guideline:
 
-- Familiarise yourself with the context of the issue.
-- If you disagree strongly, consider giving it a few minutes before responding; think before you react. Try to empathise.
-- Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
-- Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
-- Offer ways to simplify or improve code.
-- Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced. Don’t shame, no one started out knowing.
-- Be humble. (“I’m not sure, let’s try…”)
-- Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
-- Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both way: try to be open and welcoming to criticism.
-- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try to use positive language instead.
-- Use emoji to clarify tone. Compare “ok” to “ok 😃.”
+When reviewing pull requests keep in mind that you are reviewing something that someone else has worked on really hard, so always be respectful. These guidelines for giving feedback are a good reference:
 
-[Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
+https://github.com/bakkenbaeck/iOS-playbook/blob/master/GIT_AND_GITHUB.md#reviewing-pull-requests
 
