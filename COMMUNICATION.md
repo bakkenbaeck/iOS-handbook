@@ -12,7 +12,7 @@ When making jokes, talking about your favourite tea, or planning a team members 
 - **When writing short replies**
 When you write a reply of less than ~5 words, have an alarm bell in the back of your head 🔔. Is it just tacit agreement? Then it’s probably fine! “Great job”, “Couldn’t have put it better”,  “toats awesome!” are all fine. In every other case though: 🚨!
 
-It good practice to elaborate. It may seem inefficient to be so verbose in our replies, but it will avoid misunderstandings, which can result in way greater inefficiency. Avoid being pennywise, pound foolish.
+It good practice to elaborate. It may seem inefficient to be so verbose in our replies, but it will avoid misunderstandings, which can result in way greater inefficiency.
 
 ## Criticising or asking questions
 Start by repeating **what** you are replying to in your own words. This forces you to indulge yourself into the perspective of the other, which creates a greater understanding of the issue both for yourself and the other when reading your reply.
@@ -55,8 +55,8 @@ These are paraphrased or downright copied over from Github’s pull request guid
 - Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced. Don’t shame, no one started out knowing.
 - Be humble. (“I’m not sure, let’s try…”)
 - Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
-- Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both way: try to be open and welcoming to criticism.
-- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try to use positive language instead.
+- Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both ways: try to be open and welcoming to criticism.
+- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try using positive language instead.
 - Use emoji to clarify tone. Compare “ok” to “ok 😃.”
 
 [Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
