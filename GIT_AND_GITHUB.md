@@ -82,7 +82,7 @@ on something you've learned, and so on. The goal here is to make the whole team 
 in the process.
 
 Keep in mind that you are reviewing something that someone else has worked on really 
-hard, so always be respectful. These guidelines for for giving feedback are a 
+hard, so always be respectful. These guidelines for giving feedback are a 
 good reference:
 
 - Familiarise yourself with the context of the issue.
