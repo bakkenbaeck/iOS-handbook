@@ -34,7 +34,7 @@ Explain why you think this might be helpful in this particular case. Don’t jus
 - Read this article:
 
 ### Prefer:
-- A collection view might be helpful in this case, **because it would take care of the layout for you. Otherwise you’ll just be redoing the same work, implementing your own lightweight collection view instead.**
+- A collection view might be helpful in this case, **because it would take care of the layout for you. Otherwise you’ll be redoing the same work, implementing your own lightweight collection view instead.**
 - This article might be interesting for you, **as it explains the threats of storing API keys in plaintext.**
 
 ## When you feel someone is not communicating clear enough
