@@ -40,7 +40,7 @@ Explain why you think this might be helpful in this particular case. Don’t jus
 ## When you feel someone is not communicating clear enough
 If you feel someone’s reaction is not clear enough (i.e. someone’s reaction confuses you, or even agitates you), look at these guidelines together to see what could be improved in the future. If you realise something critical is missing in the guidelines, please add to it.
 
-Try to keep in mind that written communication it’s really easy to misread something or to interpret something out of context. Try not to assume rudeness, ill intent or malice. Sometimes something was poorly phrased or misread. Sometimes we’re switching between contexts too often, and end up being shorter than we should. Try asking for clarification, or if the person could rephrase that, if the meaning is’t clear. 👍 
+Try to keep in mind that written communication it’s really easy to misread something or to interpret something out of context. Try not to assume rudeness, ill intent or malice. Sometimes something was poorly phrased or misread. Sometimes we’re switching between contexts too often, and end up being shorter than we should. Try asking for clarification, or if the person could rephrase that, if the meaning isn’t clear. 👍 
 
 If following the guidelines don't clear things up, consider a call to solve the issue if the matter is pressing, or wait for the next iOS meeting to continue discussing it.
 
