@@ -82,22 +82,22 @@ on something you've learned, and so on. The goal here is to make the whole team 
 in the process.
 
 Keep in mind that you are reviewing something that someone else has worked on really 
-hard, so always be respectful. The guidelines from GitHub for giving feedback are a 
+hard, so always be respectful. This guidelines for for giving feedback are a 
 good reference:
 
-> - Familiarize yourself with the context of the issue, and reasons why this Pull Request exists.
-> - If you disagree strongly, consider giving it a few minutes before responding; think before you react.
-> - Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
-> - Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
-> - Offer ways to simplify or improve code.
-> - Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced.
-> - Be humble. (“I’m not sure, let’s try…”)
-> - Avoid hyperbole. (“NEVER do…”)
-> - Aim to develop professional skills, group knowledge and product quality, through group critique.
-> - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?
-> - Use emoji to clarify tone. Compare “✨ ✨ Looks good 👍 ✨ ✨” to “Looks good.”
+- Familiarise yourself with the context of the issue.
+- If you disagree strongly, consider giving it a few minutes before responding; think before you react. Try to empathise.
+- Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
+- Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
+- Offer ways to simplify or improve code.
+- Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced. Don’t shame, no one started out knowing.
+- Be humble. (“I’m not sure, let’s try…”)
+- Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
+- Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both way: try to be open and welcoming to criticism.
+- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try to use positive language instead.
+- Use emoji to clarify tone. Compare “ok” to “ok 😃.”
 
-[Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
+[Based on GitHub's "How to write the perfect pull request".](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
 If everything is fine feel free to merge the pull request. Avoid merging before receiving
 a feedback. If several developers are involved in the project, one confirmation should be 
