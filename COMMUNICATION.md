@@ -57,7 +57,7 @@ These are paraphrased or downright copied over from Github’s pull request guid
 - Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
 - Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both way: try to be open and welcoming to criticism.
 - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try to use positive language instead.
-- Use emoji to clarify tone. Compare “well, this sucks” to “well, this sucks 😂.”
+- Use emoji to clarify tone. Compare “ok” to “ok 😃.”
 
 [Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
