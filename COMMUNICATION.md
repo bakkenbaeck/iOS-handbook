@@ -54,7 +54,7 @@ These are paraphrased or downright copied over from Github’s pull request guid
 - Offer ways to simplify or improve code.
 - Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced. Don’t shame, no one started out knowing.
 - Be humble. (“I’m not sure, let’s try…”)
-- Never deal in absolutes. Unless needed. (“Never store sensitive data in plain text!”)
+- Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
 - Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both way: try to be open and welcoming to criticism.
 - Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try to use positive language instead.
 - Use emoji to clarify tone. Compare “well, this sucks” to “well, this sucks 😂.”
