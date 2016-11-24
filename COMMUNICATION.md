@@ -15,7 +15,7 @@ When you write a reply of less than ~5 words, have an alarm bell in the back of 
 It good practice to elaborate. It may seem inefficient to be so verbose in our replies, but it will avoid misunderstandings, which can result in way greater inefficiency. Avoid being pennywise, pound foolish.
 
 ## Criticising or asking questions
-A good idea is to start by repeating **what** you are replying to in your own words. This avoids cases where due to the high volume of messages, the context of your comment is lost. It also helps you make sure you yourself fully understood the problem, and didn’t misread anything.
+Start by repeating **what** you are replying to in your own words. This avoids cases where due to the high volume of messages, the context of your comment is lost. It also helps you make sure you yourself fully understood the problem, and didn’t misread anything.
 
 ### To be avoided:
 - Don't use optional here. 
