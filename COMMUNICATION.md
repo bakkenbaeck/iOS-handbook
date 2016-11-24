@@ -22,7 +22,7 @@ Start by repeating **what** you are replying to in your own words. This forces y
 - What’s your suggestion?
 
 ### Preferred:
-- **I see you are using an optional as an array of User object in the example above**, wouldn’t it be better to have that property default to an empty array?
+- **I see you are using an optional as an array of User object in the example above**, have you considered to have that property default to an empty array?
 
 - **Okay, so you say using a collectionView here would be over-engineering**, how would you then solve this problem instead?
 
