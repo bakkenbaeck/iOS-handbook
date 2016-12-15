@@ -52,13 +52,13 @@ The candidate will be asked to make an assigment with a 24 hour deadline. They w
 # Job description for an iOS position
 
 ### A bit about you
-- 01 You love building applications for iOS.
+- 01 You enjoy building applications for iOS.
 - 02 You're happy working in a team.
-- 03 Interest in Swift, usability and communicating with Web services.
+- 03 Interest in Swift, usability and communicating with Web services such as REST and Websockets.
 - 04 Self-sustaining and forever curious.
 - 05 Familiarity with unit testing.
 - 06 A keen eye for good design is a bonus.
-- 07 Have you collaborated on open source projects? That is also a bonus.
+- 07 Do you collaborate on open source projects? That is also a bonus.
 
 ### What you'll be doing (Oslo)
 #### After one week
@@ -72,10 +72,10 @@ You've worked with a few clients and even started working on a few ideas of your
 
 ### What you'll be doing (Amsterdam)
 #### After one week
-You've gotten your new computer set up.
+You've gotten your new computer set up, you had a warm welcome in the company wide weakly meeting. We've probably had a dinner to welcome you to the Amsterdam-team.
 
 #### After one month
-You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app. And you've visited or have a visit plannen to meet you're colleagues from Oslo and Bonn in real life.
+You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app. And you've visited or have a visit planned to work with your colleagues from Oslo or Bonn.
 
 #### After six months
 You've worked with a few clients and even started working on a few ideas of your own. You've spent some time in the lab playing with the 3D printer, Raspberry Pi, and range of drones. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own.
