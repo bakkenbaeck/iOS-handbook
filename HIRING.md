@@ -52,7 +52,7 @@ The candidate will be asked to make an assigment with a 24 hour deadline. They w
 # Job description for an iOS position
 
 ### A bit about you
-- 01 Familiarity with building applications for iOS and/or Mac OS. Maybe even some Watch and tvOS.
+- 01 Familiarity with building applications for iOS.
 - 02 Teamplayer.
 - 03 Familiarity or interest in Swift, usability and Web services.
 - 04 Self-sustaining and forever curious.
