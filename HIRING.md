@@ -47,7 +47,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Have you faced any challenges when working with designers and/or backend developers? Could you tell us a bit more about your experience on collaborating with both?
 
 ## Assignment
-The candidate will be asked to make an assigment with a 24 hour deadline. They will be able to pick the best day to receive the details of the assignment before the clock starts ticking. The assignment will consist of making a simple app to display a list of items that come from an API. It's a simple assignment that offers a lot of time and leeway to spice up withe
+The candidate will be asked to make an assigment with a 24 hour deadline. They will be able to pick the best day to receive the details of the assignment before the clock starts ticking. The assignment will consist of making a simple app to display a list of items that come from an API.
 
 # Job description for an iOS position
 
