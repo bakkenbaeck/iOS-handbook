@@ -47,27 +47,26 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Have you faced any challenges when working with designers and/or backend developers? Could you tell us a bit more about your experience on collaborating with both?
 
 ## Assignment
-The candidate will be asked to make an assigment with a 24 hour deadline. He'll get to pick the best day to receive the details of the assignment then the clock will start ticking. The assignment will consist in making a simple app to display a list of items that comes from an API. The list should be able to be accessed offline.
+The candidate will be asked to make an assigment with a 24 hour deadline. They will be able to pick the best day to receive the details of the assignment before the clock starts ticking. The assignment will consist of making a simple app to display a list of items that come from an API. It's a simple assignment that offers a lot of time and leeway to spice up withe
 
 # Job description for an iOS position
 
 ### A bit about you
-- 01 Experience with building top level applications for Apple iOS/OS X, and started peeping into Watch OS and tvOS.
-- 02 Extensive experience with team and client work.
-- 03 A broad understanding of Swift, Core Data and Web-services.
-- 04 Self-sustaining and forever curious about how to improve your workflow.
-- 05 Experience with unit testing.
-- 06 Further user experience knowledge is a bonus.
-- 07 or collaborating on open source projects is a big plus.
+- 01 Familiarity with building applications for iOS and/or Mac OS. Maybe even some Watch and tvOS.
+- 02 Teamplayer.
+- 03 Familiarity or interest in Swift, usability and Web services.
+- 04 Self-sustaining and forever curious.
+- 05 Familiarity with unit testing.
+- 06 A keen eye for good design is a bonus.
+- 07 Collaborating on open source projects is also a bonus.
 
 ### What you'll be doing
 #### After one week
-You've gotten your new computer set up, and you've taken part in your first Monday morning stretch. If you're lucky you've visited our rooftop bees and joined our Friday-bingo.
+You've gotten your new computer set up, and if you're the Oslo office, you've taken part in your first Monday morning stretch. If you're lucky, you've visited our rooftop bees and joined our Friday bingo.
 
 #### After one month
-You've gotten your first client and are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
+You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
 
 #### After six months
-You've worked with a few clients and even started working on a few ideas of your own. You've spent some time in the lab playing with the 3D printer, raspberry pis, and range of drones. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own.
-
+You've worked with a few clients and even started working on a few ideas of your own. You've spent some time in the lab playing with the 3D printer, Raspberry Pi, and range of drones. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own.
 
