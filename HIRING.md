@@ -72,12 +72,12 @@ You've worked with a few clients and even started working on a few ideas of your
 
 ### What you'll be doing (Amsterdam)
 #### After one week
-You've gotten your new computer set up, you had a warm welcome in the company wide weakly meeting. We've probably had a dinner to welcome you to the Amsterdam-team.
+You've gotten your new computer set up, you had a warm welcome in the company wide weekly meeting. We've probably had a dinner to welcome you to the Amsterdam-team.
 
 #### After one month
-You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app. And you've visited or have a visit planned to work with your colleagues from Oslo or Bonn.
+You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
 
 #### After six months
-You've worked with a few clients and even started working on a few ideas of your own. You've spent some time in the lab playing with the 3D printer, Raspberry Pi, and range of drones. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own.
+You've worked with a few clients and even started working on a few ideas of your own. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own. And you've got acquainted with your colleagues from Bonn and Oslo when you visited the office for work or a party, or maybe both!
 
 ### What you'll be doing (Bonn)
