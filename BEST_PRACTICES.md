@@ -258,14 +258,13 @@ Old style layout is still an option for when Auto Layout is not available.
 
 When something that shouldn't return an optional, returns an optional you have two options:
 
-**A)** Pass the error to the caller (throw) . 
-**B)** Crash
+**A)** Pass the error to the caller (throw): This is the ideal way of handling it, specially if there's the possibility of the app to recover. It's pretty straight forward, you create an `Error` or `NSError` with the right status code, some information about the error in the info field and you move on.
 
-**Option A** is pretty straight forward, you create an `Error` or `NSError` with the right status code, some information about the error in the info field and you move on. This is the ideal way of handling it, specially if there's the possibility of the app to recover from the problem and fix the problem.
+For example, lets say you have a method that returns a filename for a photo, in theory all the photos should have a filename, so, the return value shouldn't be an optional. In this case you could pick returning a `String` and using a `fatalError` for when the filename is not found, but is ideal that you use `throws` instead and let the method called to decide if they either go for crashing the app, or going for just excluding the photo with the missing filename.
 
-**Option B** is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
+**B)** Crash: is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
 
-In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred. In other cases such as instantiating a `URL` using a path using a `fatalError` with the path that caused the crash should be the way to go.
+In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred, because if you can't dequeue the cell, or can't a cell for the specific class, there's no other way to recover than to show an empty screen, which is not preferable.
 
 # Swift Style Guide
 
