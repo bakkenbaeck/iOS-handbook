@@ -18,7 +18,7 @@ It good practice to elaborate. It may seem inefficient to be so verbose in our r
 Start by repeating **what** you are replying to in your own words. This forces you to indulge yourself into the perspective of the other, which creates a greater understanding of the issue both for yourself and the other when reading your reply.
 
 ### To be avoided:
-- Don't use optional here. 
+- Don't use optional here.
 - What’s your suggestion?
 
 ### Preferred:
@@ -40,24 +40,12 @@ Explain why you think this might be helpful in this particular case. Don’t jus
 ## When you feel someone is not communicating clear enough
 If you feel someone’s reaction is not clear enough (i.e. someone’s reaction confuses you, or even agitates you), look at these guidelines together to see what could be improved in the future. If you realise something critical is missing in the guidelines, please add to it.
 
-Try to keep in mind that written communication it’s really easy to misread something or to interpret something out of context. Try not to assume rudeness, ill intent or malice. Sometimes something was poorly phrased or misread. Sometimes we’re switching between contexts too often, and end up being shorter than we should. Try asking for clarification, or if the person could rephrase that, if the meaning isn’t clear. 👍 
+Try to keep in mind that written communication it’s really easy to misread something or to interpret something out of context. Try not to assume rudeness, ill intent or malice. Sometimes something was poorly phrased or misread. Sometimes we’re switching between contexts too often, and end up being shorter than we should. Try asking for clarification, or if the person could rephrase that, if the meaning isn’t clear. 👍
 
 If following the guidelines don't clear things up, consider a call to solve the issue if the matter is pressing, or wait for the next iOS meeting to continue discussing it.
 
 ### Good to keep in mind:
-These are paraphrased or downright copied over from Github’s pull request guideline:
 
-- Familiarise yourself with the context of the issue.
-- If you disagree strongly, consider giving it a few minutes before responding; think before you react. Try to empathise.
-- Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
-- Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
-- Offer ways to simplify or improve code.
-- Avoid using derogatory terms, like “stupid”, when referring to the work someone has produced. Don’t shame, no one started out knowing.
-- Be humble. (“I’m not sure, let’s try…”)
-- Never deal in absolutes. Unless needed. (“We should never store sensitive data in plain text.”)
-- Aim to develop professional skills, group knowledge and product quality, through group critique. That goes both ways: try to be open and welcoming to criticism.
-- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Try using positive language instead.
-- Use emoji to clarify tone. Compare “ok” to “ok 😃.”
+When reviewing pull requests keep in mind that you are reviewing something that someone else has worked on really hard, so always be respectful. These guidelines for giving feedback are a good reference:
 
-[Source: How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
-
+https://github.com/bakkenbaeck/iOS-playbook/blob/master/GIT_AND_GITHUB.md#reviewing-pull-requests
