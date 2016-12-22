@@ -11,6 +11,7 @@
 * [Property Observing](#property-observing)
 * [Networking](#networking)
 * [View layout](#view-layout)
+* [Optional Force Unwrapping](#optional-force-unwrapping)
 * [Swift style guide](#swift-style-guide)
   * [Naming](#naming)
     * [Class Prefixes](#class-prefixes)
@@ -252,6 +253,18 @@ Use a simple NSURLSession wrapper to make things simpler, [Networking](https://g
 Views should be layout using Apple's Auto Layout. No third-party frameworks are recommended at the moment but this is open for change. Just try to use the highest abstraction that's available to you, whether this is `UIStackView` or  `NSLayoutAnchor`.
 
 Old style layout is still an option for when Auto Layout is not available.
+
+## Optional Force Unwrapping
+
+When something that shouldn't return an optional, returns an optional you have two options:
+
+**A)** Pass the error to the caller (throw): This is the ideal way of handling it, specially if there's the possibility of the app to recover. It's pretty straight forward, you create an `Error` or `NSError` with some information about the error, and throw it. [More information about throwing here.](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ErrorHandling.html)
+
+For example, lets say you have a method that returns a filename for a photo, in theory all the photos should have a filename, so, the return value shouldn't be an optional. Throw an error in this case and let the method caller decide if they either go for crashing the app, or for just excluding the photo with the missing filename.
+
+**B)** Crash: is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
+
+In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred, because if you can't dequeue the cell, or can't a cell for the specific class, there's no other way to recover than to show an empty screen, which is not preferable.
 
 # Swift Style Guide
 
