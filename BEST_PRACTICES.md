@@ -260,7 +260,7 @@ When something that shouldn't return an optional, returns an optional you have t
 
 **A)** Pass the error to the caller (throw): This is the ideal way of handling it, specially if there's the possibility of the app to recover. It's pretty straight forward, you create an `Error` or `NSError` with the right status code, some information about the error in the info field and you move on.
 
-For example, lets say you have a method that returns a filename for a photo, in theory all the photos should have a filename, so, the return value shouldn't be an optional. In this case you could pick returning a `String` and using a `fatalError` for when the filename is not found, but is ideal that you use `throws` instead and let the method called to decide if they either go for crashing the app, or going for just excluding the photo with the missing filename.
+For example, lets say you have a method that returns a filename for a photo, in theory all the photos should have a filename, so, the return value shouldn't be an optional. Throw an error in this case and let the method caller decide if they either go for crashing the app, or for just excluding the photo with the missing filename.
 
 **B)** Crash: is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
 
