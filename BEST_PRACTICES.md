@@ -133,7 +133,7 @@ Multiple-lines:
 
 Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying, since they have their own delegates that use the variable `delegate`, and can't be overwritten.
 
-Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and others. This causes to confusion for the API user, since now there are two delegates. We avoid this by not subclassing directly UITableViewController or UICollectionViewController, instead we use SweetTableController and SweetCollectionController, by doing this we can use the `delegate` variable.
+Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and others. This causes to confusion for the API user, since now there are two delegates. To avoid this, we do not subclass `UITableViewController`and `UICollectionViewController` directly. Instead we use our own classes here: `SweetTableController` and `SweetCollectionController` instead. This frees up the `delegate` variable for our own use.
 
 ```swift
 protocol RecipesControllerDelegate: class {
