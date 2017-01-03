@@ -131,7 +131,7 @@ Multiple-lines:
 
 ## Naming
 
-Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying since they have their own delegates that use the variable `delegate` and can't be overwritten.
+Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying, since they have their own delegates that use the variable `delegate`, and can't be overwritten.
 
 Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and others. This causes to confusion for the API user, since now there are two delegates. We avoid this by not subclassing directly UITableViewController or UICollectionViewController, instead we use SweetTableController and SweetCollectionController, by doing this we can use the `delegate` variable.
 
@@ -140,11 +140,11 @@ protocol RecipesControllerDelegate: class {
 }
 
 class RecipesController: SweetTableController/SweetCollectionController {
-    var delegate: RecipesControllerDelegate
+    weak var delegate: RecipesControllerDelegate?
 }
 ```
 
-If you are using something else than UITableViewController and UICollectionViewController, first consider making a simple wrapper and submitting a PR to the [SweetUIKit](https://github.com/UseSweet/SweetUIKit) library. If this is not possible use another meaningful name, such as the name of the protocol or the class.
+If you are using something else than UITableViewController and UICollectionViewController, first consider making a simple wrapper and submitting a PR to the [SweetUIKit](https://github.com/UseSweet/SweetUIKit) library. If this is not possible, use a meaningful name, such as the name of the protocol or the class.
 
 ```swift
 protocol NewRecipesControllerDelegate: class {
@@ -154,8 +154,8 @@ protocol ExistingRecipesControllerDelegate: class {
 }
 
 class RecipesController: UIPresentationViewController {
-    var newRecipesDelegate: NewRecipesControllerDelegate
-    var existingRecipesDelegate: ExistingRecipesControllerDelegate
+    weak var newRecipesDelegate: NewRecipesControllerDelegate?
+    weak var existingRecipesDelegate: ExistingRecipesControllerDelegate?
 }
 ```
 
