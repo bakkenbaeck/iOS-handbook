@@ -5,7 +5,7 @@
 * [Xcode](#xcode)
 * [Versioning](#versioning)
 * [Comments](#comments)
-* [Blocks, delegates or data source](#blocks-delegates-or-data-source)
+* [Blocks, delegates and data source](#blocks-delegates-and-data-source)
 * [View controllers](#view-controllers)
 * [Assets](#assets)
 * [Property Observing](#property-observing)
@@ -127,7 +127,74 @@ Multiple-lines:
  */
 ```
 
-## Blocks, delegates or data source
+## Blocks, delegates and data source
+
+## Naming
+
+Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying, since they have their own delegates that use the variable `delegate`, and can't be overwritten.
+
+Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and so on. This causes to confusion for the API user, since now there are two delegates. To avoid this, we do not subclass `UITableViewController`and `UICollectionViewController` directly. Instead we use our own classes here: `SweetTableController` and `SweetCollectionController` instead. This frees up the `delegate` variable for our own use. If you are using something else than UITableViewController and UICollectionViewController, use a meaningful name for your delegate, such as the name of the protocol or the class.
+
+**Preferred:**
+
+This is an example of using SweetTableController/SweetCollectionController, where we can use the `delegate` name.
+
+```swift
+protocol RecipesControllerDelegate: class {
+}
+
+class RecipesController: SweetTableController/SweetCollectionController {
+    weak var delegate: RecipesControllerDelegate?
+}
+```
+
+This is an example of subclassing `UINavigationController` where we can't use the `delegate` name, so make name the delegate based on the use case. For this specific scenario, I want my custom navigation controller to inform me that the navigation controller returned to the root controller.
+
+```swift
+protocol BackToRootRecipesNavigationControllerDelegate: class {
+}
+
+class RecipesNavigationController: UINavigationController {
+    weak var backToRootDelegate: BackToRootRecipesNavigationControllerDelegate?
+}
+```
+
+This is an example of a controller that will edit or create a recipe if it's a new recipe I want a different delegate than if it's an existing (edited) recipe. That's why I have `newRecipesDelegate` and `existingRecipesDelegate`.
+
+```swift
+protocol NewRecipesControllerDelegate: class {
+}
+
+protocol ExistingRecipesControllerDelegate: class {
+}
+
+class RecipesController: UIPresentationViewController {
+    weak var newRecipesDelegate: NewRecipesControllerDelegate?
+    weak var existingRecipesDelegate: ExistingRecipesControllerDelegate?
+}
+```
+
+**Not Preferred:**
+
+```swift
+protocol RecipesNavigationControllerDelegate: class {
+}
+
+class RecipesNavigationController: UINavigationController {
+    weak var recipesNavigationControllerDelegate: RecipesNavigationControllerDelegate?
+}
+```
+
+```swift
+protocol RecipesControllerDelegate: class {
+}
+
+class RecipesNavigationController: UITableViewController {
+    weak var recipesControllerDelegate: RecipesControllerDelegate?
+}
+```
+
+### Which one to use and when?
 
 Choosing when to use a block or closure, a delegate or a dataSource most of the time is a simple decision, but if you're having trouble deciding here are some reminders on what does what.
 
