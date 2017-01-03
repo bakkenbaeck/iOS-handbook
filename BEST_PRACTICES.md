@@ -133,7 +133,9 @@ Multiple-lines:
 
 Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying, since they have their own delegates that use the variable `delegate`, and can't be overwritten.
 
-Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and so on. This causes to confusion for the API user, since now there are two delegates. To avoid this, we do not subclass `UITableViewController`and `UICollectionViewController` directly. Instead we use our own classes here: `SweetTableController` and `SweetCollectionController` instead. This frees up the `delegate` variable for our own use.
+Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and so on. This causes to confusion for the API user, since now there are two delegates. To avoid this, we do not subclass `UITableViewController`and `UICollectionViewController` directly. Instead we use our own classes here: `SweetTableController` and `SweetCollectionController` instead. This frees up the `delegate` variable for our own use. If you are using something else than UITableViewController and UICollectionViewController, use a meaningful name for your delegate, such as the name of the protocol or the class.
+
+**Preferred:**
 
 ```swift
 protocol RecipesControllerDelegate: class {
@@ -144,7 +146,14 @@ class RecipesController: SweetTableController/SweetCollectionController {
 }
 ```
 
-If you are using something else than UITableViewController and UICollectionViewController, use a meaningful name for your delegate, such as the name of the protocol or the class.
+```swift
+protocol BackToRootRecipesNavigationControllerDelegate: class {
+}
+
+class RecipesNavigationController: UINavigationController {
+    weak var backToRootDelegate: BackToRootRecipesNavigationControllerDelegate?
+}
+```
 
 ```swift
 protocol NewRecipesControllerDelegate: class {
@@ -156,6 +165,26 @@ protocol ExistingRecipesControllerDelegate: class {
 class RecipesController: UIPresentationViewController {
     weak var newRecipesDelegate: NewRecipesControllerDelegate?
     weak var existingRecipesDelegate: ExistingRecipesControllerDelegate?
+}
+```
+
+**Not Preferred:**
+
+```swift
+protocol RecipesNavigationControllerDelegate: class {
+}
+
+class RecipesNavigationController: UINavigationController {
+    weak var recipesNavigationControllerDelegate: RecipesNavigationControllerDelegate?
+}
+```
+
+```swift
+protocol RecipesControllerDelegate: class {
+}
+
+class RecipesNavigationController: UITableViewController {
+    weak var recipesControllerDelegate: RecipesControllerDelegate?
 }
 ```
 
