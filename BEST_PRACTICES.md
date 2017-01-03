@@ -144,7 +144,7 @@ class RecipesController: SweetTableController/SweetCollectionController {
 }
 ```
 
-If you are using something else than UITableViewController and UICollectionViewController, first consider making a simple wrapper and submitting a PR to the [SweetUIKit](https://github.com/UseSweet/SweetUIKit) library. If this is not possible, use a meaningful name, such as the name of the protocol or the class.
+If you are using something else than UITableViewController and UICollectionViewController, use a meaningful name for your delegate, such as the name of the protocol or the class.
 
 ```swift
 protocol NewRecipesControllerDelegate: class {
