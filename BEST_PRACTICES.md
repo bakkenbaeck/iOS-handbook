@@ -137,6 +137,8 @@ Usually this leads to the developer naming the delegate things like `recipesDele
 
 **Preferred:**
 
+This is an example of using SweetTableController/SweetCollectionController, where we can use the `delegate` name.
+
 ```swift
 protocol RecipesControllerDelegate: class {
 }
@@ -146,6 +148,8 @@ class RecipesController: SweetTableController/SweetCollectionController {
 }
 ```
 
+This is an example of subclassing `UINavigationController` where we can't use the `delegate` name, so make name the delegate based on the use case. For this specific scenario, I want my custom navigation controller to inform me that the navigation controller returned to the root controller.
+
 ```swift
 protocol BackToRootRecipesNavigationControllerDelegate: class {
 }
@@ -154,6 +158,8 @@ class RecipesNavigationController: UINavigationController {
     weak var backToRootDelegate: BackToRootRecipesNavigationControllerDelegate?
 }
 ```
+
+This is an example of a controller that will edit or create a recipe if it's a new recipe I want a different delegate than if it's an existing (edited) recipe. That's why I have `newRecipesDelegate` and `existingRecipesDelegate`.
 
 ```swift
 protocol NewRecipesControllerDelegate: class {
