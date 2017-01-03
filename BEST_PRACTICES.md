@@ -5,7 +5,7 @@
 * [Xcode](#xcode)
 * [Versioning](#versioning)
 * [Comments](#comments)
-* [Blocks, delegates or data source](#blocks-delegates-or-data-source)
+* [Blocks, delegates and data source](#blocks-delegates-and-data-source)
 * [View controllers](#view-controllers)
 * [Assets](#assets)
 * [Property Observing](#property-observing)
@@ -127,7 +127,39 @@ Multiple-lines:
  */
 ```
 
-## Blocks, delegates or data source
+## Blocks, delegates and data source
+
+## Naming
+
+Declaring delegates for some UIViewControllers, for example UITableViewControllers or UICollectionViewControllers, can be annoying since they have their own delegates that use the variable `delegate` and can't be overwritten.
+
+Usually this leads to the developer naming the delegate things like `recipesDelegate`, `recipesControllerDelegate` and others. This causes to confusion for the API user, since now there are two delegates. We avoid this by not subclassing directly UITableViewController or UICollectionViewController, instead we use SweetTableController and SweetCollectionController, by doing this we can use the `delegate` variable.
+
+```swift
+protocol RecipesControllerDelegate: class {
+}
+
+class RecipesController: SweetTableController/SweetCollectionController {
+    var delegate: RecipesControllerDelegate
+}
+```
+
+If you are using something else than UITableViewController and UICollectionViewController, first consider making a simple wrapper and submitting a PR to the [SweetUIKit](https://github.com/UseSweet/SweetUIKit) library. If this is not possible use another meaningful name, such as the name of the protocol or the class.
+
+```swift
+protocol NewRecipesControllerDelegate: class {
+}
+
+protocol ExistingRecipesControllerDelegate: class {
+}
+
+class RecipesController: UIPresentationViewController {
+    var newRecipesDelegate: NewRecipesControllerDelegate
+    var existingRecipesDelegate: ExistingRecipesControllerDelegate
+}
+```
+
+### Which one to use and when?
 
 Choosing when to use a block or closure, a delegate or a dataSource most of the time is a simple decision, but if you're having trouble deciding here are some reminders on what does what.
 
