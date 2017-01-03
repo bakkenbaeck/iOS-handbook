@@ -12,6 +12,7 @@
 * [Networking](#networking)
 * [View layout](#view-layout)
 * [Optional Force Unwrapping](#optional-force-unwrapping)
+* [View properties and lazy-loading](#view-properties-and-lazy-loading)
 * [Swift style guide](#swift-style-guide)
   * [Naming](#naming)
     * [Class Prefixes](#class-prefixes)
@@ -265,6 +266,42 @@ For example, lets say you have a method that returns a filename for a photo, in 
 **B)** Crash: is a bit more tricky, here you could use `fatalError()` to provide more information about the crash, or just force unwrap it.
 
 In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred, because if you can't dequeue the cell, or can't a cell for the specific class, there's no other way to recover than to show an empty screen, which is not preferable.
+
+## View properties and lazy-loading
+
+When creating models with properties that require setup or configuration, it's better to use lazy loading instead of adding the logic to the viewDidLoad or init methods. This creates better code separation, it's more readable and avoids cluttering a single massive method that does more than it should. It's also easier to navigate the code, since `⌘+clicking` on a property will lead you right to where it's setup, and not just where it's declared.
+
+**Preferred* 
+
+```swift
+class RecipeCell: UITableViewCell {
+
+lazy var label: UILabel = {
+    let label = UILabel(....)
+    label.textColor = .red  
+
+    return label
+}()
+
+init() {
+    self.contentView.addSubview(self.label)
+
+    super.init()
+}
+```
+
+**Not preferred**
+
+```swift
+class RecipeCell: UITableViewCell {
+
+init() {
+    self.label = UILabel(....)
+    self.label.textColor = .red  
+
+    super.init()
+}
+```
 
 # Swift Style Guide
 
