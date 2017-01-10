@@ -1,5 +1,6 @@
+- Creating a new repo, repo naming
+- Add a rule to disable merge commits to the GitHub guidelines
 - Creating a new project
-- Preferred frameworks
-- Here write that we'll use Realm
-- How to do releases
-- Fastlane
+- Document SwiftFormat usage
+- Preferred frameworks (carthage, realm)
+- Fastlane and how to ship. Expand releases document to include App Store and TestFlight and Enterprise #42
