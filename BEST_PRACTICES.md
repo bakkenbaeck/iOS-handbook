@@ -12,7 +12,7 @@
 * [Networking](#networking)
 * [View layout](#view-layout)
 * [Optional Force Unwrapping](#optional-force-unwrapping)
-* [View properties and lazy-loading](#view-properties-and-lazy-loading)
+* [Lazy loading](#lazy-loading)
 * [Swift style guide](#swift-style-guide)
   * [Naming](#naming)
     * [Class Prefixes](#class-prefixes)
@@ -267,7 +267,7 @@ For example, lets say you have a method that returns a filename for a photo, in 
 
 In cases where the crash is obvious such as when dequeuing cells and casting them to your specific cell class, force unwrapping is preferred, because if you can't dequeue the cell, or can't a cell for the specific class, there's no other way to recover than to show an empty screen, which is not preferable.
 
-## View properties and lazy-loading
+## Lazy loading
 
 When creating models with properties that require setup or configuration, it's better to use lazy loading instead of adding the logic to the viewDidLoad or init methods. This creates better code separation, it's more readable and avoids cluttering a single massive method that does more than it should. It's also easier to navigate the code, since `⌘+clicking` on a property will lead you right to where it's setup, and not just where it's declared.
 
