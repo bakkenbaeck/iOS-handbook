@@ -338,7 +338,7 @@ In cases where the crash is obvious such as when dequeuing cells and casting the
 
 When creating models with properties that require setup or configuration, it's better to use lazy loading instead of adding the logic to the viewDidLoad or init methods. This creates better code separation, it's more readable and avoids cluttering a single massive method that does more than it should. It's also easier to navigate the code, since `⌘+clicking` on a property will lead you right to where it's setup, and not just where it's declared.
 
-**Preferred* 
+**Preferred:** 
 
 ```swift
 class RecipeCell: UITableViewCell {
@@ -357,7 +357,7 @@ init() {
 }
 ```
 
-**Not preferred**
+**Not preferred:**
 
 ```swift
 class RecipeCell: UITableViewCell {
