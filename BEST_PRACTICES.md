@@ -330,7 +330,7 @@ Use a method called `addSubViewsAndConstraints()` where you first add the sub vi
 override init(frame: CGRect) {
     super.init(frame: frame)
     
-    // set general setup things
+    // do general setup things
 
     self.addSubviewsAndConstraints()
 }
@@ -348,7 +348,7 @@ func addSubviewsAndConstraints {
 override init(frame: CGRect) {
     super.init(frame: frame)
 
-    // set general setup things
+    // do general setup things
 
     self.addSubview(self.label)
 
