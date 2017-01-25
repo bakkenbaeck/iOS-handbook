@@ -341,6 +341,7 @@ func addSubviewsAndConstraints {
     // add constraints to self.label
 }
 ```
+
 **Not preferred:**
 
 ```swift
@@ -353,6 +354,8 @@ override init(frame: CGRect) {
 
     // add constraints to self.label
 }
+```
+
 ## Optional Force Unwrapping
 
 When something that shouldn't return an optional, returns an optional you have two options:
