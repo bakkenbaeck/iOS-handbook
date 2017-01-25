@@ -327,13 +327,32 @@ Use a method called `addSubViewsAndConstraints()` where you first add the sub vi
 **Preferred:** 
 
 ```swift
+override init(frame: CGRect) {
+    super.init(frame: frame)
+    
+    // set general setup things
+
+    self.addSubviewsAndConstraints()
+}
+
 func addSubviewsAndConstraints {
     self.addSubview(self.label)
 
     // add constraints to self.label
 }
 ```
+**Not preferred:**
 
+```swift
+override init(frame: CGRect) {
+    super.init(frame: frame)
+
+    // set general setup things
+
+    self.addSubview(self.label)
+
+    // add constraints to self.label
+}
 ## Optional Force Unwrapping
 
 When something that shouldn't return an optional, returns an optional you have two options:
