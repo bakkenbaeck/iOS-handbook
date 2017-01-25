@@ -322,7 +322,7 @@ Views should be layout using Apple's Auto Layout. No third-party frameworks are 
 
 Old style layout is still an option for when Auto Layout is not available.
 
-Use a method called `addSubViewsAndConstraints()` where you first add the sub views and then set your constraints. Call this method from `viewDidLoad()` in a ViewController or the `init(frame: CGRect)` in a View. We do this to keep the layout code from cluttering your init methods. We move adding the sub views in this method because there inseparably related (a.k.a: your app chrashes when setting constraints on a sub view that has not been added to the view.) It also avoids conflicts when you use subclassing and want to override the method where you set the constraints. 
+Use a method called `addSubviewsAndConstraints()` where you first add the sub views and then set your constraints. Call this method from `viewDidLoad()` in a ViewController or the `init(frame: CGRect)` in a View. We do this to keep the layout code from cluttering your init methods. We move adding the sub views in this method because there inseparably related (a.k.a: your app chrashes when setting constraints on a sub view that has not been added to the view.) It also avoids conflicts when you use subclassing and want to override the method where you set the constraints. 
 
 **Preferred:** 
 
@@ -335,7 +335,7 @@ override init(frame: CGRect) {
     self.addSubviewsAndConstraints()
 }
 
-func addSubviewsAndConstraints {
+func addSubviewsAndConstraints() {
     self.addSubview(self.label)
 
     // add constraints to self.label
