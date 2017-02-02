@@ -8,3 +8,7 @@ This time will be mainly used to:
 # 22-12-16
 - Created this document 😂.
 - We assigned a bunch of issues that will be worked on during the week (#74, #67, #25, #24, #21, #15, #14).
+
+# 02-02-16
+- Talk about Open House 
+- Talk about hiring
