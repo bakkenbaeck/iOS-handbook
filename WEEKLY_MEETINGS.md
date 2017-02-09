@@ -12,3 +12,6 @@ This time will be mainly used to:
 # 02-02-16
 - Talk about Open House 
 - Talk about hiring
+
+# 09-02-16
+- Talk about finances app navigation architecture
