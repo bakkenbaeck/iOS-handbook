@@ -8,7 +8,7 @@ Your component should be unit tested and documented.
 
 - [ ] Create repo on GitHub
 - [ ] Go to your Projects folder
-- [ ] Run `git clone https://github.com/bakkenbaeck/pod-template <PODNAME>`
+- [ ] Run `git clone https://github.com/bakkenbaeck/swift-library-template <PODNAME>`
 - [ ] Run `cd <PODNAME>`
 - [ ] Run `./init.rb <PODNAME>`
 - [ ] [Enable Travis for your repository](https://travis-ci.org/profile/bakkenbaeck). If your component doesn't show up press "Sync Now"
