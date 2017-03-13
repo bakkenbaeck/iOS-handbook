@@ -60,6 +60,10 @@ point out your silly mistakes, and/or post a sufficient amount of gifs. The revi
 process is important. It is better for you to have another person backing you up. More eyes
 can mean less bugs and more consistency throughout.
 
+#### Code Linting
+
+We try to keep our whitespace and code style consistent, one of the tools we use to achieve this is [swiftformat](https://github.com/nicklockwood/SwiftFormat). We recommend installing it using [homebrew](https://brew.sh), for easy running and updating. For most projects you can run it from the root folder, but for projects using Cocoapods/Carthage, it’s recommended to run it from the top subfolder (usually has the same name as the project), to avoid reformatting third-party code.
+
 #### Reviewing pull requests
 
 As a reviewer, you should ideally be a core team member and have enough context
