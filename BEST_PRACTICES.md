@@ -14,6 +14,7 @@
 * [Optional Force Unwrapping](#optional-force-unwrapping)
 * [Lazy loading](#lazy-loading)
 * [Swift style guide](#swift-style-guide)
+  * [Linting](#linting)
   * [Naming](#naming)
     * [Class Prefixes](#class-prefixes)
   * [Spacing and Indentation](#spacing-and-indentation)
@@ -407,6 +408,10 @@ init() {
 # Swift Style Guide
 
 Our overarching goals are conciseness, readability, and simplicity.
+
+## Linting
+
+For code lint we use [swiftformat](https://github.com/nicklockwood/SwiftFormat). We aim to have it run as the last commit on any given pull-request. See [Git and GitHub](https://github.com/bakkenbaeck/iOS-playbook/blob/master/GIT_AND_GITHUB.md) for more information.
 
 ## Naming
 
@@ -885,3 +890,4 @@ extension UIFont {
     }
 }
 ```
+[^]
