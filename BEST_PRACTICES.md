@@ -22,7 +22,8 @@
     * [Use of Self](#use-of-self)
     * [Protocol Conformance](#protocol-conformance)
     * [Computed Properties](#computed-properties)
-    * [Example definition](#example-definition)
+    * [Lazy loading](#lazy-loading)
+    * [Example definition](#example-definition)    
   * [Function Declarations](#function-declarations)
   * [Closure Expressions](#closure-expressions)
   * [Types](#types)
@@ -600,6 +601,40 @@ var diameter: Double {
     get {
       return radius * 2.0
     }
+}
+```
+
+### Lazy loading
+
+When creating variables that require setup, it's better to do lazy loading instead of adding the logic to the `viewDidLoad` or `init` methods.
+
+**Preferred:**
+```swift
+class RecipeCell: UITableViewCell {
+
+lazy var label: UILabel = {
+    let label = UILabel(....)
+    label.textColor = .red  
+
+    return label
+}()
+
+init() {
+    self.contentView.addSubview(self.label)
+
+    super.init()
+}
+```
+
+**Not Preferred:**
+```swift
+class RecipeCell: UITableViewCell {
+
+init() {
+    self.label = UILabel(....)
+    self.label.textColor = .red  
+
+    super.init()
 }
 ```
 
