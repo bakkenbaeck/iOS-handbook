@@ -418,7 +418,7 @@ This is the current format configuration we use for our projects. Feel free to c
 **Swiftformat 0.28.0**
 
 ```
-swiftformat --disable braces,wrapArguments -enable trailingClosures --self insert --indent 4 --allman false --wrapelements beforefirst --exponentcase lowercase --stripunusedargs always --header strip --insertlines disabled --binarygrouping none --empty void --ranges spaced --trimwhitespace always --hexliteralcase uppercase --linebreaks lf --decimalgrouping none --commas always --comments indent --ifdef noindent --octalgrouping none --hexgrouping none --patternlet inline --semicolons inline
+swiftformat --disable braces,wrapArguments -enable trailingClosures --self insert --indent 4 --allman false --wrapelements beforefirst --exponentcase lowercase --stripunusedargs always --header strip --insertlines disabled --binarygrouping none --empty void --ranges spaced --trimwhitespace always --hexliteralcase uppercase --linebreaks lf --decimalgrouping none --commas always --comments indent --octalgrouping none --hexgrouping none --patternlet inline --semicolons inline
 ```
 
 ## Naming
