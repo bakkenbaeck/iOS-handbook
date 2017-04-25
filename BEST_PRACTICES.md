@@ -413,12 +413,24 @@ Our overarching goals are conciseness, readability, and simplicity.
 
 For code lint we use [swiftformat](https://github.com/nicklockwood/SwiftFormat). We aim to have it run as the last commit on any given pull-request. See [Git and GitHub](https://github.com/bakkenbaeck/iOS-playbook/blob/master/GIT_AND_GITHUB.md) for more information.
 
-This is the current format configuration we use for our projects. Feel free to create an alias for you preferred shell to facilitate usage.
+This is the current format configuration we use for our projects. Feel free to create an alias for you preferred shell to facilitate usage. 
+
+**Important: Do not forget to append a path to the command. Without it, it won't run, it'll just spew out the help text.**
 
 **Swiftformat 0.28.0**
 
 ```
 swiftformat --disable braces,wrapArguments -enable trailingClosures --self insert --indent 4 --allman false --wrapelements beforefirst --exponentcase lowercase --stripunusedargs always --header strip --insertlines disabled --binarygrouping none --empty void --ranges spaced --trimwhitespace always --hexliteralcase uppercase --linebreaks lf --decimalgrouping none --commas always --comments indent --octalgrouping none --hexgrouping none --patternlet inline --semicolons inline
+```
+
+**Example usage:**
+
+```
+# if it's not aliased to anything
+swiftformat --disable braces,wrapArguments -enable trailingClosures --self insert --indent 4 --allman false --wrapelements beforefirst --exponentcase lowercase --stripunusedargs always --header strip --insertlines disabled --binarygrouping none --empty void --ranges spaced --trimwhitespace always --hexliteralcase uppercase --linebreaks lf --decimalgrouping none --commas always --comments indent --octalgrouping none --hexgrouping none --patternlet inline --semicolons inline PathToSource/
+
+# if it's aliased 
+swiftformat PathToSource/
 ```
 
 ## Naming
