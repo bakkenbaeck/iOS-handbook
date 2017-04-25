@@ -1,5 +1,7 @@
 ![logo](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/logo-v1.png)
 
+Don't forget to check out our [suite of components and helper methods](http://github.com/usesweet), to avoid duplication of work reimplementing them yourself..
+
 Consistency is 👸.
 
 ### Index
