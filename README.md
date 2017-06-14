@@ -12,7 +12,7 @@ Consistency is 👸.
 * [Hiring](/HIRING.md)
 
 ### Maintainers
-* [@3lvis](https://github.com/3lvis)
+* [@yuliaveres](https://github.com/yuliaveres)
 * [@marijnschilling](https://github.com/marijnschilling)
 * [@Elland](https://github.com/Elland)
 * [@roberthein](https://github.com/roberthein)
