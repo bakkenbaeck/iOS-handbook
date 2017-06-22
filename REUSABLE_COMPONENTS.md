@@ -7,6 +7,7 @@ Your component should be unit tested and documented.
 # Steps to create a component
 
 - [ ] Use this template: https://github.com/JohnSundell/SwiftPlate
+- [ ] Create a local folder with your project name and run `swiftplate` from there
 - [ ] 👶  Author: Your own name
 - [ ] 📫  Author email: hello@bakkenbaeck.no
 - [ ] 🌍  GitHub URL: https://github.com/bakkenbaeck/<YOUR_PROJECT_NAME>
