@@ -550,7 +550,7 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Always use `self` when referencing properties. It will make your life simpler. Trust us.
+We don’t write `self` explicitly, because Swift assumes that you are referring to a property or method of the current instance whenever you use a known property or method name within a method.
 
 ### Protocol Conformance
 
