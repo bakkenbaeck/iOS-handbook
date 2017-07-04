@@ -550,7 +550,8 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-We don’t write `self` explicitly, because Swift assumes that you are referring to a property or method of the current instance whenever you use a known property or method name within a method.
+**We write `self.` only when the compiler needs it.**
+This means using `self` in closures (to show strong ownership) and initialisers (to resolve ambiguity). This way `self.` becomes the exceptional occurrence rather than the common, it tells the programmer the compiler is doing something special with this variable so pay attention.
 
 ### Protocol Conformance
 
