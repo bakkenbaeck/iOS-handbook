@@ -4,6 +4,7 @@
 
 * [Xcode](#xcode)
 * [Versioning](#versioning)
+* [Commented code](#commented-code)
 * [Comments](#comments)
 * [Blocks, delegates and data source](#blocks-delegates-and-data-source)
 * [View controllers](#view-controllers)
@@ -55,6 +56,17 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 ```
 
 When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
+
+## Commented code
+
+**Never** make a commit with commented out code.
+
+- If the code is so important, why is it commented out?
+- It creates unease amongst other developers -- what is this code?
+- It goes against the purpose of source control
+- It creates noise and adds no value
+
+Be extra aware of this when reviewing pull requests.
 
 ## Comments
 
