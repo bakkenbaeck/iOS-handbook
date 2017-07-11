@@ -335,14 +335,14 @@ Views should be layout using Apple's Auto Layout. No third-party frameworks are 
 
 Old style layout is still an option for when Auto Layout is not available.
 
-Use a method called `addSubviewsAndConstraints()` where you first add the subviews and then set your constraints. Call this method from `init(frame: CGRect)` in a `UIView` or the `viewDidLoad()` in a `UIViewController`. We do this to keep the layout code from cluttering your init methods. We move adding the subviews in this method because there inseparably related (a.k.a: your app chrashes when setting constraints on a subview that has not been added to the view.) It also avoids conflicts when you use subclassing and want to override the method where you set the constraints. 
+Use a method called `addSubviewsAndConstraints()` where you first add the subviews and then set your constraints. Call this method from `init(frame: CGRect)` in a `UIView` or the `viewDidLoad()` in a `UIViewController`. We do this to keep the layout code from cluttering your init methods. We move adding the subviews in this method because there inseparably related (a.k.a: your app chrashes when setting constraints on a subview that has not been added to the view.) It also avoids conflicts when you use subclassing and want to override the method where you set the constraints.
 
-**Preferred:** 
+**Preferred:**
 
 ```swift
 override init(frame: CGRect) {
     super.init(frame: frame)
-    
+
     // do general setup things
 
     self.addSubviewsAndConstraints()
@@ -385,14 +385,14 @@ In cases where the crash is obvious such as when dequeuing cells and casting the
 
 When creating models with properties that require setup or configuration, it's better to use lazy loading instead of adding the logic to the viewDidLoad or init methods. This creates better code separation, it's more readable and avoids cluttering a single massive method that does more than it should. It's also easier to navigate the code, since `⌘+clicking` on a property will lead you right to where it's setup, and not just where it's declared.
 
-**Preferred:** 
+**Preferred:**
 
 ```swift
 class RecipeCell: UITableViewCell {
 
 lazy var label: UILabel = {
     let label = UILabel(....)
-    label.textColor = .red  
+    label.textColor = .red
 
     return label
 }()
@@ -411,7 +411,7 @@ class RecipeCell: UITableViewCell {
 
 init() {
     self.label = UILabel(....)
-    self.label.textColor = .red  
+    self.label.textColor = .red
 
     super.init()
 }
@@ -425,7 +425,7 @@ Our overarching goals are conciseness, readability, and simplicity.
 
 For code lint we use [swiftformat](https://github.com/nicklockwood/SwiftFormat). We aim to have it run as the last commit on any given pull-request. See [Git and GitHub](https://github.com/bakkenbaeck/iOS-playbook/blob/master/GIT_AND_GITHUB.md) for more information.
 
-This is the current format configuration we use for our projects. Feel free to create an alias for you preferred shell to facilitate usage. 
+This is the current format configuration we use for our projects. Feel free to create an alias for you preferred shell to facilitate usage.
 
 **Important: Do not forget to append a path to the command. Without it, it won't run, it'll just spew out the help text.**
 
@@ -441,7 +441,7 @@ swiftformat --disable braces,wrapArguments -enable trailingClosures --self inser
 # if it's not aliased to anything
 swiftformat --disable braces,wrapArguments -enable trailingClosures --self insert --indent 4 --allman false --wrapelements beforefirst --exponentcase lowercase --stripunusedargs always --header strip --insertlines disabled --binarygrouping none --empty void --ranges spaced --trimwhitespace always --hexliteralcase uppercase --linebreaks lf --decimalgrouping none --commas always --comments indent --octalgrouping none --hexgrouping none --patternlet inline --semicolons inline PathToSource/
 
-# if it's aliased 
+# if it's aliased
 swiftformat PathToSource/
 ```
 
@@ -501,6 +501,32 @@ authenticate(username: "elvis", password: "m8eu201je") { error in
 When in doubt, look at how Xcode lists the method in the jump bar – our style here matches that.
 
 ![Methods in Xcode jump bar](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/xcode-jump-bar.png)
+
+### Target/Action naming
+
+When dealing with target/actions and IBAction, the preferred way to name methods is to follow the `didVerbSenderName` pattern.
+
+**Preferred**:
+
+```swift
+@objc private func didTapSubmitButton(_ sender: UIButton) {
+}
+
+```
+
+**Not preferred**:
+
+```swift
+func submit() {
+}
+
+func tappedButton() {
+}
+```
+
+Rationale:
+
+We want a consistent, coherent, and easy to identify naming pattern for method. The moment we read something as `didTapName()`, it should be obvious that this is a UIControl action call.
 
 ### Class Prefixes
 
