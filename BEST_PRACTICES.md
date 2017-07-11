@@ -600,7 +600,8 @@ Additional capabilities of classes:
 
 ### Use of Self
 
-Always use `self` when referencing properties. It will make your life simpler. Trust us.
+**We write `self.` only when the compiler needs it.**
+This means using `self` in closures (to show strong ownership) and initialisers (to resolve ambiguity). This way `self.` becomes the exceptional occurrence rather than the common, it tells the programmer the compiler is doing something special with this variable so pay attention.
 
 ### Protocol Conformance
 
