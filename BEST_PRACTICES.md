@@ -73,7 +73,7 @@ For example when implementing the view above the order would be:
 3. Subtitle label (because it's below)
 4. Time label (because reading order is left to right)
 
-Order of code (for every element counts: first place the open and underneath the private)
+#### Order of code (for every element counts: first place the open and underneath the private)
 0. protocols above the class declaration)
 1. enums
 2. static lets
@@ -87,6 +87,9 @@ Order of code (for every element counts: first place the open and underneath the
 10. public function
 11. private functions
 12. add the delegate methods in an extension
+
+#### Order of type
+Group elements of the same type together. For example if you have multiple `NSLayoutConstraint` place them underneath eachother
 
 ## Commented code
 
