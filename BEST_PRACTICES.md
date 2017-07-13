@@ -4,6 +4,7 @@
 
 * [Xcode](#xcode)
 * [Versioning](#versioning)
+* [Class structure](#class-structure)
 * [Commented code](#commented-code)
 * [Comments](#comments)
 * [Blocks, delegates and data source](#blocks-delegates-and-data-source)
@@ -56,6 +57,35 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 ```
 
 When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
+
+## Class structure
+
+To make the code structured and to make it easy for yourself and other developers to find things in the code we have a guide for codestructure. It tells you where to put what and in what order.
+
+#### Order of views
+When declaring, laying-out or adding your views always keep the order of the views in the design. The order to follow is: from back till front and in reading order.
+
+![Example of view order](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/view-order-example)
+
+So for example when implementing the view above the order would be:
+1. background image (because it's on the bottom)
+2. Title Label (because it's on top)
+3. Subtitle label (because it's below)
+4. Time label (because reading order is left to right)
+
+Order of code (for every element counts: first place the open and underneath the private)
+0. protocols above the class declaration)
+1. enums
+2. static lets
+3. normal properties
+4. computed poperties
+5. observed properties
+6. lazy vars
+7. init
+8. view controller life cycle methods (in order how the are called)
+9. public function
+10. private functions
+11. add the delegate methods in an extension
 
 ## Commented code
 
