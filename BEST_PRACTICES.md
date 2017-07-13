@@ -63,11 +63,11 @@ When it comes to apps, patch releases are bug fixes, minor releases are small ne
 To make the code structured and to make it easy for yourself and other developers to find things in the code we have a guide for codestructure. It tells you where to put what and in what order.
 
 #### Order of views
-When declaring, laying-out or adding your views always keep the order of the views in the design. The order to follow is: from back till front and in reading order.
+When declaring, laying-out or adding your views always keep the order of the views in the design. The order to follow is: from back to front and in reading order.
 
-![Example of view order](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/view-order-example)
+![Example of view order](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/view-order-example.png)
 
-So for example when implementing the view above the order would be:
+For example when implementing the view above the order would be:
 1. background image (because it's on the bottom)
 2. Title Label (because it's on top)
 3. Subtitle label (because it's below)
@@ -82,10 +82,11 @@ Order of code (for every element counts: first place the open and underneath the
 5. observed properties
 6. lazy vars
 7. init
-8. view controller life cycle methods (in order how the are called)
-9. public function
-10. private functions
-11. add the delegate methods in an extension
+8. life cycle methods (in order how the are called)
+9. addSubviewsAndConstraints()
+10. public function
+11. private functions
+12. add the delegate methods in an extension
 
 ## Commented code
 
