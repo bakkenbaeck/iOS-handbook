@@ -65,7 +65,7 @@ To make the code structured and to make it easy for yourself and other developer
 #### Order of views
 When declaring, laying-out or adding your views always keep the order of the views in the design. The order to follow is: from back to front and in reading order.
 
-![Example of view order](https://raw.githubusercontent.com/bakkenbaeck/iOS-playbook/master/assets/view-order-example.png)
+![Example of view order](/assets/view-order-example.png)
 
 For example when implementing the view above the order would be:
 1. background image (because it's on the bottom)
