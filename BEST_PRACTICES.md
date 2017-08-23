@@ -4,6 +4,7 @@
 
 * [Xcode](#xcode)
 * [Versioning](#versioning)
+* [Class structure](#class-structure)
 * [Commented code](#commented-code)
 * [Comments](#comments)
 * [Blocks, delegates and data source](#blocks-delegates-and-data-source)
@@ -55,6 +56,21 @@ When making backwards compatible changes, flag your old APIs as deprecated like 
 ```
 
 When it comes to apps, patch releases are bug fixes, minor releases are small new features and major releases are re-designs or big features.
+
+## Class structure
+
+To make the code structured and to make it easy for yourself and other developers to find things in the code we have a guide for codestructure. It tells you where to put what and in what order.
+
+#### Order of code:
+```
+class {
+    vars
+    init
+    funcs
+}
+
+extensions
+```
 
 ## Commented code
 
