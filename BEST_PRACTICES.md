@@ -20,7 +20,6 @@
     * [Class Prefixes](#class-prefixes)
   * [Spacing and Indentation](#spacing-and-indentation)
   * [Classes and Structs](#classes-and-structs)
-    * [Use of Self](#use-of-self)
     * [Protocol Conformance](#protocol-conformance)
     * [Computed Properties](#computed-properties)
     * [Example definition](#example-definition)
@@ -83,11 +82,11 @@ Be extra aware of this when reviewing pull requests.
   and telling it to scroll there, regardless of insets and offsets, it will scroll to the very bottom.
 */
 func scrollToBottom() {
-    let contentSize = self.collectionView.contentSize
+    let contentSize = collectionView.contentSize
     let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
-    let visibleRect = self.collectionView.layer.visibleRect
+    let visibleRect = collectionView.layer.visibleRect
     if !visibleRect.intersects(bottomRect) {
-        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+        collectionView.scrollRectToVisible(bottomRect, animated: true)
     }
 }
 ```
@@ -97,11 +96,11 @@ func scrollToBottom() {
 ```swift
 // Scrolls to the bottom of the view
 func scrollToBottom() {
-    let contentSize = self.collectionView.contentSize
+    let contentSize = collectionView.contentSize
     let bottomRect = CGRect(x: contentSize.width - 1, y: contentSize.height - 1, width: 1, height: 1)
-    let visibleRect = self.collectionView.layer.visibleRect
+    let visibleRect = collectionView.layer.visibleRect
     if !visibleRect.intersects(bottomRect) {
-        self.collectionView.scrollRectToVisible(bottomRect, animated: true)
+        collectionView.scrollRectToVisible(bottomRect, animated: true)
     }
 }
 ```
@@ -115,11 +114,11 @@ func override viewWillAppear(animated: Bool) {
     /*
      Workaround: Selected cell only gets deselected when pressing the back button
      dragging the screen to go back doesn't deselect the selected cell.
-     So, `self.clearsSelectionOnViewWillAppear = true` only works sometimes.
+     So, `clearsSelectionOnViewWillAppear = true` only works sometimes.
      */
-    let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+    let selectedIndexPath = tableView.indexPathForSelectedRow()
     if selectedIndexPath {
-        self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+        tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
     }
 }
 ```
@@ -272,7 +271,7 @@ For example:
 
 var photo: Photo? {
     didSet {
-        guard let viewerItem = self.viewerItem else { return }
+        guard let viewerItem = viewerItem else { return }
         // Do something with photo, maybe download and so on
     }
 }
@@ -289,7 +288,7 @@ One solution would be that the API user (the abuser) makes sure that they don't 
 ```swift
 // ViewerController (A horizontal array of PhotoViewerController)
 
-let photoViewerController = self.cachedPhotoViewerControllers.objectForKey(photo.id)
+let photoViewerController = cachedPhotoViewerControllers.objectForKey(photo.id)
 if photoViewerController.photo?.id != photo.id {
     photoViewerController.photo = photo
 }
@@ -305,17 +304,17 @@ The other solution would be that the `PhotoViewerController` takes care of this 
 var changed = false
 var photo: Photo? {
     willSet {
-        if self.photo?.id != newValue?.id {
-            self.changed = true
+        if photo?.id != newValue?.id {
+            changed = true
         }
     }
 
     didSet {
-        guard let photo = self.photo else { return }
+        guard let photo = photo else { return }
 
-        if self.changed {
+        if changed {
             // Do something with photo, maybe download and so on
-            self.changed = false
+            changed = false
         }
     }
 }
@@ -345,13 +344,13 @@ override init(frame: CGRect) {
 
     // do general setup things
 
-    self.addSubviewsAndConstraints()
+    addSubviewsAndConstraints()
 }
 
 func addSubviewsAndConstraints() {
-    self.addSubview(self.label)
+    addSubview(label)
 
-    // add constraints to self.label
+    // add constraints to label
 }
 ```
 
@@ -363,9 +362,9 @@ override init(frame: CGRect) {
 
     // do general setup things
 
-    self.addSubview(self.label)
+    addSubview(label)
 
-    // add constraints to self.label
+    // add constraints to label
 }
 ```
 
@@ -398,7 +397,7 @@ lazy var label: UILabel = {
 }()
 
 init() {
-    self.contentView.addSubview(self.label)
+    contentView.addSubview(label)
 
     super.init()
 }
@@ -410,8 +409,8 @@ init() {
 class RecipeCell: UITableViewCell {
 
 init() {
-    self.label = UILabel(....)
-    self.label.textColor = .red
+    label = UILabel(....)
+    label.textColor = .red
 
     super.init()
 }
@@ -598,10 +597,6 @@ Additional capabilities of classes:
 - Reference counting: Allows more than one reference to a class instance
 - Compatibility: Classes are available from Objetive-C
 
-### Use of Self
-
-Always use `self` when referencing properties. It will make your life simpler. Trust us.
-
 ### Protocol Conformance
 
 When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. Also don't use extensions to split code, but to extend classes or structs with additional functionality. Finally, avoid the `// MARK: -` it makes code too noisy.
@@ -665,7 +660,7 @@ class Circle: Shape {
 
     var diameter: Double {
         get {
-            return self.radius * 2.0
+            return radius * 2.0
         }
         set {
             radius = newValue / 2.0
@@ -673,25 +668,25 @@ class Circle: Shape {
     }
 
     init(x: Int, y: Int, radius: Double) {
-        self.x = x
-        self.y = y
-        self.radius = radius
+        x = x
+        y = y
+        radius = radius
     }
 
     convenience init(x: Int, y: Int, diameter: Double) {
-        self.init(x: x, y: y, radius: diameter / 2.0)
+        init(x: x, y: y, radius: diameter / 2.0)
     }
 
     func describe() -> String {
-        return "I am a circle at \(self.centerString()) with an area of \(self.computeArea())"
+        return "I am a circle at \(centerString()) with an area of \(computeArea())"
     }
 
     override func computeArea() -> Double {
-        return M_PI * self.radius * self.radius
+        return M_PI * radius * radius
     }
 
     private func centerString() -> String {
-        return "(\(self.x),\(self.y))"
+        return "(\(x),\(y))"
     }
 }
 ```
@@ -800,7 +795,7 @@ textContainer?.textLabel?.setNeedsDisplay()
 Use optional binding when it's more convenient to unwrap once and perform multiple operations:
 
 ```swift
-if let textContainer = self.textContainer {
+if let textContainer = textContainer {
     // do many things with textContainer
 }
 ```
@@ -814,7 +809,7 @@ For optional binding, shadow the original name when appropriate rather than usin
 var subview: UIView?
 
 // later on...
-if let subview = self.subview {
+if let subview = subview {
     // do something with unwrapped subview
 }
 ```
@@ -900,14 +895,14 @@ Colors should be semantic and context aware, adding the controller or the flow t
 
 **Preferred:**
 ```swift
-self.color = .onboardingButtonNormal
-self.highlightedColor = .onboardingButtonHighlighted
+color = .onboardingButtonNormal
+highlightedColor = .onboardingButtonHighlighted
 ```
 
 **Not Preferred:**
 ```swift
-self.color = .buttonNormal
-self.highlightedColor = .buttonHighlighted
+color = .buttonNormal
+highlightedColor = .buttonHighlighted
 ```
 
 For example:
