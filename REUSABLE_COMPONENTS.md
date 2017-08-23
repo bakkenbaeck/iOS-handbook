@@ -1,24 +1,17 @@
 # Reusable components
 
-Every agnostic component (UI control, category, helper, etc) should be created in a separate repository and in Swift.
+Every agnostic component (UI control, extension, helper, etc) should be created in a separate repository and in Swift.
 
 Your component should be unit tested and documented.
 
 # Steps to create a component
 
-- [ ] Create repo on GitHub
-- [ ] Go to your Projects folder
-- [ ] Run `git clone https://github.com/bakkenbaeck/swift-library-template <PODNAME>`
-- [ ] Run `cd <PODNAME>`
-- [ ] Run `./init.rb <PODNAME>`
-- [ ] [Enable Travis for your repository](https://travis-ci.org/profile/bakkenbaeck). If your component doesn't show up press "Sync Now"
-- [ ] To test your pod in another project while developing it you have to make sure all changes of your pod are commited and synced, then make sure `pod '<YOUR_PODS_NAME>', :git => 'https://github.com/bakkenbaeck/<YOUR_PODS_NAME>.git` is in the other project's Podfile. Running `pod install <YOUR_PODS_NAME>` (first time) or `pod update <YOUR_PODS_NAME>` (after each change to your pod) in the other project is required
-- [ ] Add your beautiful code and make a `Initial implementation` pull request
-- [ ] Publish your pod by running `pod trunk push`(*)
-- [ ] Add Bakken & Bæck as co-owner by running `pod trunk add-owner <PODNAME> post@bakkenbaeck.com`
-- [ ] :cake:
-
-(*) If you don't have a CocoaPods account you can create one by following [this steps](http://guides.cocoapods.org/making/getting-setup-with-trunk.html#getting-started).
+- [ ] Use this template: https://github.com/JohnSundell/SwiftPlate
+- [ ] Create a local folder with your project name and run `swiftplate` from there
+- [ ] 👶  Author: Your own name
+- [ ] 📫  Author email: hello@bakkenbaeck.no
+- [ ] 🌍  GitHub URL: https://github.com/bakkenbaeck/<YOUR_PROJECT_NAME>
+- [ ] 🏢  Organization Name: Bakken & Baeck
 
 # Steps to ship your component
 
