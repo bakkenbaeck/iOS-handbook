@@ -317,21 +317,13 @@ The other solution would be that the `PhotoViewerController` takes care of this 
 ```swift
 // PhotoViewerController
 
-var changed = false
 var photo: Photo? {
-    willSet {
-        if photo?.id != newValue?.id {
-            changed = true
-        }
-    }
-
     didSet {
         guard let photo = photo else { return }
 
-        if changed {
+        if photo.id != oldValue?.id  {
             // Do something with photo, maybe download and so on
-            changed = false
-        }
+        } //else, the photo has remained the same.
     }
 }
 ```
