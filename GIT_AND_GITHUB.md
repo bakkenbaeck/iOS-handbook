@@ -86,3 +86,13 @@ If it really makes sense to open another, it's okay to base your next pull reque
 Finally, make sure to merge any changes you've made to its parent during its review before seeking final review of your child PR.
 
 [_This is partly based on Hyper's Git and GitHub guide._](https://github.com/hyperoslo/playbook/blob/master/GIT_AND_GITHUB.md)
+
+## Releases
+
+Steps for releasing a new version of your app:
+
+1. Switch to the `master` branch.
+2. Bump the projects version number (make sure to use [semantic versioning](http://semver.org/)) and build number.
+3. Create the archive.
+4. Upload the archive to iTunes Connect for submission to TestFlight or App Review.
+4. Create a [release on GitHub](https://help.github.com/articles/creating-releases/). Remember to mark it as a `pre-release` if needed.
