@@ -30,9 +30,13 @@ The items in this style guide are required. For more general good ideas and prac
 
 ## Linting
 
-For code lint we use [SwiftLint](https://github.com/realm/SwiftLint). Documentation on the purpose and usage of all the rules can be found in that repo. 
+For code lint we use [SwiftLint](https://github.com/realm/SwiftLint). Our current `.swiftlint.yml` file is available [here](default.swiftlint.yml).
 
-Our current `.swiftlint.yml` file is available [here](.swiftlint.yml)
+Most rules enabled there are for formatting purposes, but there are a few which warn about common issues like forgetting to call `super` in methods, or simple performance tweaks like using `.first(where:)` instead of `.filter { }.first { }`. 
+
+Do not merge PRs which have SwiftLint warnings. 
+
+To automate this process at PR time, you can use [Danger](http://danger.systems/ruby/) and the `Danger-Swiftlint` plugin in [Swift](https://github.com/ashfurrow/danger-swiftlint) or in [Ruby](https://github.com/ashfurrow/danger-ruby-swiftlint) to have a bot that automatically comments on code with violations. Instructions for setting up Danger and its associated bots are [here](http://danger.systems/guides/getting_started.html).
 
 ## Naming
 
