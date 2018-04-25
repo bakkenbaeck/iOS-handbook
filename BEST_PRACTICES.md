@@ -5,6 +5,8 @@ These are things we've found to be helpful in creating readable, maintainable co
 ## Table of Contents
 
 * [Xcode](#xcode)
+    * [Version](#version)
+    * [Project Structure](#project-structure)
 * [Versioning](#versioning)
 * [Class structure](#class-structure)
 * [Comments](#comments)
@@ -21,6 +23,12 @@ These are things we've found to be helpful in creating readable, maintainable co
 The recommended version of Xcode (and Swift) for all purposes is the current available [in the App Store](https://itunes.apple.com/no/app/xcode/id497799835?mt=12).
 
 Make sure to coordinate with your project team when upgrading to a new version, particularly if a new version of Swift is involved.
+
+### Project Structure
+
+The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
+
+Make sure to use an [app-template](https://github.com/bakkenbaeck/app-template) for consistency.
 
 ### Warnings
 
