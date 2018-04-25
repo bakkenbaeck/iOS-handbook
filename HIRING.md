@@ -47,37 +47,25 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Have you faced any challenges when working with designers and/or backend developers? Could you tell us a bit more about your experience on collaborating with both?
 
 ## Assignment
-The candidate will be asked to make an assigment with a 24 hour deadline. They will be able to pick the best day to receive the details of the assignment before the clock starts ticking. The assignment will consist of making a simple app to display a list of items that come from an API.
+
+The candidate will be asked to make an assignment with a 24 hour deadline. They will be able to pick the best day to receive the details of the assignment before the clock starts ticking. The assignment will consist of making a simple app to display a list of items that come from an API.
 
 # Job description for an iOS position
 
 ### A bit about you
-- 01 You enjoy building applications for iOS.
-- 02 You're happy working in a team.
-- 03 Interest in Swift, usability and communicating with Web services such as REST and Websockets.
-- 04 Self-sustaining and forever curious.
-- 05 Familiarity with unit testing.
-- 06 A keen eye for good design is a bonus.
-- 07 Do you collaborate on open source projects? That is also a bonus.
 
-### What you'll be doing (Oslo)
-#### After one week
-You've gotten your new computer set up, you've taken part in your first Monday morning stretch. If you're lucky, you've visited our rooftop bees and joined our Friday bingo.
+- You enjoy building applications for iOS.
+- You're happy working in a team.
+- Interest in Swift, usability and communicating with Web services such as REST and Websockets.
+- Self-sustaining and forever curious.
+- Familiarity with unit testing.
+- A keen eye for good design is a bonus.
+- Do you collaborate on open source projects? That is also a bonus.
 
-#### After one month
-You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
+### What you'll be doing: 
 
-#### After six months
-You've worked with a few clients and even started working on a few ideas of your own. You've spent some time in the lab playing with the 3D printer, Raspberry Pi, and range of drones. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own.
+- **After One Week**: You've gotten your new computer set up, and you've had a warm welcome in the company-wide weekly meeting. If you're in Oslo, you've visited our rooftop bees and joined our Friday bingo. If you're in Amsterdam or Bonn, you've probably had a dinner to welcome you to that office's team.
 
-### What you'll be doing (Amsterdam)
-#### After one week
-You've gotten your new computer set up, you had a warm welcome in the company wide weekly meeting. We've probably had a dinner to welcome you to the Amsterdam-team.
+- **After one month**: You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
 
-#### After one month
-You've gotten your first client and you are already building alpha apps for them. You are taking part in regular client meetings where you are able to show your progress and get feedback on the next development iteration. You are working closely with one of the designers to develop the look and feel of the app.
-
-#### After six months
-You've worked with a few clients and even started working on a few ideas of your own. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own. And you've got acquainted with your colleagues from Bonn and Oslo when you visited the office for work or a party, or maybe both!
-
-### What you'll be doing (Bonn)
+- **After six months**: You've worked with a few clients and even started working on a few ideas of your own. You've gotten familiar with all the internal memes on Slack; and you've even started some of your own. If you're in Oslo, you've spent some time in the lab playing with the 3D printer, Raspberry Pi, and range of drones. You've gotten acquainted with your colleagues from the other offices when you've visited for work, a party, or maybe both! 
