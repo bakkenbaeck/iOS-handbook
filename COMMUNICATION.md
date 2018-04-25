@@ -10,7 +10,7 @@ Keep them in the back of your head when commenting on GitHub or Slack.
 
 When you write a reply of less than ~5 words, have an alarm bell in the back of your head 🔔. Is it just tacit agreement? Then it’s probably fine! “Great job”, “Couldn’t have put it better”,  “totes awesome!” are all fine. 
 
-In every other case though: 🚨! It good practice to elaborate. It may seem inefficient to be so verbose in our replies, but it will avoid misunderstandings, which can result in far greater inefficiency.
+In every other case though: 🚨! It's good practice to elaborate. It may seem inefficient to be so verbose in our replies, but it will avoid misunderstandings, which can result in far greater inefficiency.
 
 ## Criticizing or asking questions
 
@@ -23,7 +23,7 @@ Start by repeating **what** you are replying to in your own words. This forces y
 
 ### Prefer:
 
-- **I see you are using an optional as an array of User object in the example above**, have you considered to have that property default to an empty array?
+- **I see you are using an optional as an array of User object in the example above**, have you considered having that property default to an empty array?
 - **Okay, so you say using a collectionView here would be over-engineering**, how would you then solve this problem instead?
 
 ## Giving advice or tips
