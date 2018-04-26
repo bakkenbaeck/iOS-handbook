@@ -1,7 +1,19 @@
 # Interviewing for an iOS position
 
-## Overview
-This document provides an outline of how you can structure an interview. It also contains some questions to ask as well as some possible technical challenges to ask.
+This document provides an outline of how you can structure an interview. It also contains some questions to ask as well as some possible technical challenges.
+
+## Table of contents
+
+- [The interview](#the-interview)
+    - [Purposes of an interview](#purposes-of-an-interview)
+    - [Structure](#structure)
+    - [Questions](#questions)
+    - [Assignment](#assignment)
+ - [Job description for an iOS position](#job-description-for-an-ios-position)
+    - [A bit about you](#a-bit-about-you)
+    - [What you'll be doing](#what-youll-be-doing)
+
+# The interview
 
 ## Purposes of an interview
 We’re obviously trying to assess the candidate but remember they are assessing us. As much as possible an interview should be a two-way conversation; an opportunity to talk with a peer about some technical subjects. It is also a marketing opportunity -- make sure the candidate goes away with a positive impression of B&B -- even if you know the candidate is not going to be hired after 5 minutes ensure they have a good time for an hour. They may reapply later on; or they may recommend us to their better suited friend.
@@ -34,6 +46,7 @@ We’re obviously trying to assess the candidate but remember they are assessing
 - Thank the candidate for their time and let them know what the next step will be.
 
 ## Questions
+
 - Are you involved in the iOS community in some way?
 - For how long you've been an iOS user?
 - Who inspires you in the iOS community?
@@ -52,7 +65,7 @@ The candidate will be asked to make an assignment with a 24 hour deadline. They 
 
 # Job description for an iOS position
 
-### A bit about you
+## A bit about you
 
 - You enjoy building applications for iOS.
 - You're happy working in a team.
@@ -62,7 +75,7 @@ The candidate will be asked to make an assignment with a 24 hour deadline. They 
 - A keen eye for good design is a bonus.
 - Do you collaborate on open source projects? That is also a bonus.
 
-### What you'll be doing: 
+## What you'll be doing
 
 - **After One Week**: You've gotten your new computer set up, and you've had a warm welcome in the company-wide weekly meeting. If you're in Oslo, you've visited our rooftop bees and joined our Friday bingo. If you're in Amsterdam or Bonn, you've probably had a dinner to welcome you to that office's team.
 

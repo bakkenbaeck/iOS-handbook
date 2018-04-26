@@ -2,18 +2,18 @@
 
 These are things we've found to be helpful in creating readable, maintainable code rather than hard requirements. Hard requirements live in the [Style Guide](STYLE_GUIDE.md)
 
-## Table of Contents
+## Table of contents
 
 * [Xcode](#xcode)
     * [Version](#version)
-    * [Project Structure](#project-structure)
+    * [Project structure](#project-structure)
 * [Versioning](#versioning)
 * [Class structure](#class-structure)
 * [Comments](#comments)
-* [Extension Method Naming](#extension-method-naming)
-* [Blocks/Closures vs. Delegates](#blocks-closures-vs-delegates)
+* [Extension method naming](#extension-method-naming)
+* [Blocks/closures vs. delegates](#blocks-closures-vs-delegates)
 * [View controllers](#view-controllers)
-* [Property Observing](#property-observing)
+* [Property observing](#property-observing)
 * [Networking](#networking)
 
 ## Xcode
@@ -24,7 +24,7 @@ The recommended version of Xcode (and Swift) for all purposes is the current ava
 
 Make sure to coordinate with your project team when upgrading to a new version, particularly if a new version of Swift is involved.
 
-### Project Structure
+### Project structure
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped by type and feature for greater clarity.
 
@@ -100,7 +100,7 @@ func scrollToBottom() {
 }
 ```
 
-## Extension Method Naming
+## Extension method naming
 
 Watch out for potential method name collisions with Swift extensions of Objective-C classes. [Peter Steinberger goes into the maddening details of why here](https://pspdfkit.com/blog/2016/surprises-with-swift-extensions/), but when adding an extension to an Objective-C class, it can be helpful to add an `@objc` wrapper with a prefix for the compiler. 
 
@@ -128,7 +128,7 @@ extension UIViewController {
 }
 ```
 
-## Blocks/Closures vs Delegates
+## Blocks/closures vs delegates
 
 Choosing when to use a block/closure vs. a delegate method is usually is a simple decision, but if you're having trouble deciding here are some reminders on what does what.
 
@@ -155,7 +155,7 @@ Choosing when to use a block/closure vs. a delegate method is usually is a simpl
 
 [More information on this blog post.](https://sandofsky.com/blog/never-reach-up.html)
 
-## Property Observing
+## Property observing
 
 When using Property Observers make sure to not over-reload the UI. It's common that when using property observers any change will update some part of the UI.
 

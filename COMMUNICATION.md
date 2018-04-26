@@ -1,4 +1,4 @@
-# Communicating With Your Colleagues
+# Communicating with your colleaugues
 
 Within our iOS team, we mostly communicate with each other via the magic of the internet, and that's great! It's easy and very efficient, especially since we're often in different cities and/or countries. 
 
@@ -6,7 +6,14 @@ But online communication can easily result into misunderstandings, which tend to
 
 Keep them in the back of your head when commenting on GitHub or Slack.
 
-## Short Replies
+## Table of contents
+
+- [Short replies](#short-replies)
+- [Criticizing or asking questions](#criticizing-or-asking-questions)
+- [Giving advice or tips](#giving-advice-or-tips)
+- [Clarifications and disagreements](#clarifications-and-disagreements)
+
+## Short replies
 
 When you write a reply of less than ~5 words, have an alarm bell in the back of your head 🔔. Is it just tacit agreement? Then it’s probably fine! “Great job”, “Couldn’t have put it better”,  “totes awesome!” are all fine. 
 
@@ -40,7 +47,7 @@ Explain why you think this might be helpful in this particular case. Don’t jus
 - A collection view might be helpful in this case, **because it would take care of the layout for you. Otherwise you’ll be redoing the same work, implementing your own lightweight collection view instead.**
 - This article might be interesting for you, **as it explains the threats of storing API keys in plaintext.**
 
-## Clarifications and Disagreements
+## Clarifications and disagreements
 
 If you feel someone’s reaction is not clear enough (i.e. someone’s reaction confuses you, or even agitates you), ask for a clarification, or if the person could rephrase that, if the meaning isn’t clear. 
 

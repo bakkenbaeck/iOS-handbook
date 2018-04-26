@@ -1,4 +1,4 @@
-# Swift Style Guide
+# Swift style guide
 
 Our overarching goals are conciseness, readability, simplicity, and making as much of this style guide robot-enforcable as possible.
 
@@ -8,23 +8,23 @@ The items in this style guide are required. For more general good ideas and prac
 
 * [Linting](#linting)
 * [Naming](#naming)
-    * [Class Prefixes](#class-prefixes)
-* [Spacing and Indentation](#spacing-and-indentation)
-* [Protocol Conformance](#protocol-conformance)
+    * [Class prefixes](#class-prefixes)
+* [Spacing and indentation](#spacing-and-indentation)
+* [Protocol conformance](#protocol-conformance)
 * [View layout](#view-layout)
-* [Lazy Loading](#lazy-loading)
-* [Computed Properties](#computed-properties)
-* [Function Declarations](#function-declarations)
-* [Closure Expressions](#closure-expressions)
+* [Lazy loading](#lazy-loading)
+* [Computed properties](#computed-properties)
+* [Function declarations](#function-declarations)
+* [Closure expressions](#closure-expressions)
 * [Types](#types)
-* [Optionals and Force-Unwrapping](#optionals-and-force-unwrapping)
-* [Struct Initializers](#struct-initializers)
-* [Type Inference](#type-inference)
-* [Syntactic Sugar](#syntactic-sugar)
+* [Optionals and force-unwrapping](#optionals-and-force-unwrapping)
+* [Struct initializers](#struct-initializers)
+* [Type inference](#type-inference)
+* [Syntactic sugar](#syntactic-sugar)
 * [Semicolons](#semicolons)
 * [Resources](#resources)
-    * [Assets](#assets)
-    * [Localized Strings](#localized-strings)
+    * [Image assets](#image-assets)
+    * [Localized strings](#localized-strings)
 * [Commented code](#commented-code)
 
 
@@ -50,11 +50,11 @@ When in doubt, look at how Xcode lists the method in the jump bar – our style 
 
 ![Methods in Xcode jump bar](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/xcode-jump-bar.png)
 
-### Class Prefixes
+### Class prefixes
 
 Do not add prefixes to your Swift types. They are not necessary due to module-level namespacing. 
 
-## Spacing and Indentation
+## Spacing and indentation
 
 * Indent using 4 spaces rather than tabs. This should be configured on the project.
 
@@ -63,7 +63,7 @@ Do not add prefixes to your Swift types. They are not necessary due to module-le
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
 * There should be exactly one blank line between methods to aid in visual clarity and organization. 
 
-## Protocol Conformance
+## Protocol conformance
 
 When adding protocol conformance to a class, prefer adding a separate class extension for the protocol methods rather than adding the protocol conformances to the primary class wherever possible. 
 
@@ -169,7 +169,7 @@ override init(frame: CGRect) {
 ...
 ```
 
-## Computed Properties
+## Computed properties
 
 If a computed property is read-only, omit the `get` clause. The `get` clause is required only when a `set` clause is provided.
 
@@ -191,7 +191,7 @@ var diameter: Double {
 }
 ```
 
-## Closure Expressions
+## Closure expressions
 
 Use trailing closure syntax wherever possible. Keep the `[weak self] parameterOne, parameterTwo in` on the same line as the opening brace of the closure. 
 
@@ -241,7 +241,7 @@ let width: NSNumber = 120.0 // NSNumber
 let widthString: NSString = width.stringValue // NSString
 ```
 
-## Optionals and Force-Unwrapping
+## Optionals and force-unwrapping
 
 Declare variables and function return types as optional with `?` where a nil value is acceptable.
 
@@ -249,7 +249,7 @@ Avoid Implicitly Unwrapped Optionals (i.e., variables declared with an `!`) unle
 
 There's a reason `!` has the informal nickname of "the crash operator": If what you think is going to be there is not there, your entire application will crash.
 
-### Struct Initializers
+### Struct initializers
 
 Use the native Swift struct initializers rather than the legacy CGGeometry constructors.
 
@@ -269,7 +269,7 @@ var centerPoint = CGPointMake(96.0, 42.0)
 
 Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc. over global constants `CGRectInfinite`, `CGRectNull`, etc. For existing variables, you can use the shorter `.zeroRect`.
 
-## Type Inference
+## Type inference
 
 Prefer compact code and let the compiler infer the type for a constant or variable.
 
@@ -289,7 +289,7 @@ var currentBounds: CGRect = computeViewBounds()
 
 **NOTE**: Following this guideline means picking descriptive names is even more important than before.
 
-## Syntactic Sugar
+## Syntactic sugar
 
 Prefer the shortcut versions of type declarations over the full generics syntax.
 
@@ -329,7 +329,7 @@ Use a `Theme.swift` that contains extensions for the following classes which wil
  
 Work with the designer on your project to come up with a common naming scheme for colors to make picking colors, fonts, and margins out of a design file easier. 
 
-### Image Assets
+### Image assets
 
 Images should live in `Images.xcassets`. They don't need to be grouped in any way unless you find that helpful for organization.
 
@@ -342,7 +342,7 @@ Images should be named in either `camelCase` or  `lower_snake_case` to facilitat
 - `ic_refresh` and `ic_refresh_selected` for a refresh icon and its selected state used in multiple places throughout an app
 - `articleNavigationBar` and `articleNavigationBarSelected` for  something used in one specific place. 
 
-### Localized Strings
+### Localized strings
 
 Any strings visible to the user must be localized using `NSLocalizedString` or something wrapping it. It is way, way easier to set up all strings like this from the beginning than to add this feature later. 
 

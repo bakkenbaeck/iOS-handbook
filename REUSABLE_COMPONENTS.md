@@ -4,6 +4,12 @@ Every agnostic component (UI control, extension, helper, etc) should be created 
 
 Your component should be unit tested and documented.
 
+## Table of Contents
+
+- [Steps to create a component](#steps-to-create-a-component)
+- [Steps to ship a component](#steps-to-ship-a-component)
+- [Publicizing your component](#publicizing-your-component)
+
 # Steps to create a component
 
 - [ ] Use this template: https://github.com/JohnSundell/SwiftPlate - it will automatically add support for CocoaPods, Carthage, and Swift Package Manager.
