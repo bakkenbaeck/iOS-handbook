@@ -750,7 +750,7 @@ attendeeList.sort { a, b in
 }
 ```
 
-Always used named parameters, and never unamed ordered parameters (`$0`). It's harder to write, harder to read and takes much longer to compile.
+Always used named parameters, and never unnamed ordered parameters (`$0`). It's harder to write, harder to read and takes much longer to compile.
 
 **Preferred:**
 ```swift
