@@ -213,4 +213,3 @@ Completion blocks in networking calls should be returned in the main thread. Thi
 Completion blocks should contain the `error` instead of success/failure blocks.
 
 Use a simple NSURLSession wrapper to make things simpler. [Teapot](https://github.com/bakkenbaeck/Teapot) is a good candidate for this.
-
