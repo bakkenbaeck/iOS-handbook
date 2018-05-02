@@ -1,4 +1,4 @@
-# Communicating with your colleaugues
+# Communicating with your colleagues
 
 Within our iOS team, we mostly communicate with each other via the magic of the internet, and that's great! It's easy and very efficient, especially since we're often in different cities and/or countries. 
 
