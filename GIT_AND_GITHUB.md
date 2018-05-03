@@ -74,7 +74,7 @@ Keep in mind that you are reviewing something that someone else has worked on re
 
 If everything is fine, feel free to merge the pull request. Avoid merging before receiving a feedback. If several developers are involved in the project, one confirmation should be enough. You can always submit subsequent pull requests or file an issue after the fact.
 
-After you have merged, you should delete the branch and smile. The smile is critical part of the process, so don't forget this.
+After you have merged, you should delete the branch and smile. The smile is a critical part of the process, so don't forget this.
 
 #### My pull request depends on another pending pull request. What to do?
 
