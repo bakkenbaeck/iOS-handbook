@@ -58,8 +58,8 @@ As a reviewer your job is to be the extra pair of eyes, so the code will get twi
 
 Keep in mind that you are reviewing something that someone else has worked on really hard, so always be respectful. These guidelines for giving feedback are a good reference:
 
-- Familiarise yourself with the context of the issue.
-- If you disagree strongly, consider giving it a few minutes before responding; think before you react. Try to empathise.
+- Familiarize yourself with the context of the issue.
+- If you disagree strongly, consider giving it a few minutes before responding; think before you react. Try to empathize.
 - Ask, don’t tell. (“What do you think about trying…?” rather than “Don’t do…”)
 - Explain your reasons why code should be changed. (Not in line with the style guide? A personal preference?)
 - Offer ways to simplify or improve code.
