@@ -28,6 +28,10 @@ opt_in_rules:
   - switch_case_on_newline # Cases inside a switch should always be on a newline
 trailing_whitespace:
   ignores_empty_lines: true
+private_outlet:
+  allow_private_set: true
+cyclomatic_complexity:
+  ignores_case_statements: true
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
