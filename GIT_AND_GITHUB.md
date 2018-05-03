@@ -42,7 +42,7 @@ Pull request descriptions should be concise and well written. The reviewer shoul
 Besides, a description with more information could be helpful, for example:
 
 - If it's a static UI, a screenshot will do. 
-- If it's an interaction, a `gif` would help a lot. Goods tool to make `gif`s include [Licecap](http://www.cockos.com/licecap/), [GIPHY Capture](https://itunes.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12), and [GIF Brewery](http://gifbrewery.com/).
+- If it's an interaction, a `gif` would help a lot. Good tools to make `gif`s include [Licecap](http://www.cockos.com/licecap/), [GIPHY Capture](https://itunes.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12), and [GIF Brewery](http://gifbrewery.com/).
 - If it's a bug, steps to reproduce are very useful to help understanding context.
 
 Before merging a pull request, your code has to be reviewed, so that we can learn from you, help you find mistakes, and/or post a sufficient amount of gifs. The reviewing process is important. It is better for you to have another person backing you up. More eyes on code mean fewer bugs and better consistency throughout.
