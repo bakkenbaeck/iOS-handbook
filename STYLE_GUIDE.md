@@ -335,7 +335,9 @@ Images should live in `Images.xcassets`. They don't need to be grouped in any wa
 
 Images should be named consistently within an app to preserve organization and developer sanity. It is strongly suggested to append the state name to images for non-default states.
 
-Images should be named in either `camelCase` or  `lower_snake_case` to facilitate code generation based on the image names. Pick one and stick to it per project. 
+Images should be named in either `camelCase` or  `lower_snake_case` to facilitate code generation based on the image names. Avoid using hyphens within names, as it messes up code completion and generation. 
+
+Whatever naming style you choose, pick a style and stick to it per project. 
 
 **Examples:**
 
