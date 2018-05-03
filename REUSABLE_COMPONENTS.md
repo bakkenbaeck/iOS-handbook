@@ -23,7 +23,7 @@ Your component should be unit tested and documented.
 
 - [ ] Make sure that the README states what makes this component different than the other ones - simply having been made by us is probably not enough. It's very important that your README is 🌟 fabulous 🌟.
 - [ ] Provide a super-simple example on how to get the component up and running. 
-- [ ] If the component is dependent on other frameworks, explain why they're needed them and what they do. Don't assume that people know everything.
+- [ ] If the component is dependent on other frameworks, explain why they're needed and what they do. Don't assume that people know everything.
 - [ ] If it's a visual component, include a `.gif` showing how it works or what it does. It helps people understand your component without having to clone, build and run your project.
 - [ ] Make sure to have a cool logo 😎
 
