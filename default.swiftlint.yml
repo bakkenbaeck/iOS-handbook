@@ -22,7 +22,7 @@ opt_in_rules:
   - override_in_extension # Extensions shouldn't override declarations.
   - private_action # IBActions should be private.
   - private_outlet # IBOutlets should be private to avoid leaking UIKit to higher layers.
-  - private_unit_test # Unit tests marked private are silently skipped.
+  - private_unit_test # Unit tests should not be marked private because they are silently skipped.
   - prohibited_super_call # Some methods should not call super
   - redundant_nil_coalescing # nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
   - switch_case_on_newline # Cases inside a switch should always be on a newline
