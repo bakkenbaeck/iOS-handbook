@@ -8,8 +8,6 @@ The `master` branch is the stable branch. It's also used for development purpose
 
 You might be wondering: why only `master`? What if I have to rollback to apply a fix? Well, if you find a bug in a previous release, you can just, checkout the tag, fork it, fix it, deploy the new build, and finally, submit a PR to merge it with `master` to the sound of Daft Punk.
 
-Commit messages are in the [imperative present tense](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages), and have no period at the end.
-
 Prefer concise commits over gigantic ones. When writing a concise commit message is difficult, it may indicate too many unrelated changes.
 
 ```
