@@ -27,11 +27,11 @@ opt_in_rules:
   - redundant_nil_coalescing # nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
   - switch_case_on_newline # Cases inside a switch should always be on a newline
 trailing_whitespace:
-  ignores_empty_lines: true
+  ignores_empty_lines: true # don't try to make people delete trailing whitespace from empty lines
 private_outlet:
-  allow_private_set: true
+  allow_private_set: true # allows private(set) for IBOutlets
 cyclomatic_complexity:
-  ignores_case_statements: true
+  ignores_case_statements: true # Don't count `switch` case statements when calculating complexity - this is a trade-off we accept.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
