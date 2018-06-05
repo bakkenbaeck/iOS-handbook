@@ -11,7 +11,6 @@ Consistency is 👸.
 * [Communication](COMMUNICATION.md)
 * [Git and GitHub](GIT_AND_GITHUB.md)
 * [Reusable components](REUSABLE_COMPONENTS.md)
-* [Hiring](HIRING.md)
 
 ### Maintainers
 
