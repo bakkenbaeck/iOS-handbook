@@ -1,0 +1,40 @@
+disabled_rules:
+  - file_length # Files should not span too many lines - They shouldn't, but we're not enforcing a specific limit on this.
+  - function_body_length # Functions bodies should not span too many lines - They shouldn't, but we're not enforcing a specific limit on this.
+  - function_parameter_count # Number of function parameters should be low - They may need to be high for dependency injection.
+  - identifier_name # Long set of rules about naming - This is too restrictive.
+  - line_length # Lines should not span too many characters - They shouldn't, but we're not enforcing a specific limit on this.
+  - nesting # Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep - This is too restrictive.
+  - todo # TODOs and FIXMEs should be resolved - They should be eventually, but not at a warning-enforcement level.
+  - trailing_comma # Trailing commas in arrays and dictionaries should be avoided/enforced - Too nitpicky.
+  - type_body_length # Type bodies should not span too many lines - They shouldn't, but we're not enforcing a specific limit on this.
+  - type_name # Various naming restrictions - These are too restrictive.
+opt_in_rules:
+  - contains_over_first_not_nil # Prefer contains over first(where:) != nil
+  - empty_count # Prefer checking isEmpty over comparing count to zero.
+  - empty_string # Prefer checking isEmpty over comparing string to an empty string literal.
+  - explicit_init # Explicitly calling .init() should be avoided.
+  - fatal_error_message # A fatalError call should have a message.
+  - first_where # .first(where:) over .filter { }.first in collections.
+  - implicitly_unwrapped_optional # Implicitly unwrapped optionals should be avoided when possible.
+  - operator_usage_whitespace # Operators should be surrounded by a single whitespace when they are being used.
+  - overridden_super_call # Some overridden methods should always call super
+  - override_in_extension # Extensions shouldn't override declarations.
+  - private_action # IBActions should be private.
+  - private_outlet # IBOutlets should be private to avoid leaking UIKit to higher layers.
+  - private_unit_test # Unit tests should not be marked private because they are silently skipped.
+  - prohibited_super_call # Some methods should not call super
+  - redundant_nil_coalescing # nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
+  - switch_case_on_newline # Cases inside a switch should always be on a newline
+trailing_whitespace:
+  ignores_empty_lines: true # don't try to make people delete trailing whitespace from empty lines
+private_outlet:
+  allow_private_set: true # allows private(set) for IBOutlets
+cyclomatic_complexity:
+  ignores_case_statements: true # Don't count `switch` case statements when calculating complexity - this is a trade-off we accept.
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+## Rules to consider enabling
+# - discouraged_object_literal # Prefer initializers over object literals - If you are using generated code for images and/or colors, you should use that code instead of literals.
